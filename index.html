@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TLDR May 8 Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --blossom: #f4c4cc;
+      --pistachio: #b9d9c8;
+      --serene: #acd7df;
+      --canary: #ffefb3;
+      --latte: #d2c4b8;
+      --bg: #f7f4ef;
+      --ink: #1f211e;
+      --muted: #665f59;
+      --panel: #fffdf9;
+      --line: #d8cbc0;
+      --hot: #7f2f3b;
+      --hot-bg: #f4c4cc;
+      --research: #275541;
+      --research-bg: #d9eadf;
+      --news: #6e5511;
+      --news-bg: #ffefb3;
+      --tool: #245567;
+      --tool-bg: #d8edf1;
+      --shadow: 0 10px 28px rgba(74, 61, 50, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+
+    main {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: 18px 14px 36px;
+    }
+
+    header {
+      padding: 12px 2px 16px;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.05;
+      font-weight: 780;
+      max-width: 12ch;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 38rem;
+    }
+
+    .meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 249, 0.76);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0;
+      margin: 0 -14px 14px;
+      padding-inline: 14px;
+      background: rgba(247, 244, 239, 0.93);
+      backdrop-filter: blur(12px);
+      border-block: 1px solid rgba(220, 227, 220, 0.75);
+    }
+
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: 0.86rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+
+    section {
+      margin-top: 18px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.08rem;
+      line-height: 1.15;
+      font-weight: 780;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 720;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 13px;
+    }
+
+    .lead-card {
+      padding: 14px;
+      border-left: 5px solid var(--blossom);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 9px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 760;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .hot {
+      background: var(--hot-bg);
+      color: var(--hot);
+      border-color: #ffd2cc;
+    }
+
+    .research {
+      background: var(--research-bg);
+      color: var(--research);
+      border-color: #bfddd6;
+    }
+
+    .news {
+      background: var(--news-bg);
+      color: var(--news);
+      border-color: #f4df8c;
+    }
+
+    .tool {
+      background: var(--tool-bg);
+      color: var(--tool);
+      border-color: #c8dbef;
+    }
+
+    h3 {
+      font-size: 1rem;
+      line-height: 1.2;
+      font-weight: 780;
+    }
+
+    .summary {
+      margin-top: 8px;
+      color: #303730;
+      font-size: 0.94rem;
+    }
+
+    .why {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .topic-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .topic {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 10px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .score {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--serene);
+      font-size: 0.94rem;
+      font-weight: 820;
+    }
+
+    .topic strong {
+      display: block;
+      font-size: 0.95rem;
+      line-height: 1.2;
+    }
+
+    .topic span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+    .source {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 650;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      margin-top: 11px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--panel);
+      font-size: 0.82rem;
+      font-weight: 760;
+      text-decoration: none;
+      width: max-content;
+      max-width: 100%;
+    }
+
+    .read-link:focus-visible {
+      outline: 3px solid var(--canary);
+      outline-offset: 2px;
+    }
+
+    .newsletter-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .newsletter {
+      padding: 11px;
+      border-radius: 8px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .newsletter time {
+      display: block;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 720;
+      margin-bottom: 4px;
+    }
+
+    .newsletter a {
+      color: var(--ink);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      font-weight: 740;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 680px) {
+      main {
+        padding-top: 28px;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: 2.45rem;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>TLDR May 8 Brief</h1>
+      <p class="subtitle">Mobile scan of four TLDR newsletter issues from May 8, focused on AI companies, multimodal products, AI for science, image generation, agent tooling, and research.</p>
+      <div class="meta">
+        <span class="pill">4 newsletters</span>
+        <span class="pill">May 8, 2026</span>
+        <span class="pill">TLDR newsletter label</span>
+      </div>
+    </header>
+
+    <nav aria-label="Dashboard sections">
+      <a href="#attention">Attention</a>
+      <a href="#topics">Topics</a>
+      <a href="#research">Research</a>
+      <a href="#news">News</a>
+    </nav>
+
+    <section id="attention">
+      <div class="section-title">
+        <h2>Needs Your Attention</h2>
+        <span class="count">8 items</span>
+      </div>
+      <div class="grid">
+        <article class="card lead-card">
+          <div class="tag-row">
+            <span class="tag hot">OpenAI</span>
+            <span class="tag tool">Agents</span>
+          </div>
+          <h3>Codex now works directly in Chrome on macOS and Windows</h3>
+          <p class="summary">Codex can operate across Chrome tabs in the background, handling repetitive browser workflows and structured navigation without taking over the browser.</p>
+          <p class="why">Why it matters: this is directly in your watchlist and points to a practical shift from chat-based coding help toward browser-native task execution.</p>
+          <p class="source">Source: TLDR AI and TLDR, May 8</p>
+          <a class="read-link" href="https://links.tldrnewsletter.com/ud1fbn" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">OpenAI</span>
+            <span class="tag tool">Multimodal</span>
+          </div>
+          <h3>OpenAI released realtime audio models</h3>
+          <p class="summary">The lineup includes GPT-Realtime-2 for spoken reasoning, GPT-Realtime-Translate for live multilingual translation, and GPT-Realtime-Whisper for streaming transcription.</p>
+          <p class="why">Why it matters: this is a clear multimodal/product infrastructure item, relevant to voice agents, captions, meetings, and live translation workflows.</p>
+          <p class="source">Source: TLDR AI and TLDR, May 8</p>
+          <a class="read-link" href="https://www.testingcatalog.com/openai-launches-new-realtime-voice-and-translation-ai-models/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Meta</span>
+            <span class="tag tool">Image/video generation</span>
+          </div>
+          <h3>Meta is preparing Hatch, a consumer AI agent</h3>
+          <p class="summary">Hatch is described as a social-platform agent with image and video generation, shopping, and learning features tied into Instagram and Facebook.</p>
+          <p class="why">Why it matters: this touches your image generation and big-tech criteria, and shows Meta pushing AI agents inside existing social surfaces.</p>
+          <p class="source">Source: TLDR AI, May 8</p>
+          <a class="read-link" href="https://www.testingcatalog.com/meta-prepares-hatch-agent-under-waitlist-and-social-media-skills/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Google DeepMind</span>
+            <span class="tag research">AI for science</span>
+          </div>
+          <h3>AlphaEvolve is expanding Gemini-powered algorithm discovery</h3>
+          <p class="summary">Google DeepMind says AlphaEvolve can design advanced algorithms and support discoveries across math, computer science, and physics.</p>
+          <p class="why">Why it matters: this is the strongest AI-for-science item in the batch.</p>
+          <p class="source">Source: TLDR AI, May 8</p>
+          <a class="read-link" href="https://deepmind.google/blog/alphaevolve-impact/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Anthropic</span>
+            <span class="tag research">Interpretability</span>
+          </div>
+          <h3>Anthropic introduced Natural Language Autoencoders</h3>
+          <p class="summary">NLAs translate model activations into human-readable text to help audit model behavior, detect safety concerns, and inspect hidden motivations.</p>
+          <p class="why">Why it matters: this is important research from a frontier lab, with direct relevance to model interpretability and alignment auditing.</p>
+          <p class="source">Source: TLDR AI, May 8</p>
+          <a class="read-link" href="https://www.anthropic.com/research/natural-language-autoencoders" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Anthropic</span>
+            <span class="tag news">Security</span>
+          </div>
+          <h3>Mozilla used Claude Mythos Preview to harden Firefox</h3>
+          <p class="summary">Mozilla reported finding and fixing an unusually high number of latent Firefox security bugs using Claude Mythos Preview and other AI models.</p>
+          <p class="why">Why it matters: this is a concrete enterprise/security use case for frontier models beyond coding demos.</p>
+          <p class="source">Source: TLDR, May 8</p>
+          <a class="read-link" href="https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">OpenAI</span>
+            <span class="tag news">Safety</span>
+          </div>
+          <h3>OpenAI introduced Trusted Contact for ChatGPT</h3>
+          <p class="summary">Trusted Contact lets adults nominate someone who may be alerted if severe self-harm risk is detected in conversations.</p>
+          <p class="why">Why it matters: not a product-infra item, but it is an OpenAI safety feature worth noting.</p>
+          <p class="source">Source: TLDR AI, May 8</p>
+          <a class="read-link" href="https://links.tldrnewsletter.com/LQOllj" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Google DeepMind</span>
+            <span class="tag research">Long-horizon agents</span>
+          </div>
+          <h3>DeepMind is partnering with EVE Online for AI model testing</h3>
+          <p class="summary">EVE Online is being used as a rich environment for studying systems that need long-horizon planning, memory, and continual learning.</p>
+          <p class="why">Why it matters: this is adjacent to agent evaluation and persistent-world benchmarks.</p>
+          <p class="source">Source: TLDR AI, May 8</p>
+          <a class="read-link" href="https://arstechnica.com/gaming/2026/05/google-deepmind-partners-with-eve-online-for-ai-model-testing/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="topics">
+      <div class="section-title">
+        <h2>Hot Topics</h2>
+        <span class="count">ranked</span>
+      </div>
+      <div class="topic-list">
+        <div class="topic">
+          <div class="score">1</div>
+          <div>
+            <strong>AI agents are moving into real workflows</strong>
+            <span>Codex in Chrome, Perplexity Personal Computer, agentic GitHub workflows, Firefox hardening, and product monetization all point to agents leaving demo mode.</span>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="score">2</div>
+          <div>
+            <strong>Multimodal interfaces are becoming product infrastructure</strong>
+            <span>OpenAI realtime audio, live translation, streaming transcription, AirPods camera rumors, and Meta's image/video agent strategy all cluster around richer input and output surfaces.</span>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="score">3</div>
+          <div>
+            <strong>AI adoption is becoming an operating-model question</strong>
+            <span>TLDR Founders and Product both emphasized workflow redesign, org readiness, pricing, usage metrics, and avoiding superficial AI adoption.</span>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="score">4</div>
+          <div>
+            <strong>Research focus: interpretability, RL, and AI for science</strong>
+            <span>Anthropic NLAs, Prime-RL post training, AlphaEvolve, and EVE-based testing are the main research-oriented signals.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-title">
+        <h2>Important Research</h2>
+        <span class="count">5 reads</span>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Interpretability</span><span class="tag hot">Anthropic</span></div>
+          <h3>Natural Language Autoencoders</h3>
+          <p class="summary">A method for translating model activations into readable text. Most important for safety auditing, hidden-intent detection, and model behavior inspection.</p>
+          <a class="read-link" href="https://www.anthropic.com/research/natural-language-autoencoders" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">AI for science</span><span class="tag hot">Google</span></div>
+          <h3>AlphaEvolve</h3>
+          <p class="summary">Gemini-powered coding agent work aimed at algorithm discovery across mathematics, computer science, and physics.</p>
+          <a class="read-link" href="https://deepmind.google/blog/alphaevolve-impact/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">RL</span><span class="tag tool">Agents</span></div>
+          <h3>Prime-RL Post Training</h3>
+          <p class="summary">A case study on training specialized agents for spreadsheet information retrieval, with environment design and evaluation lessons.</p>
+          <a class="read-link" href="https://links.tldrnewsletter.com/59yuUD" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Agent evaluation</span><span class="tag hot">Google</span></div>
+          <h3>EVE Online AI model testing</h3>
+          <p class="summary">A persistent game environment as a testbed for planning, memory, and continual-learning behavior.</p>
+          <a class="read-link" href="https://arstechnica.com/gaming/2026/05/google-deepmind-partners-with-eve-online-for-ai-model-testing/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Data quality</span><span class="tag tool">RL data</span></div>
+          <h3>Good QC for RL Data</h3>
+          <p class="summary">Argues for stricter quality control for frontier-lab RL data vendors, especially around performance, cost, and latency tradeoffs.</p>
+          <a class="read-link" href="https://www.seancai.com/philosophy/good_qc_rl_data" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="section-title">
+        <h2>Interesting News</h2>
+        <span class="count">quick scan</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="tag-row"><span class="tag news">Apple</span><span class="tag tool">Multimodal hardware</span></div>
+          <h3>AirPods with cameras are reportedly in late-stage development</h3>
+          <p class="summary">The signal is less about earbuds and more about ambient multimodal capture becoming part of consumer hardware.</p>
+          <a class="read-link" href="https://www.bloomberg.com/news/articles/2026-05-07/apple-s-camera-equipped-airpods-reach-advanced-testing-stage-in-ai-device-push" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag news">Cloudflare</span><span class="tag tool">AI restructuring</span></div>
+          <h3>Cloudflare plans 1,100 layoffs tied to an AI-first operating model</h3>
+          <p class="summary">A concrete example of companies using agentic AI as the framing for org restructuring and cost changes.</p>
+          <a class="read-link" href="https://links.tldrnewsletter.com/U4nXA3" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag news">China AI labs</span></div>
+          <h3>Notes from inside China's AI labs</h3>
+          <p class="summary">The piece frames Chinese labs as less business-focused, more ecosystem-oriented, and more willing to do non-flashy model-improvement work.</p>
+          <a class="read-link" href="https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag news">Product</span><span class="tag tool">AI monetization</span></div>
+          <h3>Agent monetization is still unsettled</h3>
+          <p class="summary">The Product issue flags usage metrics, real-time value exchange, and platform-level monetization as central questions for AI products.</p>
+          <a class="read-link" href="https://metronome.com/webinars/webinar-how-agents-are-changing-monetization" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
