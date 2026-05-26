@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TLDR May 25 Dashboard</title>
+  <title>TLDR May 26 Dashboard</title>
   <style>
     :root {
       color-scheme: light;
@@ -319,11 +319,11 @@
 <body>
   <main>
     <header>
-      <h1>TLDR May 25 Brief</h1>
-      <p class="subtitle">Mobile scan of four TLDR newsletter issues from May 25, focused on frontier-lab moves, agent tooling, and AI/data infrastructure.</p>
+      <h1>TLDR May 26 Brief</h1>
+      <p class="subtitle">Mobile scan of three TLDR newsletter issues from May 26, focused on agent security, AI productivity, and hardware + media shifts.</p>
       <div class="meta">
-        <span class="pill">4 newsletters</span>
-        <span class="pill">May 25, 2026</span>
+        <span class="pill">3 newsletters</span>
+        <span class="pill">May 26, 2026</span>
         <span class="pill">TLDR newsletter label</span>
       </div>
     </header>
@@ -338,103 +338,67 @@
     <section id="attention">
       <div class="section-title">
         <h2>Needs Your Attention</h2>
-        <span class="count">8 items</span>
+        <span class="count">5 items</span>
       </div>
       <div class="grid">
         <article class="card lead-card">
           <div class="tag-row">
-            <span class="tag hot">Anthropic</span>
-            <span class="tag tool">Agents</span>
-          </div>
-          <h3>Mythos 1 looks close to broader release</h3>
-          <p class="summary">TLDR flagged signals that Anthropic is preparing “Mythos 1” for Claude Code and Claude Security, with signs of cloud-surface readiness ahead of broader availability.</p>
-          <p class="why">Why it matters: security + coding is where capabilities compound into real operational advantage (and risk), so packaging and rollout details matter.</p>
-          <p class="source">Source: TLDR AI, May 25</p>
-          <a class="read-link" href="https://www.testingcatalog.com/anthropic-prepares-mythos-1-for-claude-code-and-claude-security/" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
-            <span class="tag hot">Anthropic</span>
+            <span class="tag hot">Agents</span>
             <span class="tag research">Security</span>
           </div>
-          <h3>Exploit-building evals: capability is moving downmarket</h3>
-          <p class="summary">Anthropic reports “Mythos Preview” can convert vulnerabilities into exploit primitives and chain them into end-to-end attacks, outperforming other models on tougher exploit benchmarks.</p>
-          <p class="why">Why it matters: if exploit development becomes cheaper/faster, defender advantage shifts toward automated detection, sandboxing, and tool-level guardrails.</p>
-          <p class="source">Source: TLDR AI, May 25</p>
-          <a class="read-link" href="https://red.anthropic.com/2026/exploit-evals/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Stop giving agents your whole OAuth token</h3>
+          <p class="summary">A practical case for giving AI agents their own identity + scoped credentials, instead of inheriting a user’s full session and expanding the blast radius.</p>
+          <p class="why">Why it matters: as agentic apps move from demos to production, permission boundaries and auditability become the real product surface.</p>
+          <p class="source">Source: TLDR, May 26</p>
+          <a class="read-link" href="https://workos.com/blog/ai-agent-credentials" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag hot">DeepSeek</span>
-            <span class="tag news">Pricing</span>
+            <span class="tag hot">Productivity</span>
+            <span class="tag tool">Teams</span>
           </div>
-          <h3>DeepSeek made its 75% discount permanent</h3>
-          <p class="summary">A price-floor move: DeepSeek reportedly made its V4 Pro discount permanent, escalating the AI price war across high-volume deployments.</p>
-          <p class="why">Why it matters: pricing changes which agent products are viable and forces a sharper story than “we call an API.”</p>
-          <p class="source">Source: TLDR AI, May 25</p>
-          <a class="read-link" href="https://thenextweb.com/news/deepseek-v4-pro-75-percent-price-cut-permanent" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Managers are falling behind the AI speedup</h3>
+          <p class="summary">Teams ship faster with AI, but managers struggle to set direction, prioritize, and run fast feedback loops without micromanaging.</p>
+          <p class="why">Why it matters: the throughput gains are real, but so are coordination costs and quality regressions if management systems don’t evolve.</p>
+          <p class="source">Source: TLDR Product, May 26</p>
+          <a class="read-link" href="https://hbr.org/2026/05/managers-are-struggling-to-keep-up-with-the-ai-productivity-boom" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag hot">OpenAI</span>
-            <span class="tag tool">Builders</span>
-          </div>
-          <h3>Vibe-coding is turning into “feature shipping”</h3>
-          <p class="summary">A field report on a Replit agent building a small product slice end-to-end in minutes (image handling, UI, exports, routing, deployment).</p>
-          <p class="why">Why it matters: the bottleneck shifts from implementation to judgment—scoping, review, and maintenance discipline.</p>
-          <p class="source">Source: TLDR Founders, May 25</p>
-          <a class="read-link" href="https://www.saastr.com/even-a-mediocre-prompt-can-build-pretty-good-software-today/" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
+            <span class="tag hot">Builders</span>
             <span class="tag tool">Agents</span>
-            <span class="tag news">UI</span>
           </div>
-          <h3>Plastic user interfaces are the next UX battleground</h3>
-          <p class="summary">An argument for “headless” products where the interface becomes malleable—agent, voice, and custom surfaces as the front-end you actually interact with.</p>
-          <p class="why">Why it matters: if agents mediate the UI, defensibility shifts toward data + workflows + distribution rather than pixels.</p>
-          <p class="source">Source: TLDR Founders, May 25</p>
-          <a class="read-link" href="https://tomtunguz.com/plastic-user-interfaces/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>“Vibe coding” isn’t the point — direction is</h3>
+          <p class="summary">A reframing of Karpathy’s line: as AI handles more execution, the durable work is scoping, sequencing, and measuring outcomes.</p>
+          <p class="why">Why it matters: agentic engineering is turning into a product discipline; teams need clearer definitions of “done,” not more output.</p>
+          <p class="source">Source: TLDR Product, May 26</p>
+          <a class="read-link" href="https://jeffgothelf.com/blog/karpathy-said-vibe-coding-is-obsolete-what-he-described-instead-is-product-management/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag tool">Agents</span>
-            <span class="tag news">Reliability</span>
-          </div>
-          <h3>Temporal blind spots are breaking enterprise RAG</h3>
-          <p class="summary">A practical taxonomy of time-related failure modes in RAG systems (stale facts, missing effective dates, time windows) and how to structure retrieval to respect time.</p>
-          <p class="why">Why it matters: agent correctness often fails on “when” rather than “what”; time-aware retrieval is a baseline requirement for real workflows.</p>
-          <p class="source">Source: TLDR Data, May 25</p>
-          <a class="read-link" href="https://ragaboutit.com/7-temporal-blind-spots-breaking-enterprise-rag/" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
-            <span class="tag hot">Meta</span>
+            <span class="tag hot">Hardware</span>
             <span class="tag tool">Infra</span>
           </div>
-          <h3>LinkedIn’s HashMap resize froze production</h3>
-          <p class="summary">A Rust service hit a 10–15s freeze when a HashMap resize triggered a massive mmap allocation, grabbing the process-wide mmap lock and stalling the async runtime.</p>
-          <p class="why">Why it matters: these “everything stops” failures are exactly what make AI systems feel unreliable at scale—steal the debugging and mitigation patterns.</p>
-          <p class="source">Source: TLDR Data, May 25</p>
-          <a class="read-link" href="https://www.linkedin.com/blog/engineering/feed/the-58-million-key-freeze-what-a-hashmap-resize-taught-us-about-memory-allocation-at-scale" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>AI hardware is still a market-structure story</h3>
+          <p class="summary">A sweep across the GPU supply chain and where constraints are likely to land next: packaging, networking, memory, and power/thermal realities.</p>
+          <p class="why">Why it matters: product roadmaps and model throughput increasingly bottleneck on infra availability and unit economics.</p>
+          <p class="source">Source: TLDR AI, May 26</p>
+          <a class="read-link" href="https://www.categoryvc.com/writing/where-the-ai-hardware-market-is" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag tool">Infra</span>
-            <span class="tag news">Observability</span>
+            <span class="tag hot">Apple</span>
+            <span class="tag news">Image Gen</span>
           </div>
-          <h3>OpenTelemetry is now “graduated”</h3>
-          <p class="summary">CNCF graduated OpenTelemetry, reinforcing it as the vendor-neutral baseline for metrics, logs, and traces.</p>
-          <p class="why">Why it matters: agents amplify debugging needs; standardized telemetry is table stakes for any serious deployment.</p>
-          <p class="source">Source: TLDR Data, May 25</p>
-          <a class="read-link" href="https://www.cncf.io/announcements/2026/05/21/cloud-native-computing-foundation-announces-opentelemetrys-graduation-solidifying-status-as-the-de-facto-observability-standard/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Apple’s Genmoji + Image Playground reportedly getting a big upgrade</h3>
+          <p class="summary">A report says Apple plans a major visual overhaul for its consumer image-gen features ahead of WWDC 2026.</p>
+          <p class="why">Why it matters: better default image quality in first-party surfaces can reset user expectations (and competitive pressure) overnight.</p>
+          <p class="source">Source: TLDR AI, May 26</p>
+          <a class="read-link" href="https://in.mashable.com/tech/110086/apples-genmoji-and-image-playground-set-for-major-visual-overhaul-in-ios-27-ahead-of-wwdc-2026" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
@@ -442,56 +406,49 @@
     <section id="topics">
       <div class="section-title">
         <h2>Hot Topics</h2>
-        <span class="count">7 threads</span>
+        <span class="count">6 threads</span>
       </div>
       <div class="stack">
         <div class="topic">
           <div class="score">1</div>
           <div>
-            <strong>Security is becoming a first-class model frontier</strong>
-            <span>Mythos packaging + exploit evals suggest “capability” now includes high-risk, end-to-end operational workflows.</span>
+            <strong>Agent identity + permissions are becoming the “real app”</strong>
+            <span>Scoped credentials, policy, and audit trails are the difference between a prototype and production agent workflows.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">2</div>
           <div>
-            <strong>The “0.5 layer” threat is real for app companies</strong>
-            <span>If agents can route around glue code, moats shift to data, regulation, distribution, and relationships.</span>
+            <strong>Execution is cheaper; judgment is the bottleneck</strong>
+            <span>As “vibe coding” turns into shipping, orgs need tighter prioritization, review, and definitions of quality.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">3</div>
           <div>
-            <strong>Pricing pressure keeps accelerating</strong>
-            <span>Permanent discounts + fast tiers reshape which products can exist and compress time-to-commoditization.</span>
+            <strong>Managers need new operating rhythms for AI speed</strong>
+            <span>Fast feedback loops, clearer direction, and better metrics matter more than adding yet another tool.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">4</div>
           <div>
-            <strong>Time-awareness is a reliability requirement</strong>
-            <span>Temporal retrieval is moving from “nice-to-have” to baseline for production RAG and agent systems.</span>
+            <strong>Hardware constraints still shape “what’s possible”</strong>
+            <span>Packaging, networking, memory, and power keep acting as hidden governors on model + agent deployments.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">5</div>
           <div>
-            <strong>Interfaces are becoming programmable + personal</strong>
-            <span>Plastic UIs imply a future where one product ships many front-ends (agent, voice, embedded, bespoke).</span>
+            <strong>Consumer image generation is moving into default OS surfaces</strong>
+            <span>Quality jumps in Apple’s image tools can shift baseline expectations quickly.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">6</div>
           <div>
-            <strong>Infra is where outages hide</strong>
-            <span>The HashMap freeze is a reminder: allocators, kernel locks, and tail latency dominate user experience.</span>
-          </div>
-        </div>
-        <div class="topic">
-          <div class="score">7</div>
-          <div>
-            <strong>Observability is consolidating around OpenTelemetry</strong>
-            <span>Standard telemetry and traceability become a competitive advantage as AI systems get more distributed.</span>
+            <strong>AI’s impact on science is changing the loop</strong>
+            <span>Discovery workflows evolve when models can propose hypotheses, generate candidates, and compress iteration time.</span>
           </div>
         </div>
       </div>
@@ -504,40 +461,40 @@
       </div>
       <div class="grid two">
         <article class="card">
-          <div class="tag-row"><span class="tag research">Strategy</span><span class="tag tool">Moats</span></div>
-          <h3>The AI bifurcation of tech (the “0.5 layer”)</h3>
-          <p class="summary">A framing for how application companies get routed around by agents—and what moats still matter (data, regulation, distribution, relationships).</p>
-          <a class="read-link" href="https://neevash.com/blog/tech-bifurcation-and-the-0.5-layer" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Agents</span><span class="tag tool">Security</span></div>
+          <h3>Securing agentic apps with dedicated credentials</h3>
+          <p class="summary">Why agents should have their own identity, scoped authorization, and audit logs—rather than inheriting a user’s entire OAuth session.</p>
+          <a class="read-link" href="https://workos.com/blog/ai-agent-credentials" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Graphs</span><span class="tag tool">Knowledge</span></div>
-          <h3>Choosing the Right Graph</h3>
-          <p class="summary">A practical comparison of RDF/OWL vs property graphs, focusing on governance, reasoning/provenance, traversal performance, and developer ergonomics.</p>
-          <a class="read-link" href="https://jessicatalisman.substack.com/p/choosing-the-right-graph" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Org</span><span class="tag tool">Leadership</span></div>
+          <h3>Keeping up with the AI productivity boom</h3>
+          <p class="summary">A management view on what breaks when teams accelerate: prioritization, direction-setting, and feedback loops.</p>
+          <a class="read-link" href="https://hbr.org/2026/05/managers-are-struggling-to-keep-up-with-the-ai-productivity-boom" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Data</span><span class="tag tool">Flink</span></div>
-          <h3>Grab’s one-click ingestion platform</h3>
-          <p class="summary">How Grab unified self-service ingestion into a Flink-based workflow spanning RDS CDC and Kafka, cutting onboarding time and reducing governance issues early.</p>
-          <a class="read-link" href="https://engineering.grab.com/one-click-data-ingestion-platform-with-apache-flink" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Hardware</span><span class="tag tool">Infra</span></div>
+          <h3>Where the AI hardware market is (and what constrains it)</h3>
+          <p class="summary">A map of the supply chain and bottlenecks that matter most: packaging, memory, networking, and power/thermal limits.</p>
+          <a class="read-link" href="https://www.categoryvc.com/writing/where-the-ai-hardware-market-is" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Infra</span><span class="tag tool">MySQL</span></div>
-          <h3>Bintrail: time-travel queries via indexed binlogs</h3>
-          <p class="summary">ProxySQL-backed binlog indexing adds “AS OF” style queries and snapshot diffs in MySQL without schema changes or data copies.</p>
-          <a class="read-link" href="https://www.infoq.com/news/2026/05/bintrail-mysql-timetravel/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Science</span><span class="tag tool">AI</span></div>
+          <h3>AI is doing something weird to science</h3>
+          <p class="summary">A long-form exploration of how models change the scientific loop (hypothesis, experimentation, feedback), and what that does to incentives.</p>
+          <a class="read-link" href="https://blog.apiad.net/p/ai-is-doing-something-weird-to-science" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Systems</span><span class="tag tool">JVM</span></div>
-          <h3>The JVM “tax” isn’t inevitable</h3>
-          <p class="summary">Benchmarks of simple vectorized kernels over Apache Arrow buffers in pure Java vs native arrow-rs show comparable performance once the JVM is warmed up.</p>
-          <a class="read-link" href="https://semyonsinchenko.github.io/ssinchenko/post/jvm-tax/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Ethics</span><span class="tag tool">Policy</span></div>
+          <h3>Notes on Pope Leo XIV’s encyclical on AI</h3>
+          <p class="summary">A readable summary of a major ethics document touching environmental costs, algorithmic decision-making, and how AI concentrates power.</p>
+          <a class="read-link" href="https://simonwillison.net/2026/May/25/encyclical-on-ai/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Infra</span><span class="tag tool">Locks</span></div>
-          <h3>The 58-million-key freeze</h3>
-          <p class="summary">A postmortem-grade walkthrough of how a HashMap resize caused global lock contention and runtime-wide stalls—plus the mitigations that made it go away.</p>
-          <a class="read-link" href="https://www.linkedin.com/blog/engineering/feed/the-58-million-key-freeze-what-a-hashmap-resize-taught-us-about-memory-allocation-at-scale" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Practice</span><span class="tag tool">Ops</span></div>
+          <h3>Building an “AI VP of Customer Success” (and what broke)</h3>
+          <p class="summary">Lessons from building an internal agent: start from real workflows, personalize carefully, roll out slowly, and manage it daily.</p>
+          <a class="read-link" href="https://www.saastr.com/top-10-learnings-from-building-our-own-ai-vp-of-customer-success-qbee" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
@@ -549,40 +506,40 @@
       </div>
       <div class="grid">
         <article class="card">
-          <div class="tag-row"><span class="tag news">Space</span><span class="tag tool">Launch</span></div>
-          <h3>Starship V3 flew for the first time</h3>
-          <p class="summary">SpaceX launched Starship V3 on Flight 12 from a new pad—an important systems test as Starship remains a linchpin for future missions.</p>
-          <a class="read-link" href="https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-v3-megarocket-first-test-flight" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Work</span><span class="tag tool">Agents</span></div>
+          <h3>From SaaS tools to AI workspaces</h3>
+          <p class="summary">A thread on the shift from “apps you click” to work happening inside agents that orchestrate SaaS tools alongside humans.</p>
+          <a class="read-link" href="https://threadreaderapp.com/thread/2058914803360600238.html" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Web</span><span class="tag tool">DX</span></div>
-          <h3>Don’t roll your own browser features</h3>
-          <p class="summary">A reminder that re-implementing what browsers already do well tends to create hidden security and maintenance costs.</p>
-          <a class="read-link" href="https://susam.net/do-not-roll-your-own.html" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Testing</span><span class="tag tool">UX</span></div>
+          <h3>A quick look into discrimination testing</h3>
+          <p class="summary">A compact overview of methods to test whether users can actually detect differences between product variants.</p>
+          <a class="read-link" href="https://brandonrozek.com/blog/discrimination-testing/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Dev</span><span class="tag tool">Culture</span></div>
-          <h3>The “Eternal Sloptember” critique</h3>
-          <p class="summary">A sharp counterpoint arguing that uncritical adoption of coding agents could become an expensive industry mistake.</p>
-          <a class="read-link" href="https://geohot.github.io//blog/jekyll/update/2026/05/24/the-eternal-sloptember.html" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Culture</span><span class="tag tool">Writing</span></div>
+          <h3>The social contract of writing</h3>
+          <p class="summary">A reminder that good writing is labor: readers notice when authors didn’t do the work.</p>
+          <a class="read-link" href="https://jola.dev/posts/the-social-contract-of-writing" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Infra</span><span class="tag tool">Observability</span></div>
-          <h3>OpenTelemetry graduation announcement</h3>
-          <p class="summary">A marker of production maturity and continued consolidation around the same telemetry substrate.</p>
-          <a class="read-link" href="https://www.cncf.io/announcements/2026/05/21/cloud-native-computing-foundation-announces-opentelemetrys-graduation-solidifying-status-as-the-de-facto-observability-standard/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Science</span><span class="tag tool">Aerospace</span></div>
+          <h3>Japan’s hypersonic engine ground test</h3>
+          <p class="summary">JAXA + university teams completed a combustion trial for a Mach-5 passenger aircraft engine concept, aiming at 2040s service.</p>
+          <a class="read-link" href="https://www.bgr.com/2178211/japan-hypersonic-engine-ramjet-2-hour-flights-to-us/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">AR</span><span class="tag tool">Hardware</span></div>
-          <h3>Snap Specs AR glasses reportedly ~$2500</h3>
-          <p class="summary">A report claims Snap’s next AR glasses could land this fall at a premium price point.</p>
-          <a class="read-link" href="https://www.uploadvr.com/snap-specs-ar-glasses-reportedly-launch-this-fall-for-2500/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Finance</span><span class="tag tool">Crypto</span></div>
+          <h3>Tether plans a stablecoin for Georgia</h3>
+          <p class="summary">A quick hit on a country-tied stablecoin that emphasizes lower transaction costs and programmable payments.</p>
+          <a class="read-link" href="https://www.engadget.com/2180540/tether-will-launch-an-official-stablecoin-in-georgia-tied-to-local-currency/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">China</span><span class="tag tool">Space</span></div>
-          <h3>Shenzhou-23 mission launched</h3>
-          <p class="summary">China launched Shenzhou-23 with a mission profile that could include a record one-year stay in orbit for one crew member.</p>
-          <a class="read-link" href="https://au.finance.yahoo.com/news/china-launches-shenzhou-23-mission-022212095.html" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Teams</span><span class="tag tool">Feedback</span></div>
+          <h3>Which lies are you telling yourself?</h3>
+          <p class="summary">A prompt to challenge “unchangeable” assumptions about roadmaps, customer access, sales promises, and executive decisions.</p>
+          <a class="read-link" href="https://dpereira.substack.com/p/which-lies-are-you-telling-yourself" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
