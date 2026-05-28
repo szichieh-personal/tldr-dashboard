@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TLDR May 26 Dashboard</title>
+  <title>TLDR May 28 Dashboard</title>
   <style>
     :root {
       color-scheme: light;
@@ -319,11 +319,11 @@
 <body>
   <main>
     <header>
-      <h1>TLDR May 26 Brief</h1>
-      <p class="subtitle">Mobile scan of three TLDR newsletter issues from May 26, focused on agent security, AI productivity, and hardware + media shifts.</p>
+      <h1>TLDR May 28 Brief</h1>
+      <p class="subtitle">Mobile scan of three TLDR newsletter issues from May 28, focused on private agent integrations (MCP), multimodal product surface area, and AI/data infrastructure.</p>
       <div class="meta">
         <span class="pill">3 newsletters</span>
-        <span class="pill">May 26, 2026</span>
+        <span class="pill">May 28, 2026</span>
         <span class="pill">TLDR newsletter label</span>
       </div>
     </header>
@@ -343,62 +343,62 @@
       <div class="grid">
         <article class="card lead-card">
           <div class="tag-row">
-            <span class="tag hot">Agents</span>
-            <span class="tag research">Security</span>
+            <span class="tag hot">OpenAI</span>
+            <span class="tag research">Agents</span>
           </div>
-          <h3>Stop giving agents your whole OAuth token</h3>
-          <p class="summary">A practical case for giving AI agents their own identity + scoped credentials, instead of inheriting a user’s full session and expanding the blast radius.</p>
-          <p class="why">Why it matters: as agentic apps move from demos to production, permission boundaries and auditability become the real product surface.</p>
-          <p class="source">Source: TLDR, May 26</p>
-          <a class="read-link" href="https://workos.com/blog/ai-agent-credentials" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>OpenAI Secure MCP Tunnel (private MCP without inbound exposure)</h3>
+          <p class="summary">A new pattern for wiring private MCP servers into ChatGPT/Codex/API workflows: dial out from inside your network rather than opening inbound access.</p>
+          <p class="why">Why it matters: private tool access is the blocker for real agents; tunnels shift the debate from “can we connect?” to “how do we scope + audit?”</p>
+          <p class="source">Source: TLDR AI, May 28</p>
+          <a class="read-link" href="https://github.com/openai/tunnel-client" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag hot">Productivity</span>
-            <span class="tag tool">Teams</span>
+            <span class="tag hot">Google</span>
+            <span class="tag tool">Gemini</span>
           </div>
-          <h3>Managers are falling behind the AI speedup</h3>
-          <p class="summary">Teams ship faster with AI, but managers struggle to set direction, prioritize, and run fast feedback loops without micromanaging.</p>
-          <p class="why">Why it matters: the throughput gains are real, but so are coordination costs and quality regressions if management systems don’t evolve.</p>
-          <p class="source">Source: TLDR Product, May 26</p>
-          <a class="read-link" href="https://hbr.org/2026/05/managers-are-struggling-to-keep-up-with-the-ai-productivity-boom" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Gemini “Projects” turns prompts into shared team workspaces</h3>
+          <p class="summary">Google is expanding Gemini for Business with shareable Projects—dedicated, collaborative spaces meant to persist context across surfaces.</p>
+          <p class="why">Why it matters: the winning UX is increasingly “project memory + artifacts”, not just chat—especially for teams.</p>
+          <p class="source">Source: TLDR AI, May 28</p>
+          <a class="read-link" href="https://www.testingcatalog.com/google-expands-gemini-for-business-with-shareable-projects/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag hot">Builders</span>
-            <span class="tag tool">Agents</span>
+            <span class="tag hot">Anthropic</span>
+            <span class="tag news">Multimodal</span>
           </div>
-          <h3>“Vibe coding” isn’t the point — direction is</h3>
-          <p class="summary">A reframing of Karpathy’s line: as AI handles more execution, the durable work is scoping, sequencing, and measuring outcomes.</p>
-          <p class="why">Why it matters: agentic engineering is turning into a product discipline; teams need clearer definitions of “done,” not more output.</p>
-          <p class="source">Source: TLDR Product, May 26</p>
-          <a class="read-link" href="https://jeffgothelf.com/blog/karpathy-said-vibe-coding-is-obsolete-what-he-described-instead-is-product-management/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Claude Voice Mode expanding to 18 new languages</h3>
+          <p class="summary">Anthropic plans to expand Claude’s voice mode to more languages, pushing voice from novelty into a default interaction surface.</p>
+          <p class="why">Why it matters: voice changes where agents can live (mobile, in-car, ambient) and raises reliability + privacy expectations.</p>
+          <p class="source">Source: TLDR AI, May 28</p>
+          <a class="read-link" href="https://www.testingcatalog.com/anthropic-plans-expanding-claude-voice-mode-to-more-languages/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag hot">Hardware</span>
-            <span class="tag tool">Infra</span>
+            <span class="tag research">Governance</span>
+            <span class="tag tool">Architecture</span>
           </div>
-          <h3>AI hardware is still a market-structure story</h3>
-          <p class="summary">A sweep across the GPU supply chain and where constraints are likely to land next: packaging, networking, memory, and power/thermal realities.</p>
-          <p class="why">Why it matters: product roadmaps and model throughput increasingly bottleneck on infra availability and unit economics.</p>
-          <p class="source">Source: TLDR AI, May 26</p>
-          <a class="read-link" href="https://www.categoryvc.com/writing/where-the-ai-hardware-market-is" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>AI risk is an architecture problem (not just a model problem)</h3>
+          <p class="summary">A framing for safety/compliance: map what the system can see, what its output touches, and what it can do without checks.</p>
+          <p class="why">Why it matters: the fastest wins are often deterministic guardrails + bounded permissions, not “better prompts”.</p>
+          <p class="source">Source: TLDR Data, May 28</p>
+          <a class="read-link" href="https://appliedingenuity.substack.com/p/ai-risk-is-an-architecture-problem" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag hot">Apple</span>
-            <span class="tag news">Image Gen</span>
+            <span class="tag research">Agents</span>
+            <span class="tag tool">Analytics</span>
           </div>
-          <h3>Apple’s Genmoji + Image Playground reportedly getting a big upgrade</h3>
-          <p class="summary">A report says Apple plans a major visual overhaul for its consumer image-gen features ahead of WWDC 2026.</p>
-          <p class="why">Why it matters: better default image quality in first-party surfaces can reset user expectations (and competitive pressure) overnight.</p>
-          <p class="source">Source: TLDR AI, May 26</p>
-          <a class="read-link" href="https://in.mashable.com/tech/110086/apples-genmoji-and-image-playground-set-for-major-visual-overhaul-in-ios-27-ahead-of-wwdc-2026" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Open-source “analytics agents” are wildly different products</h3>
+          <p class="summary">A field report on five open-source analytics-agent approaches—and why reliability depends on where business context actually lives (semantic model, docs, prompts, tools).</p>
+          <p class="why">Why it matters: if you’re building agent tooling, “context substrate” choices matter more than the chat UI.</p>
+          <p class="source">Source: TLDR Data, May 28</p>
+          <a class="read-link" href="https://thenewaiorder.substack.com/p/i-battletested-5-open-source-analytics" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
@@ -412,43 +412,43 @@
         <div class="topic">
           <div class="score">1</div>
           <div>
-            <strong>Agent identity + permissions are becoming the “real app”</strong>
-            <span>Scoped credentials, policy, and audit trails are the difference between a prototype and production agent workflows.</span>
+            <strong>Private tool access is shifting from “VPN it” to “tunnel it”</strong>
+            <span>MCP tunnels make private integrations feasible; the real differentiation becomes scoping, policy, and auditability.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">2</div>
           <div>
-            <strong>Execution is cheaper; judgment is the bottleneck</strong>
-            <span>As “vibe coding” turns into shipping, orgs need tighter prioritization, review, and definitions of quality.</span>
+            <strong>Workspaces + artifacts are the new AI product primitive</strong>
+            <span>Projects, shareable context, and persisted outputs matter more than raw chat throughput.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">3</div>
           <div>
-            <strong>Managers need new operating rhythms for AI speed</strong>
-            <span>Fast feedback loops, clearer direction, and better metrics matter more than adding yet another tool.</span>
+            <strong>Voice makes “agent UX” ambient (and higher stakes)</strong>
+            <span>As voice expands across languages, reliability + privacy become table stakes for multimodal assistants.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">4</div>
           <div>
-            <strong>Hardware constraints still shape “what’s possible”</strong>
-            <span>Packaging, networking, memory, and power keep acting as hidden governors on model + agent deployments.</span>
+            <strong>Vector search is becoming a first-class database workload</strong>
+            <span>Distributed systems need vector indexing designs that handle real-time inserts/deletes and rebalancing.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">5</div>
           <div>
-            <strong>Consumer image generation is moving into default OS surfaces</strong>
-            <span>Quality jumps in Apple’s image tools can shift baseline expectations quickly.</span>
+            <strong>Agent risk controls are mostly architecture choices</strong>
+            <span>Bounded permissions, deterministic validations, and human review loops beat “prompt hardening” alone.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">6</div>
           <div>
-            <strong>AI’s impact on science is changing the loop</strong>
-            <span>Discovery workflows evolve when models can propose hypotheses, generate candidates, and compress iteration time.</span>
+            <strong>AI-for-science is heading toward “world models”</strong>
+            <span>Protein biology models + atlases hint at discovery loops where representation learning becomes the interface to nature.</span>
           </div>
         </div>
       </div>
@@ -461,40 +461,40 @@
       </div>
       <div class="grid two">
         <article class="card">
-          <div class="tag-row"><span class="tag research">Agents</span><span class="tag tool">Security</span></div>
-          <h3>Securing agentic apps with dedicated credentials</h3>
-          <p class="summary">Why agents should have their own identity, scoped authorization, and audit logs—rather than inheriting a user’s entire OAuth session.</p>
-          <a class="read-link" href="https://workos.com/blog/ai-agent-credentials" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">AI Infra</span><span class="tag tool">Vector</span></div>
+          <h3>How CockroachDB built vector indexing at scale</h3>
+          <p class="summary">A readable breakdown of C-SPANN: hierarchical K-means clustering stored as table data, built to survive real-time inserts, deletes, and rebalancing.</p>
+          <a class="read-link" href="https://blog.bytebytego.com/p/how-cockroachdb-built-vector-indexing" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Org</span><span class="tag tool">Leadership</span></div>
-          <h3>Keeping up with the AI productivity boom</h3>
-          <p class="summary">A management view on what breaks when teams accelerate: prioritization, direction-setting, and feedback loops.</p>
-          <a class="read-link" href="https://hbr.org/2026/05/managers-are-struggling-to-keep-up-with-the-ai-productivity-boom" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">AI Safety</span><span class="tag tool">Systems</span></div>
+          <h3>AI risk is an architecture problem</h3>
+          <p class="summary">A system-level map of risk: data exposure, incorrect outputs, unintended actions—then choose controls where outputs connect to reality.</p>
+          <a class="read-link" href="https://appliedingenuity.substack.com/p/ai-risk-is-an-architecture-problem" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Hardware</span><span class="tag tool">Infra</span></div>
-          <h3>Where the AI hardware market is (and what constrains it)</h3>
-          <p class="summary">A map of the supply chain and bottlenecks that matter most: packaging, memory, networking, and power/thermal limits.</p>
-          <a class="read-link" href="https://www.categoryvc.com/writing/where-the-ai-hardware-market-is" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Science</span><span class="tag tool">Biology</span></div>
+          <h3>Biohub’s “world model” of protein biology</h3>
+          <p class="summary">An open stack (model + folding + atlas) aimed at making protein representations searchable and reusable across discovery workflows.</p>
+          <a class="read-link" href="https://biohub.org/news/world-model-of-protein-biology/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Science</span><span class="tag tool">AI</span></div>
-          <h3>AI is doing something weird to science</h3>
-          <p class="summary">A long-form exploration of how models change the scientific loop (hypothesis, experimentation, feedback), and what that does to incentives.</p>
-          <a class="read-link" href="https://blog.apiad.net/p/ai-is-doing-something-weird-to-science" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Streaming</span><span class="tag tool">Kafka</span></div>
+          <h3>Kafka Share Groups and max.poll.records tuning</h3>
+          <p class="summary">A practical guide to avoiding “greedy capture” and getting stable throughput when consumption parallelism changes the bottleneck.</p>
+          <a class="read-link" href="https://jack-vanlightly.com/blog/2026/5/25/kafka-share-groups-and-parallelizing-consumption-part-1-tuning-maxpollrecords" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Ethics</span><span class="tag tool">Policy</span></div>
-          <h3>Notes on Pope Leo XIV’s encyclical on AI</h3>
-          <p class="summary">A readable summary of a major ethics document touching environmental costs, algorithmic decision-making, and how AI concentrates power.</p>
-          <a class="read-link" href="https://simonwillison.net/2026/May/25/encyclical-on-ai/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Storage</span><span class="tag tool">S3</span></div>
+          <h3>Design S3 object storage like a senior engineer</h3>
+          <p class="summary">A tour of S3-scale design: immutable objects, distributed metadata, chunking, segment compaction, and sharding strategies.</p>
+          <a class="read-link" href="https://links.tldrnewsletter.com/EXPYth" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Practice</span><span class="tag tool">Ops</span></div>
-          <h3>Building an “AI VP of Customer Success” (and what broke)</h3>
-          <p class="summary">Lessons from building an internal agent: start from real workflows, personalize carefully, roll out slowly, and manage it daily.</p>
-          <a class="read-link" href="https://www.saastr.com/top-10-learnings-from-building-our-own-ai-vp-of-customer-success-qbee" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Cost</span><span class="tag tool">Snowflake</span></div>
+          <h3>Cutting a $140k Snowflake bill to $38k</h3>
+          <p class="summary">A concrete playbook: warehouse right-sizing, auto-suspend, retention cleanup, and query/data layout changes that actually move cost curves.</p>
+          <a class="read-link" href="https://links.tldrnewsletter.com/wJzLSy" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
@@ -506,40 +506,40 @@
       </div>
       <div class="grid">
         <article class="card">
-          <div class="tag-row"><span class="tag news">Work</span><span class="tag tool">Agents</span></div>
-          <h3>From SaaS tools to AI workspaces</h3>
-          <p class="summary">A thread on the shift from “apps you click” to work happening inside agents that orchestrate SaaS tools alongside humans.</p>
-          <a class="read-link" href="https://threadreaderapp.com/thread/2058914803360600238.html" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Devin</span><span class="tag tool">Startups</span></div>
+          <h3>Cognition raises $1B+ at a $26B valuation</h3>
+          <p class="summary">A big “AI software engineer” bet: match models to tasks, push automation into real teams, and scale product + engineering.</p>
+          <a class="read-link" href="https://cognition.ai/blog/series-d" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Testing</span><span class="tag tool">UX</span></div>
-          <h3>A quick look into discrimination testing</h3>
-          <p class="summary">A compact overview of methods to test whether users can actually detect differences between product variants.</p>
-          <a class="read-link" href="https://brandonrozek.com/blog/discrimination-testing/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Audio</span><span class="tag tool">Gen</span></div>
+          <h3>ElevenLabs launches Music v2</h3>
+          <p class="summary">A music-generation model pitched around coherence while switching genres mid-track—another step toward multimodal creative stacks.</p>
+          <a class="read-link" href="https://elevenlabs.io/blog/introducing-music-v2" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Culture</span><span class="tag tool">Writing</span></div>
-          <h3>The social contract of writing</h3>
-          <p class="summary">A reminder that good writing is labor: readers notice when authors didn’t do the work.</p>
-          <a class="read-link" href="https://jola.dev/posts/the-social-contract-of-writing" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Roadmap</span><span class="tag tool">DeepMind</span></div>
+          <h3>Hassabis moves his AGI timeline up</h3>
+          <p class="summary">A quick hit on Demis Hassabis projecting AGI by ~2029–2030, a meaningful acceleration from prior public estimates.</p>
+          <a class="read-link" href="https://sherwood.news/tech/google-deepminds-hassabis-agi-is-3-to-4-years-away/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Science</span><span class="tag tool">Aerospace</span></div>
-          <h3>Japan’s hypersonic engine ground test</h3>
-          <p class="summary">JAXA + university teams completed a combustion trial for a Mach-5 passenger aircraft engine concept, aiming at 2040s service.</p>
-          <a class="read-link" href="https://www.bgr.com/2178211/japan-hypersonic-engine-ramjet-2-hour-flights-to-us/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Robots</span><span class="tag tool">Tesla</span></div>
+          <h3>Tesla’s Optimus factory build-out begins</h3>
+          <p class="summary">A reminder that “humanoid robots” narratives are becoming capital + facilities decisions, not just demo videos.</p>
+          <a class="read-link" href="https://www.teslarati.com/tesla-dedicated-optimus-factory-construction-officially-underway-giga-texas/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Finance</span><span class="tag tool">Crypto</span></div>
-          <h3>Tether plans a stablecoin for Georgia</h3>
-          <p class="summary">A quick hit on a country-tied stablecoin that emphasizes lower transaction costs and programmable payments.</p>
-          <a class="read-link" href="https://www.engadget.com/2180540/tether-will-launch-an-official-stablecoin-in-georgia-tied-to-local-currency/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Data</span><span class="tag tool">Polars</span></div>
+          <h3>Polars 1.41 ships query/runtime improvements</h3>
+          <p class="summary">A practical release with faster Parquet decoding, deeper common-subplan elimination, and a new gather() API.</p>
+          <a class="read-link" href="https://pola.rs/posts/polars-1-41/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Teams</span><span class="tag tool">Feedback</span></div>
-          <h3>Which lies are you telling yourself?</h3>
-          <p class="summary">A prompt to challenge “unchangeable” assumptions about roadmaps, customer access, sales promises, and executive decisions.</p>
-          <a class="read-link" href="https://dpereira.substack.com/p/which-lies-are-you-telling-yourself" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Space</span><span class="tag tool">Infra</span></div>
+          <h3>SpaceX IPO talk + data centers in space</h3>
+          <p class="summary">A Stratechery-style lens on valuation narratives and how “in-space compute” could become part of the story.</p>
+          <a class="read-link" href="https://stratechery.com/2026/the-spacex-ipo-and-data-centers-in-space/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
