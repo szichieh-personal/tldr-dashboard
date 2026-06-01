@@ -1,1 +1,560 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TLDR Jun 1 Dashboard</title><style>:root {color-scheme: light;--blossom: #f4c4cc;--pistachio: #b9d9c8;--serene: #acd7df;--canary: #ffefb3;--latte: #d2c4b8;--bg: #f7f4ef;--ink: #1f211e;--muted: #665f59;--panel: #fffdf9;--line: #d8cbc0;--hot: #7f2f3b;--hot-bg: #f4c4cc;--research: #275541;--research-bg: #d9eadf;--news: #6e5511;--news-bg: #ffefb3;--tool: #245567;--tool-bg: #d8edf1;--shadow: 0 10px 28px rgba(74, 61, 50, 0.1);}* {box-sizing: border-box;}body {margin: 0;font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;background: var(--bg);color: var(--ink);line-height: 1.4;letter-spacing: 0;}main {width: min(100%, 760px);margin: 0 auto;padding: 18px 14px 36px;}header {padding: 12px 2px 16px;}h1, h2, h3, p {margin: 0;}h1 {font-size: 2rem;line-height: 1.05;font-weight: 780;max-width: 12ch;}.subtitle {margin-top: 10px;color: var(--muted);font-size: 0.98rem;max-width: 38rem;}.meta {display: flex;gap: 8px;flex-wrap: wrap;margin-top: 14px;}.pill {display: inline-flex;align-items: center;min-height: 32px;padding: 6px 10px;border: 1px solid var(--line);border-radius: 999px;background: rgba(255, 253, 249, 0.76);color: var(--muted);font-size: 0.82rem;font-weight: 650;white-space: nowrap;}nav {position: sticky;top: 0;z-index: 2;display: grid;grid-auto-flow: column;grid-auto-columns: max-content;gap: 8px;overflow-x: auto;padding: 10px 0;margin: 0 -14px 14px;padding-inline: 14px;background: rgba(247, 244, 239, 0.93);backdrop-filter: blur(12px);border-block: 1px solid rgba(220, 227, 220, 0.75);}nav a {color: var(--ink);text-decoration: none;background: var(--panel);border: 1px solid var(--line);border-radius: 999px;padding: 8px 11px;font-size: 0.86rem;font-weight: 720;white-space: nowrap;}section {scroll-margin-top: 86px;margin-top: 26px;}.section-title {display: flex;align-items: baseline;justify-content: space-between;gap: 10px;margin-bottom: 12px;}.section-title h2 {font-size: 1.25rem;font-weight: 780;}.count {font-size: 0.82rem;font-weight: 720;color: var(--muted);}.grid {display: grid;gap: 12px;}.grid.two {grid-template-columns: 1fr;}.stack {display: grid;gap: 10px;}.card {background: var(--panel);border: 1px solid var(--line);border-radius: 18px;padding: 14px 14px 15px;box-shadow: var(--shadow);}.lead-card {border-color: rgba(127, 47, 59, 0.22);background: linear-gradient(145deg, rgba(244, 196, 204, 0.38), rgba(255, 253, 249, 0.92));}.tag-row {display: flex;flex-wrap: wrap;gap: 6px;margin-bottom: 10px;}.tag {display: inline-flex;align-items: center;padding: 6px 10px;border-radius: 999px;font-size: 0.78rem;font-weight: 760;border: 1px solid rgba(31, 33, 30, 0.12);background: rgba(255, 253, 249, 0.95);color: var(--ink);}.tag.hot {border-color: rgba(127, 47, 59, 0.28);background: var(--hot-bg);color: var(--hot);}.tag.research {border-color: rgba(39, 85, 65, 0.24);background: var(--research-bg);color: var(--research);}.tag.news {border-color: rgba(110, 85, 17, 0.24);background: var(--news-bg);color: var(--news);}.tag.tool {border-color: rgba(36, 85, 103, 0.24);background: var(--tool-bg);color: var(--tool);}h3 {font-size: 1.05rem;line-height: 1.2;font-weight: 780;}.summary {margin-top: 8px;font-size: 0.92rem;color: var(--muted);}.why {margin-top: 10px;padding: 10px 11px;border-radius: 14px;border: 1px solid rgba(31, 33, 30, 0.08);background: rgba(172, 215, 223, 0.3);color: rgba(31, 33, 30, 0.86);font-size: 0.86rem;}.topic {display: grid;grid-template-columns: 44px 1fr;gap: 10px;align-items: start;background: var(--panel);padding: 12px 12px 12px;box-shadow: var(--shadow);border: 1px solid var(--line);border-radius: 18px;}.score {display: grid;place-items: center;width: 44px;height: 44px;border-radius: 8px;background: var(--serene);font-size: 0.94rem;font-weight: 820;}.topic strong {display: block;font-size: 0.95rem;line-height: 1.2;}.topic span {display: block;margin-top: 3px;color: var(--muted);font-size: 0.83rem;}.source {margin-top: 9px;color: var(--muted);font-size: 0.76rem;font-weight: 650;}.read-link {display: inline-flex;align-items: center;justify-content: center;min-height: 34px;margin-top: 11px;padding: 7px 11px;border-radius: 999px;background: var(--ink);color: var(--panel);font-size: 0.82rem;font-weight: 760;text-decoration: none;width: max-content;max-width: 100%;}.read-link:focus-visible {outline: 3px solid var(--canary);outline-offset: 2px;}@media (min-width: 680px) {main {padding-top: 28px;}h1 {max-width: none;font-size: 2.45rem;}.grid.two {grid-template-columns: repeat(2, minmax(0, 1fr));}}</style></head><body><main><header><h1>TLDR Jun 1 Brief</h1><p class="subtitle">Mobile scan of four TLDR newsletter issues from June 1, focused on “super app” agent UX, open-weight multimodal models, and retrieval / data-agent infrastructure.</p><div class="meta"><span class="pill">4 newsletters</span><span class="pill">June 1, 2026</span><span class="pill">TLDR newsletter label</span></div></header><nav aria-label="Dashboard sections"><a href="#attention">Attention</a><a href="#topics">Topics</a><a href="#research">Research</a><a href="#news">News</a></nav><section id="attention"><div class="section-title"><h2>Needs Your Attention</h2><span class="count">6 items</span></div><div class="grid"><article class="card lead-card"><div class="tag-row"><span class="tag hot">Microsoft</span><span class="tag tool">Agents</span></div><h3>Copilot “super app” points to an always-on agent home</h3><p class="summary">Leaked screenshots show Microsoft consolidating Copilot into a single hub with tabs for GitHub Copilot and an always-on “Scout” agent.</p><p class="why">Why it matters: once agents live in one persistent home (with project context + tools), distribution shifts from “best model” to “best workflow surface”.</p><p class="source">Source: TLDR AI, Jun 1</p><a class="read-link" href="https://www.testingcatalog.com/exclusive-new-screenshots-of-upcoming-copilot-super-app/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag hot">Multimodal</span><span class="tag tool">Open Weights</span></div><h3>MiniMax M3: open-weight, agentic, multimodal, ultra-long context</h3><p class="summary">A new open-weights model pitched for coding + agentic work, with image/video input and up to ~1M-token context.</p><p class="why">Why it matters: when open-weight models can “see”, run tools, and hold long context, the moat moves to product + evals + deployment reliability.</p><p class="source">Source: TLDR AI, Jun 1</p><a class="read-link" href="https://threadreaderapp.com/thread/2061266317815296322.html" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag hot">Meta</span><span class="tag research">Retrieval</span></div><h3>SilverTorch: turning retrieval pipelines into a single GPU model</h3><p class="summary">Meta describes an “Index as Model” approach that folds embedding, ANN search, filtering, reranking, and scoring into a unified PyTorch model.</p><p class="why">Why it matters: retrieval is becoming a differentiable, GPU-native workload — which changes tooling, cost models, and the interface for “context”.</p><p class="source">Source: TLDR Data, Jun 1</p><a class="read-link" href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag hot">OpenAI</span><span class="tag tool">Robotics</span></div><h3>OpenAI Robotics hiring: a signal to watch</h3><p class="summary">A hiring signal for full-stack hardware/ops/systems/ML roles as robotics becomes a serious product + manufacturing program.</p><p class="why">Why it matters: “physical agents” collapse the gap between model mistakes and real-world actions — safety and reliability become existential, not optional.</p><p class="source">Source: TLDR AI, Jun 1</p><a class="read-link" href="https://threadreaderapp.com/thread/2061117302528188712.html" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag hot">Agents</span><span class="tag tool">Data</span></div><h3>How Hex built a “lab bench” to evaluate data agents</h3><p class="summary">A practical blueprint for agent evals: stable baselines, realistic messy data, and controlled comparisons across prompts/models/memory/search.</p><p class="why">Why it matters: most agent failures are evaluation failures — if you can’t measure reliability on real tasks, you can’t ship safely.</p><p class="source">Source: TLDR Data, Jun 1</p><a class="read-link" href="https://hex.tech/blog/evaluate-data-agents/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag hot">Google</span><span class="tag research">Privacy</span></div><h3>Private analytics via secure aggregation + TEEs</h3><p class="summary">Google outlines a “zero-trust aggregation” approach where only anonymized population-level insights are revealed, using secure aggregation, TEEs, and attestation.</p><p class="why">Why it matters: as agents touch more sensitive data, privacy tech (not just policy) becomes part of the product surface.</p><p class="source">Source: TLDR Data, Jun 1</p><a class="read-link" href="https://research.google/blog/private-analytics-via-zero-trust-aggregation/" target="_blank" rel="noopener noreferrer">Read article</a></article></div></section><section id="topics"><div class="section-title"><h2>Hot Topics</h2><span class="count">6 threads</span></div><div class="stack"><div class="topic"><div class="score">1</div><div><strong>Agent UX is consolidating into “super apps”</strong><span>Copilot’s hub-style design suggests the winning pattern is a persistent home with tools, projects, and multiple task modes.</span></div></div><div class="topic"><div class="score">2</div><div><strong>Open-weight multimodal models are catching up fast</strong><span>Long context + multimodal IO + agentic positioning makes “model choice” less decisive than deployment + evals.</span></div></div><div class="topic"><div class="score">3</div><div><strong>Retrieval is becoming a GPU-native, differentiable pipeline</strong><span>“Index as Model” reframes retrieval as a single model-shaped system, not a chain of components.</span></div></div><div class="topic"><div class="score">4</div><div><strong>Data-agent reliability needs an eval “lab bench”</strong><span>Realistic messy datasets + stable baselines matter more than leaderboard SQL benchmarks.</span></div></div><div class="topic"><div class="score">5</div><div><strong>$0 analytics apps are now practical with AI-assisted coding</strong><span>For many internal products, a DuckDB + static-host stack beats the complexity of BI tooling.</span></div></div><div class="topic"><div class="score">6</div><div><strong>Privacy infrastructure is part of agent product design</strong><span>Secure aggregation + TEEs point toward “privacy by architecture” for data-intensive assistants.</span></div></div></div></section><section id="research"><div class="section-title"><h2>Important Research</h2><span class="count">6 reads</span></div><div class="grid two"><article class="card"><div class="tag-row"><span class="tag research">Meta</span><span class="tag tool">Retrieval</span></div><h3>SilverTorch: “Index as Model” for recommendation retrieval</h3><p class="summary">A GPU-first reframing: embed, ANN search, filtering, reranking, and multi-task scoring as a single PyTorch model with fused kernels.</p><a class="read-link" href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag research">Agents</span><span class="tag tool">Evals</span></div><h3>How to build an internal “lab” for data-agent evaluation</h3><p class="summary">Hex’s approach to grounding agent improvements: reproducible baselines, a realistic fake business, and run-to-run comparability.</p><a class="read-link" href="https://hex.tech/blog/evaluate-data-agents/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag research">Privacy</span><span class="tag tool">Infra</span></div><h3>Private analytics via “zero-trust aggregation”</h3><p class="summary">A concrete architecture using secure aggregation, TEEs, and attestation so only anonymized population-level insights are visible.</p><a class="read-link" href="https://research.google/blog/private-analytics-via-zero-trust-aggregation/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag research">Vector</span><span class="tag tool">Postgres</span></div><h3>Vector index tradeoffs in Postgres (HNSW vs IVFFlat vs disk ANN)</h3><p class="summary">A pragmatic guide to choosing indexes as you add filters, scale to millions of vectors, and need recall/latency control.</p><a class="read-link" href="https://www.tigerdata.com/blog/the-postgres-developers-guide-to-vector-index-tradeoffs" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag research">Agents</span><span class="tag tool">Triggers</span></div><h3>Event-driven vs polling architectures for agent triggers</h3><p class="summary">A reminder that “webhook vs polling” is really about delivery contracts, replay, idempotency keys, and durable runtimes.</p><a class="read-link" href="https://agentblueprint.substack.com/p/event-driven-vs-polling-architectures" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag research">Analytics</span><span class="tag tool">Product</span></div><h3>A $0 data app: DuckDB transforms + Astro UI + static hosting</h3><p class="summary">A blueprint for lightweight internal tools where bespoke UI + scheduled refresh beats paying a BI tax.</p><a class="read-link" href="https://spicydata.ai/blog/zero-dollar-data-app/" target="_blank" rel="noopener noreferrer">Read article</a></article></div></section><section id="news"><div class="section-title"><h2>Interesting News</h2><span class="count">quick scan</span></div><div class="grid"><article class="card"><div class="tag-row"><span class="tag news">Microsoft</span><span class="tag tool">Copilot</span></div><h3>Copilot “super app” leak</h3><p class="summary">A single Copilot home with GitHub Copilot integration and an always-on “Scout” agent — a clear bet on a consolidated agent surface.</p><a class="read-link" href="https://www.testingcatalog.com/exclusive-new-screenshots-of-upcoming-copilot-super-app/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag news">Multimodal</span><span class="tag tool">Open Weights</span></div><h3>MiniMax M3 enters the “agentic model” conversation</h3><p class="summary">Open-weights, image/video input, and ultra-long context position M3 as a candidate backbone for desktop-style agents.</p><a class="read-link" href="https://threadreaderapp.com/thread/2061266317815296322.html" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag news">Nvidia</span><span class="tag tool">Edge</span></div><h3>Nvidia-powered Windows PCs could become “local agent” boxes</h3><p class="summary">New Nvidia+Microsoft chips for Windows on Arm hint at a wave of AI PCs with enough RAM + power budgets for on-device assistants.</p><a class="read-link" href="https://www.thurrott.com/mobile/copilot-pc/336816/leaks-nvidia-powered-windows-11-pcs-set-to-debut" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag news">Meta</span><span class="tag tool">Wearables</span></div><h3>Meta reportedly testing an AI pendant + more smart glasses</h3><p class="summary">Wearable assistants push multimodal interaction into always-available contexts — but raise privacy expectations accordingly.</p><a class="read-link" href="https://www.engadget.com/2184224/meta-developing-ai-pendant-more-smart-glass-models/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag news">Google</span><span class="tag tool">NotebookLM</span></div><h3>NotebookLM is teasing connectors + “canvas” style workflows</h3><p class="summary">Another signal that assistants are shifting from chat to structured workspaces: sources, preferences, and editable outputs.</p><a class="read-link" href="https://www.testingcatalog.com/3-upcoming-notebooklm-features-we-all-should-be-waiting-for/" target="_blank" rel="noopener noreferrer">Read article</a></article><article class="card"><div class="tag-row"><span class="tag news">AI for Science</span><span class="tag tool">DeepMind</span></div><h3>A new lab wants AI to pick the next scientific questions</h3><p class="summary">Inherent is building “Faraday” to identify which questions are worth asking — a bet on research planning as a model-driven workflow.</p><a class="read-link" href="https://thenextweb.com/news/inherent-ai-50-million-seed-deepmind-faraday-science" target="_blank" rel="noopener noreferrer">Read article</a></article></div></section></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TLDR Jun 1 Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --blossom: #f4c4cc;
+      --pistachio: #b9d9c8;
+      --serene: #acd7df;
+      --canary: #ffefb3;
+      --latte: #d2c4b8;
+      --bg: #f7f4ef;
+      --ink: #1f211e;
+      --muted: #665f59;
+      --panel: #fffdf9;
+      --line: #d8cbc0;
+      --hot: #7f2f3b;
+      --hot-bg: #f4c4cc;
+      --research: #275541;
+      --research-bg: #d9eadf;
+      --news: #6e5511;
+      --news-bg: #ffefb3;
+      --tool: #245567;
+      --tool-bg: #d8edf1;
+      --shadow: 0 10px 28px rgba(74, 61, 50, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+
+    main {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: 18px 14px 36px;
+    }
+
+    header {
+      padding: 12px 2px 16px;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.05;
+      font-weight: 780;
+      max-width: 12ch;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 38rem;
+    }
+
+    .meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 249, 0.76);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0;
+      margin: 0 -14px 14px;
+      padding-inline: 14px;
+      background: rgba(247, 244, 239, 0.93);
+      backdrop-filter: blur(12px);
+      border-block: 1px solid rgba(220, 227, 220, 0.75);
+    }
+
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: 0.86rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+
+    section {
+      scroll-margin-top: 86px;
+      margin-top: 26px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 {
+      font-size: 1.25rem;
+      font-weight: 780;
+    }
+
+    .count {
+      font-size: 0.82rem;
+      font-weight: 720;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .grid.two {
+      grid-template-columns: 1fr;
+    }
+
+    .stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 14px 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .lead-card {
+      border-color: rgba(127, 47, 59, 0.22);
+      background: linear-gradient(145deg, rgba(244, 196, 204, 0.38), rgba(255, 253, 249, 0.92));
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 760;
+      border: 1px solid rgba(31, 33, 30, 0.12);
+      background: rgba(255, 253, 249, 0.95);
+      color: var(--ink);
+    }
+
+    .tag.hot {
+      border-color: rgba(127, 47, 59, 0.28);
+      background: var(--hot-bg);
+      color: var(--hot);
+    }
+
+    .tag.research {
+      border-color: rgba(39, 85, 65, 0.24);
+      background: var(--research-bg);
+      color: var(--research);
+    }
+
+    .tag.news {
+      border-color: rgba(110, 85, 17, 0.24);
+      background: var(--news-bg);
+      color: var(--news);
+    }
+
+    .tag.tool {
+      border-color: rgba(36, 85, 103, 0.24);
+      background: var(--tool-bg);
+      color: var(--tool);
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      line-height: 1.2;
+      font-weight: 780;
+    }
+
+    .summary {
+      margin-top: 8px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .why {
+      margin-top: 10px;
+      padding: 10px 11px;
+      border-radius: 14px;
+      border: 1px solid rgba(31, 33, 30, 0.08);
+      background: rgba(172, 215, 223, 0.3);
+      color: rgba(31, 33, 30, 0.86);
+      font-size: 0.86rem;
+    }
+
+    .topic {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 10px;
+      align-items: start;
+      background: var(--panel);
+      padding: 12px 12px 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .score {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--serene);
+      font-size: 0.94rem;
+      font-weight: 820;
+    }
+
+    .topic strong {
+      display: block;
+      font-size: 0.95rem;
+      line-height: 1.2;
+    }
+
+    .topic span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+    .source {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 650;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      margin-top: 11px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--panel);
+      font-size: 0.82rem;
+      font-weight: 760;
+      text-decoration: none;
+      width: max-content;
+      max-width: 100%;
+    }
+
+    .read-link:focus-visible {
+      outline: 3px solid var(--canary);
+      outline-offset: 2px;
+    }
+
+    @media (min-width: 680px) {
+      main {
+        padding-top: 28px;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: 2.45rem;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>TLDR Jun 1 Brief</h1>
+      <p class="subtitle">Mobile scan of four TLDR newsletter issues from June 1, focused on “super app” agent UX, open-weight multimodal models, and retrieval / data-agent infrastructure.</p>
+      <div class="meta">
+        <span class="pill">4 newsletters</span>
+        <span class="pill">June 1, 2026</span>
+        <span class="pill">TLDR newsletter label</span>
+      </div>
+    </header>
+
+    <nav aria-label="Dashboard sections">
+      <a href="#attention">Attention</a>
+      <a href="#topics">Topics</a>
+      <a href="#research">Research</a>
+      <a href="#news">News</a>
+    </nav>
+
+    <section id="attention">
+      <div class="section-title">
+        <h2>Needs Your Attention</h2>
+        <span class="count">6 items</span>
+      </div>
+      <div class="grid">
+        <article class="card lead-card">
+          <div class="tag-row">
+            <span class="tag hot">Microsoft</span>
+            <span class="tag tool">Agents</span>
+          </div>
+          <h3>Copilot “super app” points to an always-on agent home</h3>
+          <p class="summary">Leaked screenshots show Microsoft consolidating Copilot into a single hub with tabs for GitHub Copilot and an always-on “Scout” agent.</p>
+          <p class="why">Why it matters: once agents live in one persistent home (with project context + tools), distribution shifts from “best model” to “best workflow surface”.</p>
+          <p class="source">Source: TLDR AI, Jun 1</p>
+          <a class="read-link" href="https://www.testingcatalog.com/exclusive-new-screenshots-of-upcoming-copilot-super-app/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Multimodal</span>
+            <span class="tag tool">Open Weights</span>
+          </div>
+          <h3>MiniMax M3: open-weight, agentic, multimodal, ultra-long context</h3>
+          <p class="summary">A new open-weights model pitched for coding + agentic work, with image/video input and up to ~1M-token context.</p>
+          <p class="why">Why it matters: when open-weight models can “see”, run tools, and hold long context, the moat moves to product + evals + deployment reliability.</p>
+          <p class="source">Source: TLDR AI, Jun 1</p>
+          <a class="read-link" href="https://threadreaderapp.com/thread/2061266317815296322.html" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Meta</span>
+            <span class="tag research">Retrieval</span>
+          </div>
+          <h3>SilverTorch: turning retrieval pipelines into a single GPU model</h3>
+          <p class="summary">Meta describes an “Index as Model” approach that folds embedding, ANN search, filtering, reranking, and scoring into a unified PyTorch model.</p>
+          <p class="why">Why it matters: retrieval is becoming a differentiable, GPU-native workload — which changes tooling, cost models, and the interface for “context”.</p>
+          <p class="source">Source: TLDR Data, Jun 1</p>
+          <a class="read-link" href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">OpenAI</span>
+            <span class="tag tool">Robotics</span>
+          </div>
+          <h3>OpenAI Robotics hiring: a signal to watch</h3>
+          <p class="summary">A hiring signal for full-stack hardware/ops/systems/ML roles as robotics becomes a serious product + manufacturing program.</p>
+          <p class="why">Why it matters: “physical agents” collapse the gap between model mistakes and real-world actions — safety and reliability become existential, not optional.</p>
+          <p class="source">Source: TLDR AI, Jun 1</p>
+          <a class="read-link" href="https://threadreaderapp.com/thread/2061117302528188712.html" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Agents</span>
+            <span class="tag tool">Data</span>
+          </div>
+          <h3>How Hex built a “lab bench” to evaluate data agents</h3>
+          <p class="summary">A practical blueprint for agent evals: stable baselines, realistic messy data, and controlled comparisons across prompts/models/memory/search.</p>
+          <p class="why">Why it matters: most agent failures are evaluation failures — if you can’t measure reliability on real tasks, you can’t ship safely.</p>
+          <p class="source">Source: TLDR Data, Jun 1</p>
+          <a class="read-link" href="https://hex.tech/blog/evaluate-data-agents/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Google</span>
+            <span class="tag research">Privacy</span>
+          </div>
+          <h3>Private analytics via secure aggregation + TEEs</h3>
+          <p class="summary">Google outlines a “zero-trust aggregation” approach where only anonymized population-level insights are revealed, using secure aggregation, TEEs, and attestation.</p>
+          <p class="why">Why it matters: as agents touch more sensitive data, privacy tech (not just policy) becomes part of the product surface.</p>
+          <p class="source">Source: TLDR Data, Jun 1</p>
+          <a class="read-link" href="https://research.google/blog/private-analytics-via-zero-trust-aggregation/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="topics">
+      <div class="section-title">
+        <h2>Hot Topics</h2>
+        <span class="count">6 threads</span>
+      </div>
+      <div class="stack">
+        <div class="topic">
+          <div class="score">1</div>
+          <div>
+            <strong>Agent UX is consolidating into “super apps”</strong>
+            <span>Copilot’s hub-style design suggests the winning pattern is a persistent home with tools, projects, and multiple task modes.</span>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="score">2</div>
+          <div>
+            <strong>Open-weight multimodal models are catching up fast</strong>
+            <span>Long context + multimodal IO + agentic positioning makes “model choice” less decisive than deployment + evals.</span>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="score">3</div>
+          <div>
+            <strong>Retrieval is becoming a GPU-native, differentiable pipeline</strong>
+            <span>“Index as Model” reframes retrieval as a single model-shaped system, not a chain of components.</span>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="score">4</div>
+          <div>
+            <strong>Data-agent reliability needs an eval “lab bench”</strong>
+            <span>Realistic messy datasets + stable baselines matter more than leaderboard SQL benchmarks.</span>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="score">5</div>
+          <div>
+            <strong>$0 analytics apps are now practical with AI-assisted coding</strong>
+            <span>For many internal products, a DuckDB + static-host stack beats the complexity of BI tooling.</span>
+          </div>
+        </div>
+        <div class="topic">
+          <div class="score">6</div>
+          <div>
+            <strong>Privacy infrastructure is part of agent product design</strong>
+            <span>Secure aggregation + TEEs point toward “privacy by architecture” for data-intensive assistants.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-title">
+        <h2>Important Research</h2>
+        <span class="count">6 reads</span>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Meta</span><span class="tag tool">Retrieval</span></div>
+          <h3>SilverTorch: “Index as Model” for recommendation retrieval</h3>
+          <p class="summary">A GPU-first reframing: embed, ANN search, filtering, reranking, and multi-task scoring as a single PyTorch model with fused kernels.</p>
+          <a class="read-link" href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Agents</span><span class="tag tool">Evals</span></div>
+          <h3>How to build an internal “lab” for data-agent evaluation</h3>
+          <p class="summary">Hex’s approach to grounding agent improvements: reproducible baselines, a realistic fake business, and run-to-run comparability.</p>
+          <a class="read-link" href="https://hex.tech/blog/evaluate-data-agents/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Privacy</span><span class="tag tool">Infra</span></div>
+          <h3>Private analytics via “zero-trust aggregation”</h3>
+          <p class="summary">A concrete architecture using secure aggregation, TEEs, and attestation so only anonymized population-level insights are visible.</p>
+          <a class="read-link" href="https://research.google/blog/private-analytics-via-zero-trust-aggregation/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Vector</span><span class="tag tool">Postgres</span></div>
+          <h3>Vector index tradeoffs in Postgres (HNSW vs IVFFlat vs disk ANN)</h3>
+          <p class="summary">A pragmatic guide to choosing indexes as you add filters, scale to millions of vectors, and need recall/latency control.</p>
+          <a class="read-link" href="https://www.tigerdata.com/blog/the-postgres-developers-guide-to-vector-index-tradeoffs" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Agents</span><span class="tag tool">Triggers</span></div>
+          <h3>Event-driven vs polling architectures for agent triggers</h3>
+          <p class="summary">A reminder that “webhook vs polling” is really about delivery contracts, replay, idempotency keys, and durable runtimes.</p>
+          <a class="read-link" href="https://agentblueprint.substack.com/p/event-driven-vs-polling-architectures" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag research">Analytics</span><span class="tag tool">Product</span></div>
+          <h3>A $0 data app: DuckDB transforms + Astro UI + static hosting</h3>
+          <p class="summary">A blueprint for lightweight internal tools where bespoke UI + scheduled refresh beats paying a BI tax.</p>
+          <a class="read-link" href="https://spicydata.ai/blog/zero-dollar-data-app/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="section-title">
+        <h2>Interesting News</h2>
+        <span class="count">quick scan</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="tag-row"><span class="tag news">Microsoft</span><span class="tag tool">Copilot</span></div>
+          <h3>Copilot “super app” leak</h3>
+          <p class="summary">A single Copilot home with GitHub Copilot integration and an always-on “Scout” agent — a clear bet on a consolidated agent surface.</p>
+          <a class="read-link" href="https://www.testingcatalog.com/exclusive-new-screenshots-of-upcoming-copilot-super-app/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag news">Multimodal</span><span class="tag tool">Open Weights</span></div>
+          <h3>MiniMax M3 enters the “agentic model” conversation</h3>
+          <p class="summary">Open-weights, image/video input, and ultra-long context position M3 as a candidate backbone for desktop-style agents.</p>
+          <a class="read-link" href="https://threadreaderapp.com/thread/2061266317815296322.html" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag news">Nvidia</span><span class="tag tool">Edge</span></div>
+          <h3>Nvidia-powered Windows PCs could become “local agent” boxes</h3>
+          <p class="summary">New Nvidia+Microsoft chips for Windows on Arm hint at a wave of AI PCs with enough RAM + power budgets for on-device assistants.</p>
+          <a class="read-link" href="https://www.thurrott.com/mobile/copilot-pc/336816/leaks-nvidia-powered-windows-11-pcs-set-to-debut" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag news">Meta</span><span class="tag tool">Wearables</span></div>
+          <h3>Meta reportedly testing an AI pendant + more smart glasses</h3>
+          <p class="summary">Wearable assistants push multimodal interaction into always-available contexts — but raise privacy expectations accordingly.</p>
+          <a class="read-link" href="https://www.engadget.com/2184224/meta-developing-ai-pendant-more-smart-glass-models/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag news">Google</span><span class="tag tool">NotebookLM</span></div>
+          <h3>NotebookLM is teasing connectors + “canvas” style workflows</h3>
+          <p class="summary">Another signal that assistants are shifting from chat to structured workspaces: sources, preferences, and editable outputs.</p>
+          <a class="read-link" href="https://www.testingcatalog.com/3-upcoming-notebooklm-features-we-all-should-be-waiting-for/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+        <article class="card">
+          <div class="tag-row"><span class="tag news">AI for Science</span><span class="tag tool">DeepMind</span></div>
+          <h3>A new lab wants AI to pick the next scientific questions</h3>
+          <p class="summary">Inherent is building “Faraday” to identify which questions are worth asking — a bet on research planning as a model-driven workflow.</p>
+          <a class="read-link" href="https://thenextweb.com/news/inherent-ai-50-million-seed-deepmind-faraday-science" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
