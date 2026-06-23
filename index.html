@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TLDR Jun 8 Dashboard</title>
+  <title>TLDR Jun 22 Dashboard</title>
   <style>
     :root {
       color-scheme: light;
@@ -319,11 +319,11 @@
 <body>
   <main>
     <header>
-      <h1>TLDR Jun 8 Brief</h1>
-      <p class="subtitle">Mobile scan of four TLDR newsletter issues from June 8, focused on frontier-lab power shifts, agent product surfaces, AI-for-science, and practical agent tooling.</p>
+      <h1>TLDR Jun 22 Brief</h1>
+      <p class="subtitle">Mobile scan of four TLDR newsletter issues from June 22, focused on agent orchestration, Anthropic and DeepMind movement, OpenAI data agents, context layers, and deterministic guardrails.</p>
       <div class="meta">
         <span class="pill">4 newsletters</span>
-        <span class="pill">June 8, 2026</span>
+        <span class="pill">June 22, 2026</span>
         <span class="pill">TLDR newsletter label</span>
       </div>
     </header>
@@ -338,31 +338,19 @@
     <section id="attention">
       <div class="section-title">
         <h2>Needs Your Attention</h2>
-        <span class="count">6 items</span>
+        <span class="count">7 items</span>
       </div>
       <div class="grid">
         <article class="card lead-card">
           <div class="tag-row">
-            <span class="tag hot">OpenAI</span>
-            <span class="tag tool">Policy</span>
+            <span class="tag hot">Agents</span>
+            <span class="tag tool">Orchestration</span>
           </div>
-          <h3>OpenAI government-stake talks raise a new governance scenario</h3>
-          <p class="summary">The Trump administration reportedly discussed taking a government stake in OpenAI through donated equity tied to a proposed public wealth fund.</p>
-          <p class="why">Why it matters: frontier-model governance is no longer only a private-capital story; state alignment, procurement leverage, and public-benefit narratives may shape the next phase.</p>
-          <p class="source">Source: TLDR AI, Jun 8</p>
-          <a class="read-link" href="https://www.cnbc.com/2026/06/05/trump-open-ai-altman-stake.html" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
-            <span class="tag hot">Google</span>
-            <span class="tag tool">Infra</span>
-          </div>
-          <h3>Google’s SpaceX compute deal shows demand is outrunning owned capacity</h3>
-          <p class="summary">Google reportedly signed a massive bridge-compute deal linked to roughly 110,000 NVIDIA GPUs to keep up with Gemini demand.</p>
-          <p class="why">Why it matters: hyperscalers are now treating external GPU access as strategic surge capacity, which changes how to read moat, margin, and model-launch timing.</p>
-          <p class="source">Source: TLDR AI / Tech, Jun 8</p>
-          <a class="read-link" href="https://winbuzzer.com/2026/06/06/google-taps-spacex-for-920m-monthly-ai-compute-deal-xcxwbn/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Sakana Fugu packages multi-agent routing behind one OpenAI-compatible model endpoint</h3>
+          <p class="summary">Fugu decides when to answer directly, delegate to expert models, verify results, and synthesize a response while users call a single model.</p>
+          <p class="why">Why it matters: this is a clean product shape for agent infrastructure: orchestration gets hidden behind model-compatible APIs instead of exposed as a bespoke workflow graph.</p>
+          <p class="source">Source: TLDR AI, Jun 22</p>
+          <a class="read-link" href="https://threadreaderapp.com/thread/2068862070062485867.html" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
@@ -370,47 +358,71 @@
             <span class="tag hot">Anthropic</span>
             <span class="tag research">AI for Science</span>
           </div>
-          <h3>Claude is becoming a real chemistry tool, not just a chat interface</h3>
-          <p class="summary">Anthropic shows Claude predicting NMR spectra and proposing molecular structures with accuracy that can rival established chemistry software.</p>
-          <p class="why">Why it matters: this is the kind of domain-specific capability jump that turns “general model” progress into defensible scientific workflow adoption.</p>
-          <p class="source">Source: TLDR AI, Jun 8</p>
-          <a class="read-link" href="https://www.anthropic.com/research/making-claude-a-chemist" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
-            <span class="tag hot">Microsoft</span>
-            <span class="tag tool">Agents</span>
-          </div>
-          <h3>Scout pushes Microsoft toward the persistent-agent home screen</h3>
-          <p class="summary">Microsoft’s gated Scout rollout packages always-on routines, file access, and model interoperability into a frontline agent surface.</p>
-          <p class="why">Why it matters: the winning agent product may be the environment that owns tasks, files, and habits, not the model that answers best in isolation.</p>
-          <p class="source">Source: TLDR AI, Jun 8</p>
-          <a class="read-link" href="https://www.testingcatalog.com/early-look-microsoft-rolls-out-scout-ai-agent-to-frontier-users/" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
-            <span class="tag hot">Anthropic</span>
-            <span class="tag tool">Analytics</span>
-          </div>
-          <h3>Anthropic’s analytics writeup is a strong blueprint for enterprise agents</h3>
-          <p class="summary">Anthropic argues that self-service analytics quality depends more on semantic context, governance, retrieval, and verification than SQL generation.</p>
-          <p class="why">Why it matters: agent reliability is looking more like systems engineering than prompting, especially for internal data products and artifact-heavy workflows.</p>
-          <p class="source">Source: TLDR Data, Jun 8</p>
-          <a class="read-link" href="https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>AlphaFold co-lead John Jumper is leaving DeepMind for Anthropic</h3>
+          <p class="summary">The Nobel laureate's move is the sharpest talent signal in the June 22 set, especially for frontier labs competing around scientific reasoning.</p>
+          <p class="why">Why it matters: Anthropic is not only competing on assistant products. It is pulling in world-class science talent from DeepMind's strongest brand territory.</p>
+          <p class="source">Source: TLDR AI, Jun 22</p>
+          <a class="read-link" href="https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
             <span class="tag hot">OpenAI</span>
-            <span class="tag tool">Ecosystem</span>
+            <span class="tag tool">Data Agents</span>
           </div>
-          <h3>Model providers are moving up-stack into services, consulting, and product</h3>
-          <p class="summary">A founders-focused warning: startups building on OpenAI or Anthropic may increasingly find their model vendor competing for the same enterprise spend.</p>
-          <p class="why">Why it matters: if labs own both the API and the high-value deployment layer, independent AI products need sharper workflow moats and stronger customer lock-in.</p>
-          <p class="source">Source: TLDR Founders, Jun 8</p>
-          <a class="read-link" href="https://aspiringforintelligence.substack.com/p/your-vendor-is-your-competitor" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>OpenAI's Kepler shows what a production data-aware agent needs</h3>
+          <p class="summary">Kepler has moved past text-to-SQL into a context-rich analyst over 600+ PB, with Codex jobs crawling code for grain, lineage, freshness, usage, and hidden semantics.</p>
+          <p class="why">Why it matters: serious data agents need memory, lineage, semantic context, and result grading. The product is the surrounding system, not just SQL generation.</p>
+          <p class="source">Source: TLDR Data, Jun 22</p>
+          <a class="read-link" href="https://www.infoq.com/presentations/data-aware-ai-agents/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">AWS</span>
+            <span class="tag tool">Context Layer</span>
+          </div>
+          <h3>AWS is entering the context-layer race with agent-learned graphs</h3>
+          <p class="summary">AWS Context, S3 Annotations, and Glue skill assets turn enterprise metadata into governed knowledge graphs exposed through analytics engines and MCP tools.</p>
+          <p class="why">Why it matters: cloud providers are turning context into platform infrastructure. This is where agent reliability, access control, and data gravity converge.</p>
+          <p class="source">Source: TLDR Data, Jun 22</p>
+          <a class="read-link" href="https://venturebeat.com/data/aws-enters-the-context-layer-race-with-a-graph-that-learns-from-agents-not-manual-curation/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Agent Tooling</span>
+            <span class="tag tool">Guardrails</span>
+          </div>
+          <h3>Agent Hooks move AI coding safety from instructions to deterministic checks</h3>
+          <p class="summary">Hooks interject during agent work to enforce rules such as forbidden HTML patterns or preventing completion claims while tests are failing.</p>
+          <p class="why">Why it matters: instruction-following is probabilistic. Tooling that blocks unsafe or low-quality actions at runtime is becoming mandatory for agentic code workflows.</p>
+          <p class="source">Source: TLDR Tech, Jun 22</p>
+          <a class="read-link" href="https://zarar.dev/agent-hooks-deterministic-guardrails-for-ai-generated-code/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Multimodal AI</span>
+            <span class="tag tool">Training Data</span>
+          </div>
+          <h3>Data-Juicer treats multimodal dataset prep as a foundation-model operating system</h3>
+          <p class="summary">The Ray-native framework offers 200+ operators for cleaning, deduping, synthesizing, and analyzing text, image, audio, video, and multimodal training data.</p>
+          <p class="why">Why it matters: model quality increasingly depends on repeatable data pipelines, especially for multimodal systems where raw scale is not enough.</p>
+          <p class="source">Source: TLDR Data, Jun 22</p>
+          <a class="read-link" href="https://datajuicer.github.io/data-juicer/en/main/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Google</span>
+            <span class="tag tool">Agentic Web</span>
+          </div>
+          <h3>Lighthouse is adding deterministic scoring for agentic browsing readiness</h3>
+          <p class="summary">Chrome's Lighthouse Agentic Browsing category evaluates machine-interaction readiness with reproducible audits that can feed CI/CD.</p>
+          <p class="why">Why it matters: if agents browse and operate software directly, web quality needs to include stable semantics, accessibility, and machine-readable affordances.</p>
+          <p class="source">Source: TLDR Founders and TLDR Tech, Jun 22</p>
+          <a class="read-link" href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
@@ -424,43 +436,43 @@
         <div class="topic">
           <div class="score">1</div>
           <div>
-            <strong>Frontier labs are being pulled into state and enterprise power structures</strong>
-            <span>OpenAI’s reported government-stake talks and Anthropic’s growing public-sector footprint both point to labs becoming institutional infrastructure.</span>
+            <strong>Orchestration is being hidden behind model-compatible APIs</strong>
+            <span>Sakana Fugu suggests a practical packaging layer: users call one endpoint while the system routes, verifies, and synthesizes across experts.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">2</div>
           <div>
-            <strong>Agent distribution is shifting toward persistent product surfaces</strong>
-            <span>Scout, ChatGPT overhaul rumors, and “chat is dead” narratives all suggest the next battle is for always-open task environments.</span>
+            <strong>Context layers are becoming platform infrastructure</strong>
+            <span>OpenAI Kepler, AWS Context, Lyft's semantic layer, and DuckDB agent workflows all point toward governed semantics as the agent reliability layer.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">3</div>
           <div>
-            <strong>Enterprise AI quality is becoming a context-and-governance problem</strong>
-            <span>Anthropic’s analytics playbook and trust-focused strategy pieces both argue that adoption fails on systems design more than model quality.</span>
+            <strong>AI-for-science talent competition is heating up</strong>
+            <span>John Jumper's move from DeepMind to Anthropic is a sharp reminder that frontier labs are competing for scientific research capacity, not only product PMF.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">4</div>
           <div>
-            <strong>AI-for-science is crossing into usable domain workflows</strong>
-            <span>Claude’s chemistry results are a signal that scientific copilots may soon be judged on task utility, not just benchmark novelty.</span>
+            <strong>Agent safety is moving into runtime enforcement</strong>
+            <span>Agent Hooks and project-level rules show the field moving from "please follow instructions" to deterministic checks that interrupt bad actions.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">5</div>
           <div>
-            <strong>Compute, quantization, and device placement are converging</strong>
-            <span>Google’s GPU scramble and Gemma 4 QAT together show the stack stretching from hyperscale burst capacity down to laptop/mobile inference.</span>
+            <strong>Workflow moats are replacing data-storage moats</strong>
+            <span>The Founders issue framed the SaaS shift cleanly: in an agentic world, platforms win by coordinating, routing, and governing work.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">6</div>
           <div>
-            <strong>Agent tooling is maturing from demos into hardened execution environments</strong>
-            <span>Sandboxes, analytics verification loops, and “agentic engineering” practices all push toward safer, reviewable automation.</span>
+            <strong>AI infrastructure is moving down-stack</strong>
+            <span>Tesla's Megapod, AWS context graphs, and Data-Juicer all show AI product competition reaching hardware, metadata, and data-prep foundations.</span>
           </div>
         </div>
       </div>
@@ -473,40 +485,40 @@
       </div>
       <div class="grid two">
         <article class="card">
-          <div class="tag-row"><span class="tag research">Anthropic</span><span class="tag tool">Chemistry</span></div>
-          <h3>Making Claude a chemist</h3>
-          <p class="summary">A strong example of general models moving into specialized scientific reasoning, with concrete spectrum-prediction and structure-inference gains.</p>
-          <a class="read-link" href="https://www.anthropic.com/research/making-claude-a-chemist" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Google</span><span class="tag tool">Diffusion LLMs</span></div>
+          <h3>DiffusionGemma transparency audit</h3>
+          <p class="summary">The audit found diffusion-based language modeling can remain monitorable while raising harder questions about non-chronological reasoning and intermediate context.</p>
+          <a class="read-link" href="https://www.lesswrong.com/posts/zoYXpdaMgFT43Wc24/how-transparent-is-diffusiongemma-and-why-it-matters" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Anthropic</span><span class="tag tool">Analytics</span></div>
-          <h3>How Anthropic enables self-service data analytics with Claude</h3>
-          <p class="summary">A practical architecture for data agents: semantic layers, canonical datasets, evals, provenance, and correction loops over naive SQL generation.</p>
-          <a class="read-link" href="https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">OpenAI</span><span class="tag tool">Data Agents</span></div>
+          <h3>Data-aware AI agents at OpenAI</h3>
+          <p class="summary">Kepler's architecture highlights scoped memories, Codex-derived metadata, AST-normalized grading, and dashboard self-validation as core agent research problems.</p>
+          <a class="read-link" href="https://www.infoq.com/presentations/data-aware-ai-agents/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Google</span><span class="tag tool">Edge Models</span></div>
-          <h3>Gemma 4 QAT for mobile and laptop efficiency</h3>
-          <p class="summary">Quantization-aware training keeps smaller Gemma deployments useful on edge devices, which matters for private and low-latency multimodal experiences.</p>
-          <a class="read-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">NVIDIA</span><span class="tag tool">Robotics</span></div>
+          <h3>ENPIRE closes the loop for autonomous robotics policies</h3>
+          <p class="summary">NVIDIA's framework lets coding agents iteratively improve robot policies through automated resets, evaluation, verification, and refinement.</p>
+          <a class="read-link" href="https://research.nvidia.com/labs/gear/enpire/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Amazon</span><span class="tag tool">Evaluation</span></div>
-          <h3>Ground truth is a process, not a dataset</h3>
-          <p class="summary">A useful framing for agent evals and research QA: let models challenge labels with evidence, then update the benchmark through audited review.</p>
-          <a class="read-link" href="https://www.amazon.science/blog/ground-truth-is-a-process-not-a-dataset" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Data Infra</span><span class="tag tool">CDC</span></div>
+          <h3>Write-Ahead Intent Log for efficient CDC at scale</h3>
+          <p class="summary">DoorDash's WAIL approach replaces fragile CDC paths by logging mutation intent, verifying state, applying schema rules, and publishing recoverable events.</p>
+          <a class="read-link" href="https://www.infoq.com/presentations/write-ahead-intent-log/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Artifacts</span><span class="tag tool">Visual AI</span></div>
-          <h3>The next frontier of visual AI is code</h3>
-          <p class="summary">Editable artifact generation is shifting from pixels toward code-native outputs such as HTML, CSS, and 3D scripts.</p>
-          <a class="read-link" href="https://a16z.com/the-next-frontier-of-visual-ai-is-code/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Codegen</span><span class="tag tool">Inference</span></div>
+          <h3>Optimizing models to be fast at codegen</h3>
+          <p class="summary">Morph LLM combines coding-specialized speculative decoding, kernel tuning, and interconnect work to target faster agentic coding loops.</p>
+          <a class="read-link" href="https://www.morphllm.com/blog/codegen-inference-research" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Agents</span><span class="tag tool">Engineering</span></div>
-          <h3>Vibe coding is dangerous, agentic engineering isn’t</h3>
-          <p class="summary">A grounded operating model for shipping with agents: specs, tests, review, cost discipline, and explicit human ownership.</p>
-          <a class="read-link" href="https://motherduck.com/blog/vibe-coding-dangerous-agentic-engineering-wes-mckinney/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">DuckDB</span><span class="tag tool">Agent Analytics</span></div>
+          <h3>DuckDB's agent moment</h3>
+          <p class="summary">MotherDuck argues local-first analytical environments fit agent swarms that need isolated branches, low latency, profiling, quality evals, and lineage.</p>
+          <a class="read-link" href="https://roundup.getdbt.com/p/duckdbs-agent-moment-jordan-tigani" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
@@ -518,40 +530,40 @@
       </div>
       <div class="grid">
         <article class="card">
-          <div class="tag-row"><span class="tag news">OpenAI</span><span class="tag tool">Product</span></div>
-          <h3>ChatGPT is reportedly heading toward a broader agent-style overhaul</h3>
-          <p class="summary">The product direction appears to be moving from chat-only interaction toward multi-step task execution for enterprise users.</p>
-          <a class="read-link" href="https://www.engadget.com/2189038/openai-reportedly-has-a-major-chatgpt-overhaul-in-store/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Tesla</span><span class="tag tool">AI Infra</span></div>
+          <h3>Tesla plans modular AI data-center hardware called Megapod</h3>
+          <p class="summary">The trademark describes a turnkey AI compute building block with servers, networking, power, and cooling, aimed at Nvidia-dominated infrastructure.</p>
+          <a class="read-link" href="https://electrek.co/2026/06/21/tesla-megapod-ai-data-center-hardware/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Google</span><span class="tag tool">Search UX</span></div>
-          <h3>Chrome is testing direct handoff into Google’s AI Mode</h3>
-          <p class="summary">Another sign that AI answers are being positioned as the default browser/search entrypoint rather than an optional side path.</p>
-          <a class="read-link" href="https://9to5google.com/2026/06/05/google-tests-sending-users-straight-to-ai-mode-instead-of-search-in-chrome/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Anthropic</span><span class="tag tool">Policy</span></div>
+          <h3>Anthropic restrictions remain a live policy risk</h3>
+          <p class="summary">A June 22 quick link says restrictions had not been formally rescinded even after a G7 meeting changed public posture.</p>
+          <a class="read-link" href="https://thenextweb.com/news/trump-anthropic-not-national-security-threat-axios-interview" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Apple</span><span class="tag tool">Consumer AI</span></div>
-          <h3>AI features now sit inside 40 of the App Store’s top 100 apps</h3>
-          <p class="summary">Consumer AI monetization is broadening beyond chatbots into everyday app categories like photo, health, and shopping.</p>
-          <a class="read-link" href="https://www.apple.com/newsroom/2026/06/app-store-ecosystem-reaches-1-point-4-trillion-usd-as-developers-thrive-globally/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Image Generation</span><span class="tag tool">Diffusion LLMs</span></div>
+          <h3>Mercury 2 uses diffusion-style generation for very fast reasoning output</h3>
+          <p class="summary">Inception Labs says Mercury 2 generates about 1,000 tokens per second, making it more relevant to speed-sensitive workflow stages than hardest frontier reasoning.</p>
+          <a class="read-link" href="https://decrypt.co/371722/inception-labs-mercury-2-ai-beats-googles-diffusiongemma" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Google</span><span class="tag tool">Open Models</span></div>
-          <h3>Gemma optimization keeps the open-model push moving onto edge devices</h3>
-          <p class="summary">Smaller efficient checkpoints matter because local and hybrid deployment keeps getting more attractive for privacy and responsiveness.</p>
-          <a class="read-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">AI for Science</span><span class="tag tool">Medical Devices</span></div>
+          <h3>Midjourney Scanner skepticism is worth tracking</h3>
+          <p class="summary">The Astral Codex Ten analysis calls the scanner technically interesting but likely not useful for most serious medical applications today.</p>
+          <a class="read-link" href="https://www.astralcodexten.com/p/preliminary-thoughts-on-the-midjourney" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Agents</span><span class="tag tool">Tooling</span></div>
-          <h3>LangSmith is pitching sandboxes as the safe runtime for agents</h3>
-          <p class="summary">Dedicated microVM-style environments are becoming a standard answer to “how do I let an agent act without trusting it fully?”</p>
-          <a class="read-link" href="https://www.langchain.com/blog/give-your-ai-agent-its-own-computer" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Data</span><span class="tag tool">Metrics</span></div>
+          <h3>Lyft's Golden Metrics layer fights metric definition drift</h3>
+          <p class="summary">Dual ownership, versioning, APIs, catalog access, and AI-agent access turn business definitions into governed infrastructure.</p>
+          <a class="read-link" href="https://eng.lyft.com/metric-semantic-layer-how-lyft-governs-and-scales-key-data-definitions-56bee3643c29" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">OpenAI</span><span class="tag tool">Competition</span></div>
-          <h3>The model layer is increasingly a competitive chokepoint for startups</h3>
-          <p class="summary">Founders building on frontier APIs need to assume their providers may also sell implementation, services, and packaged workflows.</p>
-          <a class="read-link" href="https://aspiringforintelligence.substack.com/p/your-vendor-is-your-competitor" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Founders</span><span class="tag tool">AI Strategy</span></div>
+          <h3>Evals are being framed as strategic IP for agentic companies</h3>
+          <p class="summary">The Founders issue argues production agents require evaluation suites that capture taste, tool use, governance, and task-specific judgment.</p>
+          <a class="read-link" href="https://links.tldrnewsletter.com/q9Ohdc" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
