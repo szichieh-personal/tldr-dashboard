@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TLDR Jul 6 Dashboard</title>
+  <title>TLDR Jul 13 Dashboard</title>
   <style>
     :root {
       color-scheme: light;
@@ -319,11 +319,11 @@
 <body>
   <main>
     <header>
-      <h1>TLDR Jul 6 Brief</h1>
-      <p class="subtitle">Mobile scan of four TLDR newsletter issues from July 6, focused on GPT-5.6 signals, Claude/Fable tooling, AI-for-science workbenches, agent harness reliability, AI storage, and inference infrastructure.</p>
+      <h1>TLDR Jul 13 Brief</h1>
+      <p class="subtitle">Mobile scan of four TLDR newsletter issues from July 13, focused on browser-native coding agents, frontier-model access, enterprise AI ownership, agent memory, evaluation quality, and production AI infrastructure.</p>
       <div class="meta">
         <span class="pill">4 newsletters</span>
-        <span class="pill">July 6, 2026</span>
+        <span class="pill">July 13, 2026</span>
         <span class="pill">TLDR newsletter label</span>
       </div>
     </header>
@@ -338,91 +338,103 @@
     <section id="attention">
       <div class="section-title">
         <h2>Needs Your Attention</h2>
-        <span class="count">7 items</span>
+        <span class="count">8 items</span>
       </div>
       <div class="grid">
         <article class="card lead-card">
           <div class="tag-row">
-            <span class="tag hot">OpenAI</span>
-            <span class="tag tool">Frontier Models</span>
-          </div>
-          <h3>GPT-5.6 appears to be moving through narrow preview with new reasoning controls</h3>
-          <p class="summary">The TLDR AI issue says OpenAI is preparing a Sol, Terra, and Luna tiering scheme, with a reasoning-effort slider and an ultra mode for harder tasks.</p>
-          <p class="why">Why it matters: model selection may shift from picking one frontier endpoint to tuning reasoning budget, latency, and capability tiers per workflow.</p>
-          <p class="source">Source: TLDR AI, Jul 6</p>
-          <a class="read-link" href="https://www.testingcatalog.com/openai-might-be-preparing-gpt-5-6-for-next-weeks-release/" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
             <span class="tag hot">Anthropic</span>
             <span class="tag tool">Agent Tooling</span>
           </div>
-          <h3>Better models can still be worse tool callers when schemas get strict</h3>
-          <p class="summary">Newer Anthropic models may solve the task but add invalid fields to alternative tool schemas, exposing a reliability gap in agent harnesses.</p>
-          <p class="why">Why it matters: coding and data agents need constrained calls, validators, and recovery paths. Better reasoning alone does not guarantee production-safe tool use.</p>
-          <p class="source">Source: TLDR Data and TLDR Tech, Jul 6</p>
-          <a class="read-link" href="https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Claude Code now brings a sandboxed browser into the desktop agent loop</h3>
+          <p class="summary">Claude Code can open documentation, designs, and websites, then read, click, and interact with them alongside local development targets.</p>
+          <p class="why">Why it matters: browser access closes a major context gap for coding agents and makes product verification, research, and UI workflows part of one harness.</p>
+          <p class="source">Source: TLDR AI, Jul 13</p>
+          <a class="read-link" href="https://threadreaderapp.com/thread/2075635283211772279.html" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">OpenAI</span>
+            <span class="tag news">Legal</span>
+          </div>
+          <h3>Apple sued OpenAI over alleged theft of confidential hardware information</h3>
+          <p class="summary">Apple alleges OpenAI's device effort solicited secret product details and prototypes from candidates, then used the information with a manufacturing partner.</p>
+          <p class="why">Why it matters: the dispute puts recruiting practices, model-era hardware competition, and trade-secret controls directly in the spotlight.</p>
+          <p class="source">Source: TLDR Tech and TLDR AI, Jul 13</p>
+          <a class="read-link" href="https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
             <span class="tag hot">Anthropic</span>
-            <span class="tag research">AI for Science</span>
+            <span class="tag tool">Model Access</span>
           </div>
-          <h3>Claude Science frames Anthropic's science push as an end-to-end workbench</h3>
-          <p class="summary">The workbench is positioned around literature review, hypothesis generation, data analysis, experiment design, and code writing for scientists.</p>
-          <p class="why">Why it matters: AI-for-science products are moving from chat assistants toward domain workbenches that hold context across the research loop.</p>
-          <p class="source">Source: TLDR Data, Jul 6</p>
-          <a class="read-link" href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Anthropic extended Claude Fable 5 access and higher Claude Code limits again</h3>
+          <p class="summary">The temporary extension through July 19 contrasts with OpenAI's relaxed GPT-5.6 Sol caps and underscores how frontier access remains fluid.</p>
+          <p class="why">Why it matters: teams should treat model availability and usage limits as operational dependencies, with routing and fallback plans built in.</p>
+          <p class="source">Source: TLDR AI, Jul 13</p>
+          <a class="read-link" href="https://simonwillison.net/2026/Jul/12/bump/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
-            <span class="tag hot">Meta</span>
-            <span class="tag tool">AI Infrastructure</span>
+            <span class="tag hot">Agent Memory</span>
+            <span class="tag research">Long Horizon</span>
           </div>
-          <h3>Meta published its AI storage blueprint for large-scale training infrastructure</h3>
-          <p class="summary">The blueprint covers multi-tier storage, placement, replication, caching, erasure coding, and networking choices for massive AI workloads.</p>
-          <p class="why">Why it matters: model capability is increasingly constrained by storage topology, movement, durability, and serving economics, not only GPU supply.</p>
-          <p class="source">Source: TLDR Data, Jul 6</p>
-          <a class="read-link" href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
-            <span class="tag hot">Agent Tooling</span>
-            <span class="tag tool">Verification</span>
-          </div>
-          <h3>Verification loops are becoming the main cost of agentic development</h3>
-          <p class="summary">The TLDR AI deep dive argues agents made building cheaper, but moved the bottleneck to proving whether generated work actually functions.</p>
-          <p class="why">Why it matters: durable agent systems will be judged by tests, runtime evidence, and independent checks, not by how quickly they produce plausible changes.</p>
-          <p class="source">Source: TLDR AI, Jul 6</p>
-          <a class="read-link" href="https://thinkroom.kieranklaassen.com/d/njrS5TJhis" target="_blank" rel="noopener noreferrer">Read article</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row">
-            <span class="tag hot">Multimodal AI</span>
-            <span class="tag news">Video</span>
-          </div>
-          <h3>ByteDance's Seedance 2.5 rumor raises the bar for long-form AI video</h3>
-          <p class="summary">The reported Dreamina model would output 180-second clips across ByteDance products, with open questions around identity, motion, camera logic, and prompt stability.</p>
-          <p class="why">Why it matters: longer clips only matter if temporal coherence improves. Video generation is becoming a product-infrastructure race, not just a demo race.</p>
-          <p class="source">Source: TLDR AI, Jul 6</p>
-          <a class="read-link" href="https://www.testingcatalog.com/bytedance-set-to-launch-seedance-2-5-with-3-minute-ai-video-output/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>A separate memory agent improves long-horizon task performance</h3>
+          <p class="summary">The system tracks important state and selectively reminds the action agent when relevant information risks falling out of context.</p>
+          <p class="why">Why it matters: durable agent performance may depend on active memory management more than simply expanding context windows.</p>
+          <p class="source">Source: TLDR AI, Jul 13</p>
+          <a class="read-link" href="https://arxiv.org/abs/2607.08716" target="_blank" rel="noopener noreferrer">Read paper</a>
         </article>
 
         <article class="card">
           <div class="tag-row">
             <span class="tag hot">Google</span>
-            <span class="tag tool">Workspace AI</span>
+            <span class="tag tool">Agent Evaluation</span>
           </div>
-          <h3>Gemini may get a dedicated inbox triage section for Workspace users</h3>
-          <p class="summary">Google is testing a Gemini app section aimed at Business and Workspace inbox triage, suggesting email operations remain a prime agent surface.</p>
-          <p class="why">Why it matters: inbox triage is a high-frequency workflow where context, permissions, and confidence controls will decide whether AI assistants become daily infrastructure.</p>
-          <p class="source">Source: TLDR AI, Jul 6</p>
-          <a class="read-link" href="https://www.testingcatalog.com/google-tests-new-gemini-inbox-section-for-workspace-triage/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <h3>Google proposes information-theoretic controls for agent evaluation difficulty</h3>
+          <p class="summary">Google Data Cloud's Frontier AI team explores modulating case difficulty so evaluations better distinguish agent capability.</p>
+          <p class="why">Why it matters: agent benchmarks need calibrated difficulty and diagnostic power, not just pass rates on a fixed collection of tasks.</p>
+          <p class="source">Source: TLDR AI, Jul 13</p>
+          <a class="read-link" href="https://cloud.google.com/blog/products/data-analytics/evaluate-agent-performance/" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Meta</span>
+            <span class="tag news">Image Generation</span>
+          </div>
+          <h3>Meta pulled a new AI image feature after privacy backlash</h3>
+          <p class="summary">Muse Image let people generate or alter content using material from public-facing accounts, prompting immediate concern over consent and reuse.</p>
+          <p class="why">Why it matters: image-generation products need provenance, permission, and abuse controls designed before launch—not added after user backlash.</p>
+          <p class="source">Source: TLDR AI, Jul 13</p>
+          <a class="read-link" href="https://www.bbc.com/news/articles/c2dy6e8klw0o" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Anthropic</span>
+            <span class="tag tool">Product Analytics</span>
+          </div>
+          <h3>Claude adds a reflection dashboard for understanding personal usage</h3>
+          <p class="summary">The beta feature visualizes how people use Claude and is available to Free, Pro, and Max users with memory enabled.</p>
+          <p class="why">Why it matters: usage reflection can turn vague AI adoption into observable workflows, helping teams identify repeatable patterns and skill gaps.</p>
+          <p class="source">Source: TLDR Founders, Jul 13</p>
+          <a class="read-link" href="https://www.anthropic.com/news/reflect-with-claude" target="_blank" rel="noopener noreferrer">Read article</a>
+        </article>
+
+        <article class="card">
+          <div class="tag-row">
+            <span class="tag hot">Agent Tooling</span>
+            <span class="tag tool">Code Review</span>
+          </div>
+          <h3>Better tools made Copilot review worse until GitHub narrowed the agent's path</h3>
+          <p class="summary">Generic instructions sent the reviewer roaming across repositories; starting from the diff and gathering exact evidence cut cost 20% without quality loss.</p>
+          <p class="why">Why it matters: agent performance depends on search strategy and harness instructions as much as the underlying model or tool set.</p>
+          <p class="source">Source: TLDR Data, Jul 13</p>
+          <a class="read-link" href="https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
@@ -436,43 +448,43 @@
         <div class="topic">
           <div class="score">1</div>
           <div>
-            <strong>Tool schemas are becoming an agent reliability boundary</strong>
-            <span>The Better Models, Worse Tools thread is a reminder that agent infrastructure needs hard validation, not just smarter models.</span>
+            <strong>Browsers are becoming first-class tools inside coding-agent harnesses</strong>
+            <span>Claude Code's in-app browser joins local files, terminals, and dev servers in one operating loop.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">2</div>
           <div>
-            <strong>Frontier releases are adding more runtime controls</strong>
-            <span>GPT-5.6's rumored reasoning slider and ultra mode fit a broader shift toward per-task budgets, routing, and controllable effort.</span>
+            <strong>Model access is an infrastructure dependency, not a stable assumption</strong>
+            <span>Temporary Claude Fable extensions and relaxed GPT-5.6 Sol caps make fallback routing and capacity planning essential.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">3</div>
           <div>
-            <strong>AI-for-science is turning into a product category</strong>
-            <span>Claude Science and Leanstral point to assistants that operate inside scientific literature, experiments, proofs, and verification workflows.</span>
+            <strong>Enterprise AI value is migrating into customer-owned context</strong>
+            <span>Weights, corrections, traces, evals, and decision history increasingly define the durable asset around replaceable models.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">4</div>
           <div>
-            <strong>Compute scarcity is being questioned, but infrastructure bottlenecks remain</strong>
-            <span>Clouded Judgement and token-economics pieces both point away from simple GPU counts and toward utilization, memory, networking, and demand timing.</span>
+            <strong>Proactive memory is emerging as a separate agent subsystem</strong>
+            <span>Long-horizon agents benefit when a dedicated process tracks state and surfaces reminders only when they matter.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">5</div>
           <div>
-            <strong>Context engineering is becoming analytics engineering for agents</strong>
-            <span>The dbt playbook frames clean data models, docs, evals, permissions, and CI as the practical layer that lifts agent accuracy.</span>
+            <strong>Evaluation quality is now a research and infrastructure problem</strong>
+            <span>Broken SQL gold answers and adaptive agent evaluations both show why a single benchmark score can mislead.</span>
           </div>
         </div>
         <div class="topic">
           <div class="score">6</div>
           <div>
-            <strong>Agentic GTM is moving from pilots to production workloads</strong>
-            <span>Vercel's SDR automation example stresses semantic layers, APIs, MCP, webhooks, and cost controls at 100x to 1,000x scale.</span>
+            <strong>Harness design can outweigh adding more tools</strong>
+            <span>GitHub's Copilot review results show that disciplined navigation and evidence gathering can improve cost and quality together.</span>
           </div>
         </div>
       </div>
@@ -485,40 +497,40 @@
       </div>
       <div class="grid two">
         <article class="card">
-          <div class="tag-row"><span class="tag research">AI for Science</span><span class="tag tool">Formal Methods</span></div>
-          <h3>Leanstral targets theorem proving and code verification</h3>
-          <p class="summary">Mistral's open 119B-parameter verification agent sits at the intersection of coding models, proof search, and reliability evaluation.</p>
-          <a class="read-link" href="https://github.com/mistralai/LeanstralSafeVerify/blob/main/LeanstralReport.pdf" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Agent Memory</span><span class="tag tool">Long Horizon</span></div>
+          <h3>Proactive memory selectively restores state for long-running agents</h3>
+          <p class="summary">A dedicated memory agent improves results on Terminal-Bench 2.0 and tau2-Bench without changing the action model.</p>
+          <a class="read-link" href="https://arxiv.org/abs/2607.08716" target="_blank" rel="noopener noreferrer">Read paper</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Forecasting</span><span class="tag tool">Time Series</span></div>
-          <h3>t0-alpha shows zero-shot time-series forecasting is maturing</h3>
-          <p class="summary">The 102M-parameter open-weights forecaster beats classical baselines across most tasks, with production value likely in calibrated outputs and routing.</p>
-          <a class="read-link" href="https://towardsdatascience.com/time-series-llms-explained-with-t0-alpha/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Verification</span><span class="tag tool">LLM Evaluators</span></div>
+          <h3>LLM-as-a-Verifier proposes a general-purpose verification framework</h3>
+          <p class="summary">The paper examines how language models can act as reusable evaluators, a key layer for scaling agent and generation workflows.</p>
+          <a class="read-link" href="https://arxiv.org/abs/2607.05391" target="_blank" rel="noopener noreferrer">Read paper</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Inference</span><span class="tag tool">Data Centers</span></div>
-          <h3>Token economics are dominated by data-center bottlenecks</h3>
-          <p class="summary">Inference cost depends on prefill, decode, KV cache management, batching, quantization, speculative decoding, memory bandwidth, optics, and power.</p>
-          <a class="read-link" href="https://www.datagravity.dev/p/how-an-ai-token-travels-through-a" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Evaluation</span><span class="tag tool">Text to SQL</span></div>
+          <h3>Widely used text-to-SQL benchmarks contain incorrect gold queries</h3>
+          <p class="summary">sqlsure argues BIRD and Spider can reward copied mistakes and penalize correct SQL unless grading also checks declared data semantics.</p>
+          <a class="read-link" href="https://sqlsure.ai/blog/bird-benchmark-wrong-gold/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">AI Ecosystem</span><span class="tag tool">Strategy</span></div>
-          <h3>Pace layers help separate fast AI churn from durable structure</h3>
-          <p class="summary">The framework sorts AI ecosystem components by change speed, helping teams decide what to monitor, standardize, or build around.</p>
-          <a class="read-link" href="https://www.dbreunig.com/2026/07/03/ai-ecosytem-pace-layers.html" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Agent Evaluation</span><span class="tag tool">Information Theory</span></div>
+          <h3>Google explores adaptive difficulty for evaluating AI agents</h3>
+          <p class="summary">Information-theoretic measures can help tune evaluation cases so benchmarks reveal meaningful performance differences.</p>
+          <a class="read-link" href="https://cloud.google.com/blog/products/data-analytics/evaluate-agent-performance/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">LLMs</span><span class="tag tool">Prompting</span></div>
-          <h3>Bare URLs can steer model output when memorized content is present</h3>
-          <p class="summary">The prompt-influence analysis suggests URLs can function as keys into model weights when the linked content exists in training data.</p>
-          <a class="read-link" href="https://aifoc.us/influencing-model-output-with-urls/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Robotics</span><span class="tag tool">Multimodal Sensing</span></div>
+          <h3>1X's tendon-driven robot hands target the hardest part of home manipulation</h3>
+          <p class="summary">Twenty-five backdrivable joints and tactile sensing aim to handle slips, awkward shapes, and the variability of household objects.</p>
+          <a class="read-link" href="https://thenextweb.com/news/1x-neo-robot-tendon-driven-hands" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Experiments</span><span class="tag tool">Causal Inference</span></div>
-          <h3>Variance reduction below the randomization grain improves experiment power</h3>
-          <p class="summary">Instacart's analysis applies user- and session-level adjustment techniques to detect smaller effects in A/B testing.</p>
-          <a class="read-link" href="https://tech.instacart.com/variance-reduction-below-the-randomization-grain-31719f87a7d2" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag research">Model Comparison</span><span class="tag tool">Benchmarking</span></div>
+          <h3>A blind “Pepsi challenge” asks how to explain differences between strong LLMs</h3>
+          <p class="summary">As leading models converge on standard benchmarks, side-by-side preference tests may expose differences users actually feel.</p>
+          <a class="read-link" href="https://threadreaderapp.com/thread/2075315309591044522.html" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
@@ -530,40 +542,40 @@
       </div>
       <div class="grid">
         <article class="card">
-          <div class="tag-row"><span class="tag news">Anthropic</span><span class="tag tool">Claude Code</span></div>
-          <h3>Alibaba reportedly restricted Claude Code internally</h3>
-          <p class="summary">Employees were reportedly directed toward Alibaba's Qoder tool after Claude Code was classified as high-risk software.</p>
-          <a class="read-link" href="https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">OpenAI</span><span class="tag tool">Organization</span></div>
+          <h3>OpenAI consolidated key projects under Greg Brockman ahead of a possible IPO</h3>
+          <p class="summary">The reorganization puts Brockman over major initiatives as OpenAI pushes revenue growth amid competition and leadership changes.</p>
+          <a class="read-link" href="https://www.cnbc.com/2026/07/10/openai-power-consolidates-under-co-founder-greg-brockman-ahead-of-ipo.html" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Open Source AI</span><span class="tag tool">Ecosystem</span></div>
-          <h3>The Open Source AI Gap Map catalogs missing pieces in the stack</h3>
-          <p class="summary">The map aims to make open-source AI infrastructure easier to inspect, coordinate, fund, and extend.</p>
-          <a class="read-link" href="https://map.currentai.org/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Cursor</span><span class="tag tool">General Agents</span></div>
+          <h3>Cursor is reportedly expanding beyond coding into a general-purpose agent</h3>
+          <p class="summary">The reported agent would handle email, texts, spreadsheets, and engineering tasks, extending Cursor's harness into broader knowledge work.</p>
+          <a class="read-link" href="https://threadreaderapp.com/thread/2075311381641916622.html" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Local AI</span><span class="tag tool">Developer Infra</span></div>
-          <h3>A practical guide lays out hardware tiers for local SOTA-ish LLMs</h3>
-          <p class="summary">The guide covers Dockerized local model setups, speech-to-text, and the cost gap between Qwen-class rigs and almost-Opus-level machines.</p>
-          <a class="read-link" href="https://github.com/jamesob/local-llm" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">LangChain</span><span class="tag tool">Agent Memory</span></div>
+          <h3>OpenWiki Brains turns connected sources into proactive local agent memory</h3>
+          <p class="summary">The project maintains local wikis from sources such as Gmail and Notion so agents receive consistent context without manual updates.</p>
+          <a class="read-link" href="https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">SaaS</span><span class="tag tool">AI ROI</span></div>
-          <h3>Software spend is rising while legacy SaaS valuations keep splitting</h3>
-          <p class="summary">The SaaStr analysis argues companies tapping AI budgets are separating from teams still selling the pre-AI playbook.</p>
-          <a class="read-link" href="https://www.saastr.com/tired-vs-wired-our-deep-dive-on-why-software-spend-is-up-15-yet-half-of-saas-is-still-dying/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Airflow</span><span class="tag tool">AI Infrastructure</span></div>
+          <h3>Airflow is adding AI controls for schema drift, persistent state, and retries</h3>
+          <p class="summary">Semantic validation, reconnectable job state, and LLM-based failure classification aim to reduce pipeline firefighting.</p>
+          <a class="read-link" href="https://blog.dataengineerthings.org/how-airflow-is-using-ai-to-make-data-engineering-more-resilient-not-more-complex-36ff44fd8df7" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Agents</span><span class="tag tool">Patterns</span></div>
-          <h3>New agentic patterns are emerging around harness ownership</h3>
-          <p class="summary">The July 6 issues repeatedly point to control loops, model routing, delegation, and verification as the durable surface above commodity models.</p>
-          <a class="read-link" href="https://blog.fsck.com/2026/07/05/new-patterns/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Thinking Machines</span><span class="tag tool">Customizable AI</span></div>
+          <h3>Thinking Machines argues for interactive models shaped by local knowledge</h3>
+          <p class="summary">Its vision centers on tools and interfaces that let organizations adapt AI to their own expertise, values, and judgment.</p>
+          <a class="read-link" href="https://thinkingmachines.ai/blog/the-future-worth-building-is-human/" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Vector Search</span><span class="tag tool">Data Infra</span></div>
-          <h3>Redis compared open-source vector databases for production tradeoffs</h3>
-          <p class="summary">Redis, Weaviate, Qdrant, Milvus, Chroma, and LanceDB were compared across latency, filtering, scale, benchmarks, and developer experience.</p>
-          <a class="read-link" href="https://redis.io/blog/best-open-source-vector-databases-comparison/" target="_blank" rel="noopener noreferrer">Read article</a>
+          <div class="tag-row"><span class="tag news">Intent Engineering</span><span class="tag tool">Agent Workflows</span></div>
+          <h3>Intent engineering shifts prompts from prescribing steps to defining outcomes</h3>
+          <p class="summary">As agents become better planners, specifying the desired result may outperform detailed instructions about how to reach it.</p>
+          <a class="read-link" href="https://danielmiessler.com/blog/intent-engineering" target="_blank" rel="noopener noreferrer">Read article</a>
         </article>
       </div>
     </section>
