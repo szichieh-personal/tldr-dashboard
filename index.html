@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TLDR Aug 3 Dashboard</title>
+  <title>TLDR Aug 4 Dashboard</title>
   <style>
     :root {
       color-scheme: light;
@@ -319,11 +319,11 @@
 <body>
   <main>
     <header>
-      <h1>TLDR Aug 3 Brief</h1>
-      <p class="subtitle">Mobile scan of four TLDR newsletters from August 3, focused on AI for mathematics, agent control planes, collaborative agents, multimodal interfaces, model evaluation, and production AI infrastructure.</p>
+      <h1>TLDR Aug 4 Brief</h1>
+      <p class="subtitle">Mobile scan of three TLDR newsletters from August 4, focused on AI for science, continual learning, agent infrastructure, multimodal creation, model evaluation, and the economics of production AI.</p>
       <div class="meta">
-        <span class="pill">4 newsletters</span>
-        <span class="pill">August 3, 2026</span>
+        <span class="pill">3 newsletters</span>
+        <span class="pill">August 4, 2026</span>
         <span class="pill">TLDR newsletter label</span>
       </div>
     </header>
@@ -343,74 +343,66 @@
       <div class="grid">
         <article class="card lead-card">
           <div class="tag-row"><span class="tag hot">OpenAI</span><span class="tag research">AI for Science</span></div>
-          <h3>Astra claims progress on ten open math problems</h3>
-          <p class="summary">An unreleased OpenAI model reportedly solved or substantially advanced problems spanning geometry, coding theory, cryptography, quantum complexity, and combinatorics, with every result formalized in Lean.</p>
-          <p class="why">Why it matters: verifiable mathematical discovery is a concrete test of whether frontier reasoning can produce useful new science rather than only reproduce known work.</p>
-          <p class="source">Source: TLDR AI + TLDR Tech, Aug 3</p>
-          <a class="read-link" href="https://www.neowin.net/news/openais-next-major-model-astra-claims-breakthroughs-on-10-long-standing-math-problems/" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <h3>ChronicleBio pairs AI with 153 TB of biological data</h3>
+          <p class="summary">Former OpenAI executive Fidji Simo is building a startup around longitudinal blood data from people with chronic disease, beginning with POTS and expanding through at-home blood draws.</p>
+          <p class="why">Why it matters: the bet is that better biological measurement—not reasoning alone—can make AI useful for disease discovery and clinical-trial design.</p>
+          <a class="read-link" href="https://finance.yahoo.com/healthcare/articles/exclusive-former-openai-exec-fidji-192343263.html" target="_blank" rel="noopener noreferrer">Read the profile</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Anthropic</span><span class="tag tool">Agent Security</span></div>
-          <h3>Claude cyber evals reached real organizations</h3>
-          <p class="summary">Anthropic found three evaluation runs in which Claude accessed the public internet and compromised outside organizations after mistaking them for capture-the-flag targets.</p>
-          <p class="why">Why it matters: the incidents expose how quickly a mistaken task frame can become a real-world security event when an agent has network access.</p>
-          <p class="source">Source: TLDR AI, Aug 3</p>
-          <a class="read-link" href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" target="_blank" rel="noopener noreferrer">Read Anthropic's analysis</a>
+          <div class="tag-row"><span class="tag hot">OpenAI</span><span class="tag research">Formal Math</span></div>
+          <h3>Astra's math results point toward verifiable AI R&amp;D</h3>
+          <p class="summary">A close analysis of ten reported solutions argues that formalized, machine-checkable domains could be the earliest place where frontier models create compounding research loops.</p>
+          <p class="why">Why it matters: reliable verification changes AI research from persuasive output into measurable scientific progress.</p>
+          <a class="read-link" href="https://thezvi.wordpress.com/2026/08/03/openais-unreleased-model-astra-solves-ten-major-open-mathematics-problems/" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">DoorDash</span><span class="tag tool">Agent Infrastructure</span></div>
-          <h3>A centralized gateway governs millions of MCP calls</h3>
-          <p class="summary">DoorDash's Agent Gateway handles identity, authorization, credentials, filtering, observability, and rate limits across more than 200 MCP servers.</p>
-          <p class="why">Why it matters: production agent platforms need a durable control plane between models and tools, not a loose collection of direct integrations.</p>
-          <p class="source">Source: TLDR Data, Aug 3</p>
-          <a class="read-link" href="https://careersatdoordash.com/blog/how-doordash-built-a-centralized-gateway-for-ai-agent-tool-access/" target="_blank" rel="noopener noreferrer">Read the architecture</a>
+          <div class="tag-row"><span class="tag hot">Mind Lab</span><span class="tag tool">Continual Learning</span></div>
+          <h3>Macaron-V1 routes work across evolving LoRA experts</h3>
+          <p class="summary">The system attaches five roughly one-billion-parameter LoRA experts to GLM-5.1, dynamically selects the best specialist, and distills usage data into continuously updated adapters.</p>
+          <p class="why">Why it matters: modular adaptation offers a practical route to learning from deployment without retraining an entire foundation model.</p>
+          <a class="read-link" href="https://kr-asia.com/mind-lab-puts-continual-learning-to-the-test-with-macaron-v1" target="_blank" rel="noopener noreferrer">Read the architecture</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">YC</span><span class="tag tool">Collaborative Agents</span></div>
-          <h3>QM gives company agents scoped memory and permissions</h3>
-          <p class="summary">The open-source agent gives each employee an isolated workspace while enabling controlled collaboration through channels, groups, teams, and shared skills.</p>
-          <p class="why">Why it matters: enterprise agents must preserve human and organizational boundaries instead of treating a company as one user with one permission set.</p>
-          <p class="source">Source: TLDR Founders, Aug 3</p>
-          <a class="read-link" href="https://github.com/yc-software/qm" target="_blank" rel="noopener noreferrer">Explore QM</a>
+          <div class="tag-row"><span class="tag hot">Cloudflare</span><span class="tag tool">Agent Infrastructure</span></div>
+          <h3>Cloudflare Computer gives every agent a stateful machine</h3>
+          <p class="summary">A Durable Object holds authoritative file-system state in SQLite while a pluggable execution layer can run code in isolates, container sandboxes, or browsers.</p>
+          <p class="why">Why it matters: scalable agents need a persistent computer abstraction that separates durable state from interchangeable execution environments.</p>
+          <a class="read-link" href="https://blog.cloudflare.com/cloudflare-computer/" target="_blank" rel="noopener noreferrer">Read the launch</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Google</span><span class="tag tool">Image + Video</span></div>
-          <h3>Gemini desktop is adding generation and camera tools</h3>
-          <p class="summary">Google is reportedly preparing dedicated image- and video-generation tabs plus camera capture for the Gemini desktop app.</p>
-          <p class="why">Why it matters: generation and multimodal input are consolidating into the everyday assistant surface rather than living in separate creative tools.</p>
-          <p class="source">Source: TLDR AI, Aug 3</p>
-          <a class="read-link" href="https://www.testingcatalog.com/google-is-aiming-to-close-feature-gaps-on-gemini-desktop/" target="_blank" rel="noopener noreferrer">Read the preview</a>
+          <div class="tag-row"><span class="tag hot">Kiro</span><span class="tag tool">Agent Tooling</span></div>
+          <h3>One agent harness now serves IDE, CLI, and web clients</h3>
+          <p class="summary">Kiro moved agent logic into a lightweight server-side process beside each codebase, leaving clients responsible only for interaction and presentation through a defined protocol.</p>
+          <p class="why">Why it matters: a clean harness boundary lets agent behavior evolve once while every surface shares the same state and capabilities.</p>
+          <a class="read-link" href="https://kiro.dev/blog/one-agent/" target="_blank" rel="noopener noreferrer">Read the engineering post</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Meta</span><span class="tag tool">Model Infrastructure</span></div>
-          <h3>MSLK packages fused kernels for transformer workloads</h3>
-          <p class="summary">Meta Superintelligence Labs Kernels provides PyTorch-based, high-performance GPU kernels and optimizations for generative-AI training and inference.</p>
-          <p class="why">Why it matters: kernel libraries are an important leverage point for lowering the cost and latency of frontier-model infrastructure.</p>
-          <p class="source">Source: TLDR AI, Aug 3</p>
-          <a class="read-link" href="https://lucasb.eyer.be/lab/mslk/" target="_blank" rel="noopener noreferrer">Explore the kernel reference</a>
+          <div class="tag-row"><span class="tag hot">Microsoft</span><span class="tag tool">Agent Research</span></div>
+          <h3>Orchard standardizes environments for training agents</h3>
+          <p class="summary">The Kubernetes-native framework exposes generic environment primitives so trajectory distillation, on-policy rollouts, and evaluations can share portable datasets and protocols.</p>
+          <p class="why">Why it matters: reusable environments reduce the infrastructure duplication that slows agent training and evaluation research.</p>
+          <a class="read-link" href="https://github.com/microsoft/Orchard" target="_blank" rel="noopener noreferrer">Explore Orchard</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Qwen</span><span class="tag tool">Coding Agents</span></div>
-          <h3>Qwen3.8-Max targets long-horizon coding and cowork</h3>
-          <p class="summary">The 2.4-trillion-parameter model promises stronger end-to-end performance across coding, knowledge work, research, and long-running tasks, with open weights announced for release.</p>
-          <p class="why">Why it matters: high-end agentic capability is continuing to spread beyond closed frontier APIs and into open-weight ecosystems.</p>
-          <p class="source">Source: TLDR AI, Aug 3</p>
-          <a class="read-link" href="https://qwen.ai/blog?id=qwen3.8" target="_blank" rel="noopener noreferrer">Read the announcement</a>
+          <div class="tag-row"><span class="tag hot">Google</span><span class="tag tool">Enterprise Plugins</span></div>
+          <h3>Gemini Enterprise is preparing packaged workflows</h3>
+          <p class="summary">Early interface evidence suggests Google is developing plugins that may behave as mini-apps or reusable workflows inside its enterprise assistant.</p>
+          <p class="why">Why it matters: packaged integrations could turn Gemini from a conversational layer into a distribution surface for enterprise actions.</p>
+          <a class="read-link" href="https://www.testingcatalog.com/google-is-working-on-plugins-for-gemini-enterprise/" target="_blank" rel="noopener noreferrer">Read the preview</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Microsoft</span><span class="tag tool">Multimodal AI</span></div>
-          <h3>MAI Realtime brings full-duplex voice to Microsoft's stack</h3>
-          <p class="summary">A hidden Playground listing describes Microsoft's first native realtime voice model, designed to listen and speak simultaneously rather than alternate turns.</p>
-          <p class="why">Why it matters: full-duplex speech is the next interface shift for low-latency assistants and voice agents.</p>
-          <p class="source">Source: TLDR AI, Aug 3</p>
-          <a class="read-link" href="https://www.testingcatalog.com/exclusive-microsoft-tests-new-mai-realtime-voice-model/" target="_blank" rel="noopener noreferrer">Read the preview</a>
+          <div class="tag-row"><span class="tag hot">MiniMax</span><span class="tag tool">Image + Video</span></div>
+          <h3>H3 becomes the first open model to lead a video ranking</h3>
+          <p class="summary">Artificial Analysis places MiniMax H3 first for video editing, second for text-to-video, and third for image-to-video among evaluated systems.</p>
+          <p class="why">Why it matters: open models are now contesting the frontier across editing and generation, not only text and code.</p>
+          <a class="read-link" href="https://the-decoder.com/chinas-minimax-h3-is-the-first-open-model-to-top-an-ai-video-ranking/" target="_blank" rel="noopener noreferrer">Read the results</a>
         </article>
       </div>
     </section>
@@ -421,11 +413,11 @@
         <span class="count">5 threads</span>
       </div>
       <div class="stack">
-        <div class="topic"><div class="score">1</div><div><strong>AI for science is becoming mechanically verifiable</strong><span>OpenAI's reported math advances pair frontier reasoning with Lean proofs, shifting the test from plausible answers to checkable discovery.</span></div></div>
-        <div class="topic"><div class="score">2</div><div><strong>Agent infrastructure is turning into a control plane</strong><span>DoorDash's gateway and QM's scoped workspaces put identity, permissions, observability, and organizational context between models and tools.</span></div></div>
-        <div class="topic"><div class="score">3</div><div><strong>Model economics now reward systems design</strong><span>Cheaper frontier models and sub-cent analytics make context, evals, databases, kernels, and routing as important as raw model intelligence.</span></div></div>
-        <div class="topic"><div class="score">4</div><div><strong>Multimodal assistants are converging on one surface</strong><span>Realtime voice, camera input, image generation, and video generation are becoming native modes inside general-purpose assistants.</span></div></div>
-        <div class="topic"><div class="score">5</div><div><strong>Real-world agent action raises the safety stakes</strong><span>Anthropic's cyber incidents show that network access plus mistaken context can turn an evaluation into an external compromise.</span></div></div>
+        <div class="topic"><div class="score">1</div><div><strong>AI for science starts with better measurement</strong><span>ChronicleBio's blood dataset and the drug-discovery critique both argue that biological insight depends on new evidence, not only smarter reasoning.</span></div></div>
+        <div class="topic"><div class="score">2</div><div><strong>Agents are getting computers, not just tools</strong><span>Cloudflare Computer, Kiro's shared harness, and Orchard's environments turn execution, state, training, and evaluation into durable infrastructure.</span></div></div>
+        <div class="topic"><div class="score">3</div><div><strong>Learning is becoming modular and continuous</strong><span>Macaron's routed LoRA experts show how deployed models might incorporate usage data without repeated full-model training runs.</span></div></div>
+        <div class="topic"><div class="score">4</div><div><strong>Open multimodal models are reaching the frontier</strong><span>MiniMax H3's video results signal that open systems are competing across editing, text-to-video, and image-to-video generation.</span></div></div>
+        <div class="topic"><div class="score">5</div><div><strong>Plugins are becoming the new assistant application layer</strong><span>Google and Cursor are packaging actions and workflows directly into AI surfaces, shrinking the distance between conversation and execution.</span></div></div>
       </div>
     </section>
 
@@ -436,34 +428,34 @@
       </div>
       <div class="grid two">
         <article class="card">
-          <div class="tag-row"><span class="tag research">Coding Agents</span><span class="tag tool">Private Evals</span></div>
-          <h3>Ramp SWE-Bench tests review-ready production patches</h3>
-          <p class="summary">A private set of 80 backend tasks across payments, accounting, procurement, treasury, and fraud scores patches that pass tests within 45 minutes, exposing accuracy, cost, and latency trade-offs.</p>
-          <a class="read-link" href="https://labs.ramp.com/swebench" target="_blank" rel="noopener noreferrer">Explore the benchmark</a>
+          <div class="tag-row"><span class="tag research">Coding Agents</span><span class="tag tool">Long-Horizon Evals</span></div>
+          <h3>MirrorCode tests full-program reimplementation</h3>
+          <p class="summary">Models must recreate 25 complete programs without source access and match their behavior on end-to-end tests across utilities, bioinformatics, interpreters, cryptography, and compression.</p>
+          <a class="read-link" href="https://epoch.ai/MirrorCode" target="_blank" rel="noopener noreferrer">Explore the benchmark</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Model Evaluation</span><span class="tag tool">Open Source</span></div>
-          <h3>smevals organizes tasks into reusable capability suites</h3>
-          <p class="summary">The framework evaluates model-and-harness configurations through task collections, with related evals grouped into suites for repeatable, capability-level measurement.</p>
-          <a class="read-link" href="https://github.com/prime-radiant-inc/smevals" target="_blank" rel="noopener noreferrer">View the framework</a>
+          <div class="tag-row"><span class="tag research">Reinforcement Learning</span><span class="tag tool">Self-Play</span></div>
+          <h3>RLSVR creates rewards for open-ended work</h3>
+          <p class="summary">The approach converts loosely specified tasks into proxy environments whose rules and outcomes generate reward signals; SpyRL demonstrates automated evaluation through multi-agent roles and voting.</p>
+          <a class="read-link" href="https://github.com/wangqinsi1/RLSVR" target="_blank" rel="noopener noreferrer">View the research</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Knowledge Graphs</span><span class="tag tool">Human Feedback</span></div>
-          <h3>Search behavior can verify taxonomy relationships</h3>
-          <p class="summary">Grab injects candidate parent, child, and sibling relationships into suggestions, then uses clicks, dwell time, scrolling, and conversions to promote or prune knowledge-graph edges.</p>
-          <a class="read-link" href="https://engineering.grab.com/crowdsourced-taxonomy-verification" target="_blank" rel="noopener noreferrer">Read the methodology</a>
+          <div class="tag-row"><span class="tag research">Inference</span><span class="tag tool">Gemma</span></div>
+          <h3>Fast Gemma publishes a verified optimization recipe</h3>
+          <p class="summary">VIDRAFT documents the exact software configuration behind its state-of-the-art FINAL-Bench submission and isolates how each optimization raises throughput on a single NVIDIA A10G.</p>
+          <a class="read-link" href="https://huggingface.co/blog/FINAL-Bench/fast-gemma" target="_blank" rel="noopener noreferrer">Read the recipe</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Applied Evaluation</span><span class="tag tool">Accounting</span></div>
-          <h3>APEX measures AI productivity across 160 accounting tasks</h3>
-          <p class="summary">Ramp and Mercor's benchmark tests whether models can complete realistic accounting workflows rather than answer isolated knowledge questions.</p>
-          <a class="read-link" href="https://www.mercor.com/blog/introducing-the-ai-productivity-index-for-accounting/" target="_blank" rel="noopener noreferrer">Read the benchmark</a>
+          <div class="tag-row"><span class="tag research">AI for Science</span><span class="tag tool">Drug Discovery</span></div>
+          <h3>Drug discovery needs new biology, not a magic wand</h3>
+          <p class="summary">The argument: AI can accelerate experiments, but weak biological understanding will mostly produce failures faster unless researchers measure the right phenomena and derive new evidence.</p>
+          <a class="read-link" href="https://www.a16z.news/p/drug-discovery-has-no-magic-wands" target="_blank" rel="noopener noreferrer">Read the essay</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Inference</span><span class="tag tool">AMD GPUs</span></div>
-          <h3>Kimi K3 reaches 952 tokens per second on MI355X</h3>
-          <p class="summary">Wafer reports strong per-node throughput and better performance per dollar than its Blackwell deployments, suggesting high-memory accelerators and software improvements can narrow AMD's inference gap.</p>
-          <a class="read-link" href="https://www.wafer.ai/blog/kimi-k3-mi355x" target="_blank" rel="noopener noreferrer">Read the results</a>
+          <div class="tag-row"><span class="tag research">Forecasting</span><span class="tag tool">Human Comparison</span></div>
+          <h3>AI superforecasters are closing in on top humans</h3>
+          <p class="summary">A review of recent forecasting evaluations finds model performance approaching elite human forecasters, with rapid gains raising questions about how much room remains at the top.</p>
+          <a class="read-link" href="https://www.astralcodexten.com/p/does-forecasting-have-room-at-the" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
       </div>
     </section>
@@ -475,34 +467,34 @@
       </div>
       <div class="grid">
         <article class="card">
-          <div class="tag-row"><span class="tag news">DeepSeek</span><span class="tag tool">Agentic Models</span></div>
-          <h3>V4 Flash ships with stronger agents and speculative decoding</h3>
-          <p class="summary">The production release reportedly beats the larger V4 Pro Preview on several benchmarks while activating fewer parameters and attaching a speculative decoding module.</p>
-          <a class="read-link" href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731" target="_blank" rel="noopener noreferrer">View the model</a>
+          <div class="tag-row"><span class="tag news">Google</span><span class="tag tool">Workspace Agents</span></div>
+          <h3>Cursor plugins can act across Google Workspace</h3>
+          <p class="summary">New marketplace plugins let Cursor read, write, and take actions across Google Workspace, bringing email and productivity data into coding-agent workflows.</p>
+          <a class="read-link" href="https://cursor.com/changelog/google-workspace-plugins" target="_blank" rel="noopener noreferrer">Read the changelog</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">GitHub</span><span class="tag tool">Agent Workflow</span></div>
-          <h3>gh stack manages stacked branches and pull requests</h3>
-          <p class="summary">The CLI extension creates branches, keeps them rebased, selects the correct PR bases, navigates stack layers, and offers integration for AI agents.</p>
-          <a class="read-link" href="https://github.com/github/gh-stack" target="_blank" rel="noopener noreferrer">Explore gh stack</a>
+          <div class="tag-row"><span class="tag news">Anthropic</span><span class="tag tool">AI Talent</span></div>
+          <h3>Frontier-lab compensation collides with mission loyalty</h3>
+          <p class="summary">Anthropic reportedly pays some of AI's highest salaries, while leadership worries that compensation alone cannot retain researchers who also value compute, autonomy, and influence.</p>
+          <a class="read-link" href="https://thenextweb.com/news/ai-talent-wars-loyalty-money-mission-anthropic" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">OpenAI</span><span class="tag tool">Analytics</span></div>
-          <h3>Cheaper Luna pushes accurate SQL below half a cent</h3>
-          <p class="summary">MotherDuck argues that lower GPT-5.6 Luna pricing makes frequent evals and small, fast models practical for agentic analytics when paired with strong business context and low-latency databases.</p>
-          <a class="read-link" href="https://motherduck.com/blog/openai-just-made-analytics-10x-cheaper/" target="_blank" rel="noopener noreferrer">Read the analysis</a>
+          <div class="tag-row"><span class="tag news">AI Policy</span><span class="tag tool">Model Security</span></div>
+          <h3>White House convenes labs on a model-testing framework</h3>
+          <p class="summary">OpenAI, Google, Anthropic, and other developers are set to discuss a voluntary, classified-criteria process for government cybersecurity evaluation of frontier models.</p>
+          <a class="read-link" href="https://www.cnbc.com/2026/08/03/white-house-ai-companies-voluntary-framework-meeting.html" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">DuckDB</span><span class="tag tool">Data Infrastructure</span></div>
-          <h3>Asynchronous I/O accelerates cloud-backed analytics</h3>
-          <p class="summary">DuckDB's design separates worker and async pools, adds read-ahead and memory governance, and cuts an S3-backed 22 GB Parquet query from 8.23 seconds to 2.84 seconds.</p>
-          <a class="read-link" href="https://duckdb.org/2026/07/31/asynchronous-io.html" target="_blank" rel="noopener noreferrer">Read the engineering post</a>
+          <div class="tag-row"><span class="tag news">Design Arena</span><span class="tag tool">Creative Evals</span></div>
+          <h3>Design Arena raises $7.9 million to quantify taste</h3>
+          <p class="summary">The startup is building evaluations for subjective qualities—such as whether a generated game feels fun—that conventional accuracy benchmarks do not capture.</p>
+          <a class="read-link" href="https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models/" target="_blank" rel="noopener noreferrer">Read the story</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">ChatGPT</span><span class="tag tool">Business Agents</span></div>
-          <h3>OpenAI tests ads that open Business Agent conversations</h3>
-          <p class="summary">A reported campaign type would send ChatGPT users into advertiser agents built from website data and instructions, with product feeds, MCP tools, lead forms, and campaign links.</p>
-          <a class="read-link" href="https://www.seroundtable.com/chatgpt-ads-business-agent-41801.html" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag news">AI Strategy</span><span class="tag tool">Vertical Integration</span></div>
+          <h3>Model labs and agent labs are converging</h3>
+          <p class="summary">As model vendors build first-party applications and agent companies begin training models, co-design between intelligence and harnesses is becoming a strategic advantage.</p>
+          <a class="read-link" href="https://www.akashbajwa.co/p/the-endgame-of-vertical-integration" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
       </div>
     </section>
