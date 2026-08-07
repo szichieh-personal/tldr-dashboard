@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TLDR Aug 6 Dashboard</title>
+  <title>TLDR Aug 7 Dashboard</title>
   <style>
     :root {
       color-scheme: light;
@@ -319,11 +319,11 @@
 <body>
   <main>
     <header>
-      <h1>TLDR Aug 6 Brief</h1>
-      <p class="subtitle">Mobile scan of three TLDR newsletters from August 6, focused on Google DeepMind's leadership reset, coding agents, custom AI silicon, multimodal systems, agent security, and model-training infrastructure.</p>
+      <h1>TLDR Aug 7 Brief</h1>
+      <p class="subtitle">Mobile scan of four TLDR newsletters from August 7, focused on OpenAI's free-tier expansion, portable agent tooling, agent security, multimodal research, AI for science, and the infrastructure race beneath frontier models.</p>
       <div class="meta">
-        <span class="pill">3 newsletters</span>
-        <span class="pill">August 6, 2026</span>
+        <span class="pill">4 newsletters</span>
+        <span class="pill">August 7, 2026</span>
         <span class="pill">TLDR newsletter label</span>
       </div>
     </header>
@@ -342,67 +342,67 @@
       </div>
       <div class="grid">
         <article class="card lead-card">
-          <div class="tag-row"><span class="tag hot">Google DeepMind</span><span class="tag tool">Leadership</span></div>
-          <h3>DeepMind enters a post-Hassabis, post-Dean era</h3>
-          <p class="summary">Demis Hassabis is moving from DeepMind CEO to chair and Alphabet chief scientist, while Jeff Dean leaves Google after 27 years to start Discovery Loop.</p>
-          <p class="why">Why it matters: two defining leaders are changing roles at once as Google reorganizes its frontier research and AI-for-science strategy.</p>
-          <a class="read-link" href="https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag hot">OpenAI</span><span class="tag tool">ChatGPT</span></div>
+          <h3>GPT-5.6 Luna becomes the default for Free and Go</h3>
+          <p class="summary">OpenAI is removing text-chat limits for free users, making Luna the default, and adding an optional Think control while keeping separate limits for files, voice, images, and image generation.</p>
+          <p class="why">Why it matters: unlimited everyday inference sharply expands the addressable audience while moving the product boundary toward richer modalities and deliberate reasoning.</p>
+          <a class="read-link" href="https://www.axios.com/2026/08/06/openai-chatgpt-upgrades-luna-free-paid" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Meta</span><span class="tag tool">Coding Agents</span></div>
-          <h3>Meta releases Muse Code and Muse Spark 1.2</h3>
-          <p class="summary">Muse Code is a terminal agent for complex repository-level engineering tasks, powered by Meta's updated Muse Spark coding model.</p>
-          <p class="why">Why it matters: Meta is joining the increasingly strategic market for first-party coding agents and the models beneath them.</p>
-          <a class="read-link" href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2" target="_blank" rel="noopener noreferrer">Read the launch</a>
+          <div class="tag-row"><span class="tag hot">Agent Plugins</span><span class="tag tool">Open Standard</span></div>
+          <h3>Agent skills and MCP servers get a portable package format</h3>
+          <p class="summary">Agent Plugins 1.0 defines a shared structure that compatible clients can discover and load while leaving installation, permissions, distribution, and client-specific behavior to each host.</p>
+          <p class="why">Why it matters: a small interoperability layer could turn agent extensions into reusable infrastructure instead of one-client integrations.</p>
+          <a class="read-link" href="https://agent-plugins.org/" target="_blank" rel="noopener noreferrer">Read the specification</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Anthropic</span><span class="tag tool">Custom Silicon</span></div>
-          <h3>Anthropic starts building an AI chip design team</h3>
-          <p class="summary">Anthropic confirmed plans to co-design silicon and models, hiring chip engineers to improve Claude's speed and efficiency beyond its existing hardware partnerships.</p>
-          <p class="why">Why it matters: frontier labs are moving deeper into the hardware stack to control cost, supply, and model performance.</p>
-          <a class="read-link" href="https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag hot">Cloudflare</span><span class="tag tool">Agent Browser</span></div>
+          <h3>Kitesurf puts an agent-first browser inside Workers</h3>
+          <p class="summary">The lightweight browser runs in V8 isolates on Cloudflare Workers for bursty agent workloads that need page rendering without a full pixel-perfect Chromium stack.</p>
+          <p class="why">Why it matters: browser execution is becoming a purpose-built cloud primitive for agents, with isolation, scale, and cost shaped around machine users.</p>
+          <a class="read-link" href="https://blog.cloudflare.com/kitesurf/" target="_blank" rel="noopener noreferrer">Read the launch</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Cloudflare</span><span class="tag tool">Agentic Workspace</span></div>
-          <h3>Cloudflare open-sources its internal AI operating system</h3>
-          <p class="summary">Cloudflare OS combines agent chat, sandboxed app creation, and guardrails in an office-like workspace where any file can become a custom AI-built application.</p>
-          <p class="why">Why it matters: it is a concrete blueprint for turning agent chat and generated artifacts into a governed company-wide workspace.</p>
-          <a class="read-link" href="https://github.com/cloudflare/cloudflare-os" target="_blank" rel="noopener noreferrer">View the repository</a>
+          <div class="tag-row"><span class="tag hot">Agent Security</span><span class="tag tool">Frameworks</span></div>
+          <h3>Prompt injection is only one layer of the agent threat model</h3>
+          <p class="summary">Security researchers argue that framework flaws can turn untrusted content into code execution, credential theft, and other high-impact failures even when prompts themselves are handled carefully.</p>
+          <p class="why">Why it matters: the containment boundary must cover the harness, tools, secrets, and runtime—not just model inputs.</p>
+          <a class="read-link" href="https://www.theregister.com/security/2026/08/05/prompt-injection-isnt-the-bug-ai-agent-frameworks-are/5283585" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Cloudflare</span><span class="tag tool">Agent Security</span></div>
-          <h3>The Agent Access Model replaces standing agent privileges</h3>
-          <p class="summary">Cloudflare proposes task-specific, ephemeral credentials with harness and network enforcement, evidence-based grants, and action-by-action authorization.</p>
-          <p class="why">Why it matters: enterprise agents need access that contracts as task state changes, rather than inheriting broad human credentials.</p>
-          <a class="read-link" href="https://blog.cloudflare.com/the-agent-access-model/" target="_blank" rel="noopener noreferrer">Read the model</a>
+          <div class="tag-row"><span class="tag hot">AI Safety</span><span class="tag tool">Sandboxing</span></div>
+          <h3>Sandbox escapes expose the limits of current safeguards</h3>
+          <p class="summary">A Harvard overview highlights systems that evade controls and argues for stronger transparency, testing, governance, and technical containment as AI systems gain autonomy.</p>
+          <p class="why">Why it matters: capability gains are outpacing the operational controls needed to make agent actions inspectable and recoverable.</p>
+          <a class="read-link" href="https://news.harvard.edu/gazette/story/2026/08/when-ai-goes-rogue/" target="_blank" rel="noopener noreferrer">Read the overview</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">ByteDance</span><span class="tag tool">Multimodal AI</span></div>
-          <h3>SeedRealtime streams vision, audio, text, and speech together</h3>
-          <p class="summary">The native audio-visual model continuously processes video, audio, and text while generating spoken responses in real time.</p>
-          <p class="why">Why it matters: continuous multimodal interaction is a key step from turn-based assistants toward agents that perceive live environments.</p>
-          <a class="read-link" href="https://seed.bytedance.com/en/SeedRealtime" target="_blank" rel="noopener noreferrer">View the model</a>
+          <div class="tag-row"><span class="tag hot">Cloudflare</span><span class="tag tool">Agentic Internet</span></div>
+          <h3>The web is being redesigned for machine-readable action</h3>
+          <p class="summary">Cloudflare sketches an agentic internet where services are readable, discoverable, callable, and payable through protocols built for software actors.</p>
+          <p class="why">Why it matters: agents need more than browser automation—they need identity, structured capabilities, payments, and enforceable access rules.</p>
+          <a class="read-link" href="https://blog.cloudflare.com/the-agentic-internet/" target="_blank" rel="noopener noreferrer">Read the proposal</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Prime Intellect</span><span class="tag tool">Self-Improving Agents</span></div>
-          <h3>Prime Agent treats context and harness state as programmable</h3>
-          <p class="summary">Its Recursive Language Model exposes context and subagents through a persistent REPL, while Continual Harness lets the agent modify its own working state over long trajectories.</p>
-          <p class="why">Why it matters: this is a serious architecture for long-horizon coding, autoresearch, and agents that improve their own operating process.</p>
-          <a class="read-link" href="https://www.primeintellect.ai/blog/prime-agent" target="_blank" rel="noopener noreferrer">Read the research</a>
+          <div class="tag-row"><span class="tag hot">CopilotKit</span><span class="tag tool">Agent Channels</span></div>
+          <h3>Channels SDK brings agents into team conversations</h3>
+          <p class="summary">The open-source SDK connects AG-UI-compatible agents to chat platforms with streaming, tools, files, interactive UI, and pauses for human approval.</p>
+          <p class="why">Why it matters: agents are moving from separate destinations into the communication surfaces where work already happens.</p>
+          <a class="read-link" href="https://github.com/CopilotKit/channels-sdk" target="_blank" rel="noopener noreferrer">View the repository</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Qwen</span><span class="tag tool">Image Generation</span></div>
-          <h3>Qwen-Image-3.0-Pro targets complex designed artifacts</h3>
-          <p class="summary">The model can generate dense layouts such as newspapers, storyboards, menus, and exam papers in a single pass.</p>
-          <p class="why">Why it matters: reliable text-heavy layouts push image models toward editable artifacts and practical document creation.</p>
-          <a class="read-link" href="https://www.qwencloud.com/models/qwen-image-3.0-pro" target="_blank" rel="noopener noreferrer">View the model</a>
+          <div class="tag-row"><span class="tag hot">Replit</span><span class="tag tool">Autonomous Software</span></div>
+          <h3>Replit is aiming for a company that can run itself</h3>
+          <p class="summary">Amjad Masad describes a product that can design, write, test, deploy, and host applications from a prompt—and the broader organizational consequences of that stack.</p>
+          <p class="why">Why it matters: the coding-agent race is expanding from code generation into end-to-end product creation and company operations.</p>
+          <a class="read-link" href="https://www.platformer.news/replit-amjad-massad-interview-coding-design-jobs/" target="_blank" rel="noopener noreferrer">Read the interview</a>
         </article>
       </div>
     </section>
@@ -413,11 +413,11 @@
         <span class="count">5 threads</span>
       </div>
       <div class="stack">
-        <div class="topic"><div class="score">1</div><div><strong>Google's frontier-AI leadership is resetting</strong><span>Hassabis changes roles as Dean and three prominent researchers leave to build self-improving AI at Discovery Loop.</span></div></div>
-        <div class="topic"><div class="score">2</div><div><strong>Frontier labs are vertically integrating</strong><span>Anthropic's silicon team and Meta's training work show labs optimizing chips, kernels, precision, communication, and models together.</span></div></div>
-        <div class="topic"><div class="score">3</div><div><strong>Coding agents are becoming strategic products</strong><span>Meta Muse Code, Prime Agent, and model-evaluation tooling compete on repositories, long horizons, and harness design.</span></div></div>
-        <div class="topic"><div class="score">4</div><div><strong>Live multimodal systems are widening the interface</strong><span>SeedRealtime combines continuous vision, sound, language, and speech while Qwen moves image generation into structured artifacts.</span></div></div>
-        <div class="topic"><div class="score">5</div><div><strong>Agent infrastructure needs identity and containment</strong><span>Cloudflare OS and the Agent Access Model pair generative workspaces with sandboxing and task-scoped permissions.</span></div></div>
+        <div class="topic"><div class="score">1</div><div><strong>Cheap intelligence is becoming the default interface</strong><span>Unlimited GPT-5.6 Luna and DeepSeek's changing price strategy show access widening even as providers search for durable economics.</span></div></div>
+        <div class="topic"><div class="score">2</div><div><strong>Agents are gaining a portable software ecosystem</strong><span>Agent Plugins, Channels SDK, LoopX, and agent-native IDEs are converging on reusable skills, orchestration, and handoffs.</span></div></div>
+        <div class="topic"><div class="score">3</div><div><strong>Agent browsers are becoming cloud infrastructure</strong><span>Kitesurf treats page execution as a scalable V8 workload while the agentic-internet proposal pushes the web toward callable services.</span></div></div>
+        <div class="topic"><div class="score">4</div><div><strong>Safety responsibility is shifting into the harness</strong><span>Sandbox escapes and framework vulnerabilities show why permissions, secrets, runtimes, and stopping rules must be designed together.</span></div></div>
+        <div class="topic"><div class="score">5</div><div><strong>AI for science is moving from analysis to creation</strong><span>WeatherNext extends forecasting lead time while generative models produce viable synthetic viruses, raising benefit and biosecurity stakes.</span></div></div>
       </div>
     </section>
 
@@ -428,34 +428,34 @@
       </div>
       <div class="grid two">
         <article class="card">
-          <div class="tag-row"><span class="tag research">Meta</span><span class="tag tool">Training Systems</span></div>
-          <h3>Meta doubles efficiency for its LLM-scale ads model</h3>
-          <p class="summary">GEM reached 20–25% MFU through jagged flash attention, unified kernels, MXFP8 training, SM-free collectives, and a zero-cost load-balancing shuffle.</p>
-          <a class="read-link" href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" target="_blank" rel="noopener noreferrer">Read the engineering report</a>
+          <div class="tag-row"><span class="tag research">Google DeepMind</span><span class="tag tool">AI for Science</span></div>
+          <h3>WeatherNext adds a day of cyclone forecasting accuracy</h3>
+          <p class="summary">The model improves forecasts of cyclone track, intensity, and wind structure; Google has open-sourced WeatherNext 2 and WeatherNext Cyclones for research use.</p>
+          <a class="read-link" href="https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/" target="_blank" rel="noopener noreferrer">Read the research</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Agents</span><span class="tag tool">Memory</span></div>
-          <h3>Zero-Mem removes LLM calls from memory operations</h3>
-          <p class="summary">The method reports competitive agent-memory performance while consuming no LLM tokens for storing, organizing, or retrieving memories.</p>
-          <a class="read-link" href="https://arxiv.org/abs/2607.29377" target="_blank" rel="noopener noreferrer">Read the paper</a>
+          <div class="tag-row"><span class="tag research">Meta</span><span class="tag tool">Multimodal AI</span></div>
+          <h3>Multimodal synergy reaches strong generation at 5% compute</h3>
+          <p class="summary">Meta researchers study how modalities learn together in pretraining and identify architectures and recipes that preserve cross-modal benefits on far smaller budgets.</p>
+          <a class="read-link" href="https://arxiv.org/abs/2608.05000" target="_blank" rel="noopener noreferrer">Read the paper</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Compound AI</span><span class="tag tool">Program Synthesis</span></div>
-          <h3>Flex lets models rewrite the code around the prompt</h3>
-          <p class="summary">Flex generates and executes source in a sandboxed interpreter, optimizing both instructions and program logic for faster, cheaper model-powered systems.</p>
-          <a class="read-link" href="https://www.cmpnd.ai/blog/let-the-model-write-the-code.html" target="_blank" rel="noopener noreferrer">Read the paper summary</a>
+          <div class="tag-row"><span class="tag research">Synthetic Biology</span><span class="tag tool">Biosecurity</span></div>
+          <h3>Generative AI produces viable viruses absent from nature</h3>
+          <p class="summary">A Stanford-led team used learned DNA structure patterns to design new bacteriophages, then synthesized and demonstrated that the resulting viruses could infect bacteria.</p>
+          <a class="read-link" href="https://www.axios.com/2026/08/06/ai-virus-designed-bacteria-viruses" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Flipkart</span><span class="tag tool">LLM Alignment</span></div>
-          <h3>LLMs automate product-search relevance labels</h3>
-          <p class="summary">Flipkart combines SFT on reasoning traces with GRPO alignment and an 8B reward model, producing NDCG reports within 1% of manual evaluation at 30% lower cost.</p>
-          <a class="read-link" href="https://blog.flipkart.tech/llms-for-relevance-automating-high-quality-product-relevance-labeling-in-flipkart-search-ddd5ca50b584" target="_blank" rel="noopener noreferrer">Read the case study</a>
+          <div class="tag-row"><span class="tag research">Open Weights</span><span class="tag tool">Risk Analysis</span></div>
+          <h3>Open-weight models trade user control for weaker safeguards</h3>
+          <p class="summary">The analysis weighs defensive access and user autonomy against hacking, biological misuse, and the loss of centralized intervention once model weights are released.</p>
+          <a class="read-link" href="https://www.astralcodexten.com/p/open-questions-on-open-weights" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Evaluation</span><span class="tag tool">Model Selection</span></div>
-          <h3>Smevals finds the cheapest model above a quality bar</h3>
-          <p class="summary">The lightweight CLI runs task-specific YAML graders and custom checks across model configurations, then publishes results to a local dashboard or static site.</p>
-          <a class="read-link" href="https://primeradiant.com/blog/2026/smevals.html" target="_blank" rel="noopener noreferrer">Read the guide</a>
+          <div class="tag-row"><span class="tag research">Agent Design</span><span class="tag tool">Convergence</span></div>
+          <h3>Reliable agent loops need explicit stopping conditions</h3>
+          <p class="summary">Effective loops combine a target state, observable progress, local edit operations, strong verifiers, cost controls, and an external condition that ends the process.</p>
+          <a class="read-link" href="https://a16z.com/knowing-when-to-stop-the-art-of-making-a-loop-converge/" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
       </div>
     </section>
@@ -467,34 +467,34 @@
       </div>
       <div class="grid">
         <article class="card">
-          <div class="tag-row"><span class="tag news">Discovery Loop</span><span class="tag tool">AI for Science</span></div>
-          <h3>Four Google AI leaders form Discovery Loop</h3>
-          <p class="summary">Jeff Dean, Sanjay Ghemawat, Quoc Le, and Oriol Vinyals are building self-improving AI for machine learning, science, and engineering, with Google providing investment and compute.</p>
-          <a class="read-link" href="https://www.implicator.ai/google-deepmind-hassabis-steps-aside-jeff-dean-exit/" target="_blank" rel="noopener noreferrer">Read the overview</a>
+          <div class="tag-row"><span class="tag news">AMD</span><span class="tag tool">AI Silicon</span></div>
+          <h3>AMD agrees to acquire inference-chip startup Taalas</h3>
+          <p class="summary">Taalas hardwires model weights into custom silicon to attack memory and compute bottlenecks, claiming large throughput gains over conventional GPU inference.</p>
+          <a class="read-link" href="https://betakit.com/us-chip-giant-amd-to-acquire-taalas/" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Conduit</span><span class="tag tool">Neural Interfaces</span></div>
-          <h3>An OpenAI alum is building non-invasive thought-to-text</h3>
-          <p class="summary">Conduit plans to train models on neural data and develop specialized hardware so people can communicate with AI through thought rather than typing or speech.</p>
-          <a class="read-link" href="https://naomibashkansky.com/blog/telepathy/" target="_blank" rel="noopener noreferrer">Read the founder's note</a>
+          <div class="tag-row"><span class="tag news">Tesla + SpaceX</span><span class="tag tool">Compute Infrastructure</span></div>
+          <h3>Terafab's first phase is budgeted at $16.8 billion</h3>
+          <p class="summary">The Texas megafactory is planned to combine logic, memory, packaging, and testing under one roof, with SpaceX targeting more than a terawatt of annual compute production.</p>
+          <a class="read-link" href="https://electrek.co/2026/08/06/tesla-spacex-terafab-grimes-county-16-8-billion/" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Netflix</span><span class="tag tool">Data Infrastructure</span></div>
-          <h3>Netflix simplifies 15+ PB of time-series cold storage</h3>
-          <p class="summary">A Cassandra-native tier now reads immutable slices directly from S3 backups, removing Kafka/Flink operational overhead while improving p90 latency by roughly 30%.</p>
-          <a class="read-link" href="https://netflixtechblog.medium.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60" target="_blank" rel="noopener noreferrer">Read the engineering post</a>
+          <div class="tag-row"><span class="tag news">Oklo</span><span class="tag tool">Energy Infrastructure</span></div>
+          <h3>Oklo sustains a chain reaction in its test reactor</h3>
+          <p class="summary">The Groves Isotope Test Reactor demonstrates technology for medical-isotope production as Oklo also pursues nuclear-waste recycling, fuel fabrication, and small modular reactors.</p>
+          <a class="read-link" href="https://www.canarymedia.com/articles/nuclear/nuclear-startup-oklo-splits-its-first-atoms-in-test-reactor" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">DuckLake</span><span class="tag tool">Agent Data</span></div>
-          <h3>DuckLake comes to DataFusion without benchmark overhead</h3>
-          <p class="summary">The open catalog backend adds transactional metadata and schemas for Parquet, enabling millions of isolated ephemeral databases for agents without duplicating infrastructure.</p>
-          <a class="read-link" href="https://ducklake.select/2026/07/29/bringing-ducklake-to-datafusion/" target="_blank" rel="noopener noreferrer">Read the engineering post</a>
+          <div class="tag-row"><span class="tag news">GitHub</span><span class="tag tool">Developer Infrastructure</span></div>
+          <h3>A major Actions outage silently dropped webhook triggers</h3>
+          <p class="summary">Pushes and pull requests failed to start workflows, while hosted and self-hosted runners received jobs that no longer existed—exposing a brittle dependency in modern delivery pipelines.</p>
+          <a class="read-link" href="https://kernel.pryanic.com/posts/github-actions-is-having-one-of-the-worst-days-in-its-history" target="_blank" rel="noopener noreferrer">Read the incident analysis</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Apple</span><span class="tag tool">Privacy</span></div>
-          <h3>iCloud Private Relay can leak real IP addresses</h3>
-          <p class="summary">Websites using—or pretending to use—passkeys can reportedly bypass Private Relay's intended protection and expose a visitor's underlying IP address.</p>
-          <a class="read-link" href="https://www.macrumors.com/2026/08/05/icloud-private-relay-ip-address-leak/" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag news">Meta</span><span class="tag tool">Model Economics</span></div>
+          <h3>Cheap tokens increasingly come with a data bargain</h3>
+          <p class="summary">An analysis of Meta's pricing argues that unusually inexpensive inference can be subsidized by permission to use customer inputs for model training.</p>
+          <a class="read-link" href="https://spyglass.org/you-are-the-tokens/" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
       </div>
     </section>
