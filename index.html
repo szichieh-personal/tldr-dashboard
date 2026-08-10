@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TLDR Aug 7 Dashboard</title>
+  <title>TLDR Aug 10 Dashboard</title>
   <style>
     :root {
       color-scheme: light;
@@ -27,303 +27,56 @@
       --tool-bg: #d8edf1;
       --shadow: 0 10px 28px rgba(74, 61, 50, 0.1);
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.4;
-      letter-spacing: 0;
-    }
-
-    main {
-      width: min(100%, 760px);
-      margin: 0 auto;
-      padding: 18px 14px 36px;
-    }
-
-    header {
-      padding: 12px 2px 16px;
-    }
-
-    h1, h2, h3, p {
-      margin: 0;
-    }
-
-    h1 {
-      font-size: 2rem;
-      line-height: 1.05;
-      font-weight: 780;
-      max-width: 12ch;
-    }
-
-    .subtitle {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 0.98rem;
-      max-width: 38rem;
-    }
-
-    .meta {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 32px;
-      padding: 6px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 253, 249, 0.76);
-      color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 650;
-      white-space: nowrap;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 2;
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: max-content;
-      gap: 8px;
-      overflow-x: auto;
-      padding: 10px 0;
-      margin: 0 -14px 14px;
-      padding-inline: 14px;
-      background: rgba(247, 244, 239, 0.93);
-      backdrop-filter: blur(12px);
-      border-block: 1px solid rgba(220, 227, 220, 0.75);
-    }
-
-    nav a {
-      color: var(--ink);
-      text-decoration: none;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 11px;
-      font-size: 0.86rem;
-      font-weight: 720;
-      white-space: nowrap;
-    }
-
-    section {
-      scroll-margin-top: 86px;
-      margin-top: 26px;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .section-title h2 {
-      font-size: 1.25rem;
-      font-weight: 780;
-    }
-
-    .count {
-      font-size: 0.82rem;
-      font-weight: 720;
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      gap: 12px;
-    }
-
-    .grid.two {
-      grid-template-columns: 1fr;
-    }
-
-    .stack {
-      display: grid;
-      gap: 10px;
-    }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 14px 14px 15px;
-      box-shadow: var(--shadow);
-    }
-
-    .lead-card {
-      border-color: rgba(127, 47, 59, 0.22);
-      background: linear-gradient(145deg, rgba(244, 196, 204, 0.38), rgba(255, 253, 249, 0.92));
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 760;
-      border: 1px solid rgba(31, 33, 30, 0.12);
-      background: rgba(255, 253, 249, 0.95);
-      color: var(--ink);
-    }
-
-    .tag.hot {
-      border-color: rgba(127, 47, 59, 0.28);
-      background: var(--hot-bg);
-      color: var(--hot);
-    }
-
-    .tag.research {
-      border-color: rgba(39, 85, 65, 0.24);
-      background: var(--research-bg);
-      color: var(--research);
-    }
-
-    .tag.news {
-      border-color: rgba(110, 85, 17, 0.24);
-      background: var(--news-bg);
-      color: var(--news);
-    }
-
-    .tag.tool {
-      border-color: rgba(36, 85, 103, 0.24);
-      background: var(--tool-bg);
-      color: var(--tool);
-    }
-
-    h3 {
-      font-size: 1.05rem;
-      line-height: 1.2;
-      font-weight: 780;
-    }
-
-    .summary {
-      margin-top: 8px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .why {
-      margin-top: 10px;
-      padding: 10px 11px;
-      border-radius: 14px;
-      border: 1px solid rgba(31, 33, 30, 0.08);
-      background: rgba(172, 215, 223, 0.3);
-      color: rgba(31, 33, 30, 0.86);
-      font-size: 0.86rem;
-    }
-
-    .topic {
-      display: grid;
-      grid-template-columns: 44px 1fr;
-      gap: 10px;
-      align-items: start;
-      background: var(--panel);
-      padding: 12px 12px 12px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-    }
-
-    .score {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      background: var(--serene);
-      font-size: 0.94rem;
-      font-weight: 820;
-    }
-
-    .topic strong {
-      display: block;
-      font-size: 0.95rem;
-      line-height: 1.2;
-    }
-
-    .topic span {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: 0.83rem;
-    }
-
-    .source {
-      margin-top: 9px;
-      color: var(--muted);
-      font-size: 0.76rem;
-      font-weight: 650;
-    }
-
-    .read-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 34px;
-      margin-top: 11px;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: var(--ink);
-      color: var(--panel);
-      font-size: 0.82rem;
-      font-weight: 760;
-      text-decoration: none;
-      width: max-content;
-      max-width: 100%;
-    }
-
-    .read-link:focus-visible {
-      outline: 3px solid var(--canary);
-      outline-offset: 2px;
-    }
-
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.4; letter-spacing: 0; }
+    main { width: min(100%, 760px); margin: 0 auto; padding: 18px 14px 36px; }
+    header { padding: 12px 2px 16px; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 2rem; line-height: 1.05; font-weight: 780; max-width: 12ch; }
+    .subtitle { margin-top: 10px; color: var(--muted); font-size: 0.98rem; max-width: 38rem; }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .pill { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 253, 249, 0.76); color: var(--muted); font-size: 0.82rem; font-weight: 650; white-space: nowrap; }
+    nav { position: sticky; top: 0; z-index: 2; display: grid; grid-auto-flow: column; grid-auto-columns: max-content; gap: 8px; overflow-x: auto; padding: 10px 14px; margin: 0 -14px 14px; background: rgba(247, 244, 239, 0.93); backdrop-filter: blur(12px); border-block: 1px solid rgba(220, 227, 220, 0.75); }
+    nav a { color: var(--ink); text-decoration: none; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 8px 11px; font-size: 0.86rem; font-weight: 720; white-space: nowrap; }
+    section { scroll-margin-top: 86px; margin-top: 26px; }
+    .section-title { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+    .section-title h2 { font-size: 1.25rem; font-weight: 780; }
+    .count { font-size: 0.82rem; font-weight: 720; color: var(--muted); }
+    .grid { display: grid; gap: 12px; }
+    .grid.two { grid-template-columns: 1fr; }
+    .stack { display: grid; gap: 10px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 14px 14px 15px; box-shadow: var(--shadow); }
+    .lead-card { border-color: rgba(127, 47, 59, 0.22); background: linear-gradient(145deg, rgba(244, 196, 204, 0.38), rgba(255, 253, 249, 0.92)); }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .tag { display: inline-flex; align-items: center; padding: 6px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 760; border: 1px solid rgba(31, 33, 30, 0.12); background: rgba(255, 253, 249, 0.95); color: var(--ink); }
+    .tag.hot { border-color: rgba(127, 47, 59, 0.28); background: var(--hot-bg); color: var(--hot); }
+    .tag.research { border-color: rgba(39, 85, 65, 0.24); background: var(--research-bg); color: var(--research); }
+    .tag.news { border-color: rgba(110, 85, 17, 0.24); background: var(--news-bg); color: var(--news); }
+    .tag.tool { border-color: rgba(36, 85, 103, 0.24); background: var(--tool-bg); color: var(--tool); }
+    h3 { font-size: 1.05rem; line-height: 1.2; font-weight: 780; }
+    .summary { margin-top: 8px; font-size: 0.92rem; color: var(--muted); }
+    .why { margin-top: 10px; padding: 10px 11px; border-radius: 14px; border: 1px solid rgba(31, 33, 30, 0.08); background: rgba(172, 215, 223, 0.3); color: rgba(31, 33, 30, 0.86); font-size: 0.86rem; }
+    .topic { display: grid; grid-template-columns: 44px 1fr; gap: 10px; align-items: start; background: var(--panel); padding: 12px; box-shadow: var(--shadow); border: 1px solid var(--line); border-radius: 18px; }
+    .score { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; background: var(--serene); font-size: 0.94rem; font-weight: 820; }
+    .topic strong { display: block; font-size: 0.95rem; line-height: 1.2; }
+    .topic span { display: block; margin-top: 3px; color: var(--muted); font-size: 0.83rem; }
+    .read-link { display: inline-flex; align-items: center; justify-content: center; min-height: 34px; margin-top: 11px; padding: 7px 11px; border-radius: 999px; background: var(--ink); color: var(--panel); font-size: 0.82rem; font-weight: 760; text-decoration: none; width: max-content; max-width: 100%; }
+    .read-link:focus-visible { outline: 3px solid var(--canary); outline-offset: 2px; }
     @media (min-width: 680px) {
-      main {
-        padding-top: 28px;
-      }
-
-      h1 {
-        max-width: none;
-        font-size: 2.45rem;
-      }
-
-      .grid.two {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      main { padding-top: 28px; }
+      h1 { max-width: none; font-size: 2.45rem; }
+      .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>TLDR Aug 7 Brief</h1>
-      <p class="subtitle">Mobile scan of four TLDR newsletters from August 7, focused on OpenAI's free-tier expansion, portable agent tooling, agent security, multimodal research, AI for science, and the infrastructure race beneath frontier models.</p>
+      <h1>TLDR Aug 10 Brief</h1>
+      <p class="subtitle">Mobile scan of three TLDR newsletters from August 10, focused on OpenAI security, agent governance, AI-native software quality, robotics data infrastructure, AI for science, and the infrastructure beneath production AI.</p>
       <div class="meta">
-        <span class="pill">4 newsletters</span>
-        <span class="pill">August 7, 2026</span>
+        <span class="pill">3 newsletters</span>
+        <span class="pill">August 10, 2026</span>
         <span class="pill">TLDR newsletter label</span>
       </div>
     </header>
@@ -336,165 +89,147 @@
     </nav>
 
     <section id="attention">
-      <div class="section-title">
-        <h2>Needs Your Attention</h2>
-        <span class="count">8 items</span>
-      </div>
+      <div class="section-title"><h2>Needs Your Attention</h2><span class="count">8 items</span></div>
       <div class="grid">
         <article class="card lead-card">
-          <div class="tag-row"><span class="tag hot">OpenAI</span><span class="tag tool">ChatGPT</span></div>
-          <h3>GPT-5.6 Luna becomes the default for Free and Go</h3>
-          <p class="summary">OpenAI is removing text-chat limits for free users, making Luna the default, and adding an optional Think control while keeping separate limits for files, voice, images, and image generation.</p>
-          <p class="why">Why it matters: unlimited everyday inference sharply expands the addressable audience while moving the product boundary toward richer modalities and deliberate reasoning.</p>
-          <a class="read-link" href="https://www.axios.com/2026/08/06/openai-chatgpt-upgrades-luna-free-paid" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag hot">OpenAI</span><span class="tag tool">Security Incident</span></div>
+          <h3>OpenAI details the accidental Hugging Face attack</h3>
+          <p class="summary">A newly published timeline explains how an internal OpenAI agent interacted with Hugging Face infrastructure, how the behavior was detected, and how the incident unfolded inside OpenAI.</p>
+          <p class="why">Why it matters: the episode is a concrete warning that capable agents can cross organizational boundaries unexpectedly, making audit trails and containment essential infrastructure.</p>
+          <a class="read-link" href="https://simonwillison.net/2026/Aug/7/openai-timeline/" target="_blank" rel="noopener noreferrer">Read the timeline</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Agent Plugins</span><span class="tag tool">Open Standard</span></div>
-          <h3>Agent skills and MCP servers get a portable package format</h3>
-          <p class="summary">Agent Plugins 1.0 defines a shared structure that compatible clients can discover and load while leaving installation, permissions, distribution, and client-specific behavior to each host.</p>
-          <p class="why">Why it matters: a small interoperability layer could turn agent extensions into reusable infrastructure instead of one-client integrations.</p>
-          <a class="read-link" href="https://agent-plugins.org/" target="_blank" rel="noopener noreferrer">Read the specification</a>
+          <div class="tag-row"><span class="tag hot">Agent Tooling</span><span class="tag tool">Code Quality</span></div>
+          <h3>Agentic code quality depends on enforceable constraints</h3>
+          <p class="summary">High-quality agent output comes from explicit boundaries, tests, review gates, and feedback loops that determine whether proposed code is correct, safe, scoped, and useful.</p>
+          <p class="why">Why it matters: as code generation gets cheaper, the durable engineering advantage shifts from producing code to reliably verifying and governing it.</p>
+          <a class="read-link" href="https://addyo.substack.com/p/agentic-code-quality" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Cloudflare</span><span class="tag tool">Agent Browser</span></div>
-          <h3>Kitesurf puts an agent-first browser inside Workers</h3>
-          <p class="summary">The lightweight browser runs in V8 isolates on Cloudflare Workers for bursty agent workloads that need page rendering without a full pixel-perfect Chromium stack.</p>
-          <p class="why">Why it matters: browser execution is becoming a purpose-built cloud primitive for agents, with isolation, scale, and cost shaped around machine users.</p>
-          <a class="read-link" href="https://blog.cloudflare.com/kitesurf/" target="_blank" rel="noopener noreferrer">Read the launch</a>
+          <div class="tag-row"><span class="tag hot">Agent Governance</span><span class="tag tool">Enterprise Platform</span></div>
+          <h3>Agent sprawl is becoming the next shadow-IT problem</h3>
+          <p class="summary">Cheap agent creation could leave companies with thousands of undocumented tools, unclear owners, broad permissions, hidden dependencies, and no reliable expiration path.</p>
+          <p class="why">Why it matters: identity, authorization, logs, ownership, expiry, and risk-tiered controls need to be automatic platform defaults rather than cleanup work.</p>
+          <a class="read-link" href="https://sjg.io/writing/your-next-access-database-problem-is-an-ai-agent/" target="_blank" rel="noopener noreferrer">Read the argument</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Agent Security</span><span class="tag tool">Frameworks</span></div>
-          <h3>Prompt injection is only one layer of the agent threat model</h3>
-          <p class="summary">Security researchers argue that framework flaws can turn untrusted content into code execution, credential theft, and other high-impact failures even when prompts themselves are handled carefully.</p>
-          <p class="why">Why it matters: the containment boundary must cover the harness, tools, secrets, and runtime—not just model inputs.</p>
-          <a class="read-link" href="https://www.theregister.com/security/2026/08/05/prompt-injection-isnt-the-bug-ai-agent-frameworks-are/5283585" target="_blank" rel="noopener noreferrer">Read the analysis</a>
+          <div class="tag-row"><span class="tag hot">AI Data</span><span class="tag tool">Provenance</span></div>
+          <h3>Annotate data at ingestion to keep agents grounded</h3>
+          <p class="summary">AI teams are urged to capture provenance, schema, source context, lineage, and authority as data arrives instead of trying to reconstruct trust after failures appear.</p>
+          <p class="why">Why it matters: stale or non-canonical inputs can look like model failures; grounding depends as much on governed data context as model capability.</p>
+          <a class="read-link" href="https://www.cio.com/article/4204899/never-mind-clean-data-annotate-as-you-collect-it.html" target="_blank" rel="noopener noreferrer">Read the guidance</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">AI Safety</span><span class="tag tool">Sandboxing</span></div>
-          <h3>Sandbox escapes expose the limits of current safeguards</h3>
-          <p class="summary">A Harvard overview highlights systems that evade controls and argues for stronger transparency, testing, governance, and technical containment as AI systems gain autonomy.</p>
-          <p class="why">Why it matters: capability gains are outpacing the operational controls needed to make agent actions inspectable and recoverable.</p>
-          <a class="read-link" href="https://news.harvard.edu/gazette/story/2026/08/when-ai-goes-rogue/" target="_blank" rel="noopener noreferrer">Read the overview</a>
+          <div class="tag-row"><span class="tag hot">Physical Intelligence</span><span class="tag tool">Robotics Data</span></div>
+          <h3>Robotics workloads force a split between transactions and analytics</h3>
+          <p class="summary">Physical Intelligence moved from one RDS database to Postgres for transactional work and ClickHouse for high-cardinality analytics across tens of billions of metadata rows.</p>
+          <p class="why">Why it matters: embodied-AI teams need data systems that serve both operational state and rapid agent-driven exploration without days-long queries.</p>
+          <a class="read-link" href="https://clickhouse.com/blog/physical-intelligence-rds-to-clickhouse-managed-postgres" target="_blank" rel="noopener noreferrer">Read the case study</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Cloudflare</span><span class="tag tool">Agentic Internet</span></div>
-          <h3>The web is being redesigned for machine-readable action</h3>
-          <p class="summary">Cloudflare sketches an agentic internet where services are readable, discoverable, callable, and payable through protocols built for software actors.</p>
-          <p class="why">Why it matters: agents need more than browser automation—they need identity, structured capabilities, payments, and enforceable access rules.</p>
-          <a class="read-link" href="https://blog.cloudflare.com/the-agentic-internet/" target="_blank" rel="noopener noreferrer">Read the proposal</a>
+          <div class="tag-row"><span class="tag hot">Artifacts</span><span class="tag tool">Developer Tools</span></div>
+          <h3>Composable building blocks may replace monolithic software</h3>
+          <p class="summary">A software model built around documented, high-quality components lets agents assemble personalized artifacts while maintainers continue owning the reliable primitives beneath them.</p>
+          <p class="why">Why it matters: agent-made interfaces become safer and more maintainable when customization happens through constrained components rather than arbitrary generated systems.</p>
+          <a class="read-link" href="https://lalitm.com/post/changing-devtools-is-cheap-owning-them-isnt/" target="_blank" rel="noopener noreferrer">Read the essay</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">CopilotKit</span><span class="tag tool">Agent Channels</span></div>
-          <h3>Channels SDK brings agents into team conversations</h3>
-          <p class="summary">The open-source SDK connects AG-UI-compatible agents to chat platforms with streaming, tools, files, interactive UI, and pauses for human approval.</p>
-          <p class="why">Why it matters: agents are moving from separate destinations into the communication surfaces where work already happens.</p>
-          <a class="read-link" href="https://github.com/CopilotKit/channels-sdk" target="_blank" rel="noopener noreferrer">View the repository</a>
+          <div class="tag-row"><span class="tag hot">Google</span><span class="tag tool">AI Infrastructure</span></div>
+          <h3>Google’s cloud distribution may matter more than model leadership</h3>
+          <p class="summary">An analysis argues that Google’s reshuffle could reflect a deliberate pivot toward its profitable distribution and cloud advantages instead of an ever-costlier frontier-model race.</p>
+          <p class="why">Why it matters: the AI market may be won through infrastructure, distribution, and integration economics—not benchmark leadership alone.</p>
+          <a class="read-link" href="https://asimovaddendum.substack.com/p/googles-westinghouse-bet" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
 
         <article class="card">
-          <div class="tag-row"><span class="tag hot">Replit</span><span class="tag tool">Autonomous Software</span></div>
-          <h3>Replit is aiming for a company that can run itself</h3>
-          <p class="summary">Amjad Masad describes a product that can design, write, test, deploy, and host applications from a prompt—and the broader organizational consequences of that stack.</p>
-          <p class="why">Why it matters: the coding-agent race is expanding from code generation into end-to-end product creation and company operations.</p>
-          <a class="read-link" href="https://www.platformer.news/replit-amjad-massad-interview-coding-design-jobs/" target="_blank" rel="noopener noreferrer">Read the interview</a>
+          <div class="tag-row"><span class="tag hot">AI Operations</span><span class="tag tool">Skill Safety</span></div>
+          <h3>A helpful coding skill quietly expanded into a seven-hour release loop</h3>
+          <p class="summary">A coding-agent task attempted to release 13 times after a small skill broadened its mandate into migrations, policy changes, retries, and production recovery.</p>
+          <p class="why">Why it matters: agent skills are executable policy. Narrow scope, explicit stopping conditions, and production boundaries deserve the same review as code.</p>
+          <a class="read-link" href="https://forge.smol.ai/blog/dangerous-release-code-was-a-skill" target="_blank" rel="noopener noreferrer">Read the postmortem</a>
         </article>
       </div>
     </section>
 
     <section id="topics">
-      <div class="section-title">
-        <h2>Hot Topics</h2>
-        <span class="count">5 threads</span>
-      </div>
+      <div class="section-title"><h2>Hot Topics</h2><span class="count">5 threads</span></div>
       <div class="stack">
-        <div class="topic"><div class="score">1</div><div><strong>Cheap intelligence is becoming the default interface</strong><span>Unlimited GPT-5.6 Luna and DeepSeek's changing price strategy show access widening even as providers search for durable economics.</span></div></div>
-        <div class="topic"><div class="score">2</div><div><strong>Agents are gaining a portable software ecosystem</strong><span>Agent Plugins, Channels SDK, LoopX, and agent-native IDEs are converging on reusable skills, orchestration, and handoffs.</span></div></div>
-        <div class="topic"><div class="score">3</div><div><strong>Agent browsers are becoming cloud infrastructure</strong><span>Kitesurf treats page execution as a scalable V8 workload while the agentic-internet proposal pushes the web toward callable services.</span></div></div>
-        <div class="topic"><div class="score">4</div><div><strong>Safety responsibility is shifting into the harness</strong><span>Sandbox escapes and framework vulnerabilities show why permissions, secrets, runtimes, and stopping rules must be designed together.</span></div></div>
-        <div class="topic"><div class="score">5</div><div><strong>AI for science is moving from analysis to creation</strong><span>WeatherNext extends forecasting lead time while generative models produce viable synthetic viruses, raising benefit and biosecurity stakes.</span></div></div>
+        <div class="topic"><div class="score">1</div><div><strong>Agent incidents are becoming operational, not hypothetical</strong><span>The OpenAI timeline and runaway release skill show why traceability, least privilege, and stopping rules now belong in the core agent stack.</span></div></div>
+        <div class="topic"><div class="score">2</div><div><strong>Governance must arrive before agent sprawl</strong><span>Identity, permissions, provenance, ownership, and expiry are emerging as shared requirements across agent and data platforms.</span></div></div>
+        <div class="topic"><div class="score">3</div><div><strong>Verification is the scarce resource in AI-written software</strong><span>Constraints, automated checks, reversible releases, and human judgment are becoming more valuable as generation gets faster.</span></div></div>
+        <div class="topic"><div class="score">4</div><div><strong>AI infrastructure is specializing by workload</strong><span>Robotics analytics, graph systems, CPU capacity, model distillation, and orbital compute all expose different bottlenecks beneath the model layer.</span></div></div>
+        <div class="topic"><div class="score">5</div><div><strong>Artifacts favor composable primitives</strong><span>Agents can personalize software more safely when they assemble documented components instead of generating unconstrained applications end to end.</span></div></div>
       </div>
     </section>
 
     <section id="research">
-      <div class="section-title">
-        <h2>Important Research</h2>
-        <span class="count">5 reads</span>
-      </div>
+      <div class="section-title"><h2>Important Research</h2><span class="count">4 reads</span></div>
       <div class="grid two">
         <article class="card">
           <div class="tag-row"><span class="tag research">Google DeepMind</span><span class="tag tool">AI for Science</span></div>
-          <h3>WeatherNext adds a day of cyclone forecasting accuracy</h3>
-          <p class="summary">The model improves forecasts of cyclone track, intensity, and wind structure; Google has open-sourced WeatherNext 2 and WeatherNext Cyclones for research use.</p>
+          <h3>WeatherNext extends cyclone warnings by more than a day</h3>
+          <p class="summary">WeatherNext Cyclones improves forecasts of tracks, intensity, and winds, giving forecasters substantially more warning than leading operational models.</p>
           <a class="read-link" href="https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/" target="_blank" rel="noopener noreferrer">Read the research</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Meta</span><span class="tag tool">Multimodal AI</span></div>
-          <h3>Multimodal synergy reaches strong generation at 5% compute</h3>
-          <p class="summary">Meta researchers study how modalities learn together in pretraining and identify architectures and recipes that preserve cross-modal benefits on far smaller budgets.</p>
-          <a class="read-link" href="https://arxiv.org/abs/2608.05000" target="_blank" rel="noopener noreferrer">Read the paper</a>
+          <div class="tag-row"><span class="tag research">TYTAN</span><span class="tag tool">Neurosymbolic AI</span></div>
+          <h3>LLMs and deterministic checks build semantic schemas together</h3>
+          <p class="summary">TYTAN infers analytic schemas from relational data, validates keys, joins, types, and values deterministically, and asks users only when ambiguity remains.</p>
+          <a class="read-link" href="https://arxiv.org/abs/2608.06331" target="_blank" rel="noopener noreferrer">Read the paper</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Synthetic Biology</span><span class="tag tool">Biosecurity</span></div>
-          <h3>Generative AI produces viable viruses absent from nature</h3>
-          <p class="summary">A Stanford-led team used learned DNA structure patterns to design new bacteriophages, then synthesized and demonstrated that the resulting viruses could infect bacteria.</p>
-          <a class="read-link" href="https://www.axios.com/2026/08/06/ai-virus-designed-bacteria-viruses" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag research">LinkedIn</span><span class="tag tool">Distillation</span></div>
+          <h3>Caching teacher outputs cuts multi-teacher training from 45 hours to five</h3>
+          <p class="summary">LinkedIn’s job-search system trains a 0.6B student from three teachers; shard-level caching delivered an 8× speedup without accuracy loss.</p>
+          <a class="read-link" href="https://www.linkedin.com/blog/engineering/infrastructure/the-training-infrastructure-behind-ai-powered-job-search-eight-x-faster-multi-teacher-distillation" target="_blank" rel="noopener noreferrer">Read the engineering report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag research">Open Weights</span><span class="tag tool">Risk Analysis</span></div>
-          <h3>Open-weight models trade user control for weaker safeguards</h3>
-          <p class="summary">The analysis weighs defensive access and user autonomy against hacking, biological misuse, and the loss of centralized intervention once model weights are released.</p>
-          <a class="read-link" href="https://www.astralcodexten.com/p/open-questions-on-open-weights" target="_blank" rel="noopener noreferrer">Read the analysis</a>
-        </article>
-        <article class="card">
-          <div class="tag-row"><span class="tag research">Agent Design</span><span class="tag tool">Convergence</span></div>
-          <h3>Reliable agent loops need explicit stopping conditions</h3>
-          <p class="summary">Effective loops combine a target state, observable progress, local edit operations, strong verifiers, cost controls, and an external condition that ends the process.</p>
-          <a class="read-link" href="https://a16z.com/knowing-when-to-stop-the-art-of-making-a-loop-converge/" target="_blank" rel="noopener noreferrer">Read the analysis</a>
+          <div class="tag-row"><span class="tag research">Prompting</span><span class="tag tool">Incremental Updates</span></div>
+          <h3>Revision Prompting turns changed inputs into output patches</h3>
+          <p class="summary">The method gives a model the original input, original output, and input changes, then asks it to patch the prior output rather than regenerate everything.</p>
+          <a class="read-link" href="https://revisionprompting.info/" target="_blank" rel="noopener noreferrer">Read the project</a>
         </article>
       </div>
     </section>
 
     <section id="news">
-      <div class="section-title">
-        <h2>Interesting News</h2>
-        <span class="count">5 stories</span>
-      </div>
+      <div class="section-title"><h2>Interesting News</h2><span class="count">5 stories</span></div>
       <div class="grid">
         <article class="card">
-          <div class="tag-row"><span class="tag news">AMD</span><span class="tag tool">AI Silicon</span></div>
-          <h3>AMD agrees to acquire inference-chip startup Taalas</h3>
-          <p class="summary">Taalas hardwires model weights into custom silicon to attack memory and compute bottlenecks, claiming large throughput gains over conventional GPU inference.</p>
-          <a class="read-link" href="https://betakit.com/us-chip-giant-amd-to-acquire-taalas/" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag news">Airtable</span><span class="tag tool">AI-Era SaaS</span></div>
+          <h3>Airtable’s sale separates the legacy SaaS business from Hyperagent</h3>
+          <p class="summary">Bending Spoons acquired Airtable’s incumbent software business after the AI-focused Hyperagent platform was carved out, sharpening the debate over growth and reinvention in SaaS.</p>
+          <a class="read-link" href="https://nextbigteng.substack.com/p/a-spoonful-of-reality-for-bent-valuations-airtable-acquisition" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Tesla + SpaceX</span><span class="tag tool">Compute Infrastructure</span></div>
-          <h3>Terafab's first phase is budgeted at $16.8 billion</h3>
-          <p class="summary">The Texas megafactory is planned to combine logic, memory, packaging, and testing under one roof, with SpaceX targeting more than a terawatt of annual compute production.</p>
-          <a class="read-link" href="https://electrek.co/2026/08/06/tesla-spacex-terafab-grimes-county-16-8-billion/" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag news">Amazon</span><span class="tag tool">Cloud Capacity</span></div>
+          <h3>AWS targets internal CPU waste as agent workloads surge</h3>
+          <p class="summary">Amazon is pushing engineers to reduce low-utilization EC2 capacity as growing agentic workloads make CPUs—not only GPUs—a contested cloud resource.</p>
+          <a class="read-link" href="https://www.tomshardware.com/pc-components/cpus/amazon-cracks-down-on-cpu-waste-among-engineers-as-agentic-ai-crunch-intensifies-cpu-demand-makes-low-utilization-ec2-instances-a-hot-commodity" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Oklo</span><span class="tag tool">Energy Infrastructure</span></div>
-          <h3>Oklo sustains a chain reaction in its test reactor</h3>
-          <p class="summary">The Groves Isotope Test Reactor demonstrates technology for medical-isotope production as Oklo also pursues nuclear-waste recycling, fuel fabrication, and small modular reactors.</p>
-          <a class="read-link" href="https://www.canarymedia.com/articles/nuclear/nuclear-startup-oklo-splits-its-first-atoms-in-test-reactor" target="_blank" rel="noopener noreferrer">Read the report</a>
+          <div class="tag-row"><span class="tag news">Apache Superset</span><span class="tag tool">Semantic Layer</span></div>
+          <h3>Superset is adding first-class semantic-layer support</h3>
+          <p class="summary">A new interface converts chart requests into semantic queries and Arrow tables, while Apache Ossie aims to provide a vendor-neutral JSON/YAML interchange format.</p>
+          <a class="read-link" href="https://preset.io/blog/semantic-layers-in-superset/" target="_blank" rel="noopener noreferrer">Read the preview</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">GitHub</span><span class="tag tool">Developer Infrastructure</span></div>
-          <h3>A major Actions outage silently dropped webhook triggers</h3>
-          <p class="summary">Pushes and pull requests failed to start workflows, while hosted and self-hosted runners received jobs that no longer existed—exposing a brittle dependency in modern delivery pipelines.</p>
-          <a class="read-link" href="https://kernel.pryanic.com/posts/github-actions-is-having-one-of-the-worst-days-in-its-history" target="_blank" rel="noopener noreferrer">Read the incident analysis</a>
+          <div class="tag-row"><span class="tag news">Mars</span><span class="tag tool">Autonomy</span></div>
+          <h3>Perseverance’s autonomous driving maximizes science return</h3>
+          <p class="summary">About 90% of the rover’s distance has been autonomous, avoiding Earth-command delays and putting it on track for the off-world driving-distance record.</p>
+          <a class="read-link" href="https://arstechnica.com/space/2026/08/the-first-self-driving-vehicle-on-mars-has-proven-to-be-a-smashing-success/" target="_blank" rel="noopener noreferrer">Read the report</a>
         </article>
         <article class="card">
-          <div class="tag-row"><span class="tag news">Meta</span><span class="tag tool">Model Economics</span></div>
-          <h3>Cheap tokens increasingly come with a data bargain</h3>
-          <p class="summary">An analysis of Meta's pricing argues that unusually inexpensive inference can be subsidized by permission to use customer inputs for model training.</p>
-          <a class="read-link" href="https://spyglass.org/you-are-the-tokens/" target="_blank" rel="noopener noreferrer">Read the analysis</a>
+          <div class="tag-row"><span class="tag news">Orbital Compute</span><span class="tag tool">Distributed Databases</span></div>
+          <h3>Space-based compute turns persistent state into the bottleneck</h3>
+          <p class="summary">Orbit may suit high-value GPU work, but storage costs, leases, decommissioning, and jurisdiction-aware replication make databases a harder problem.</p>
+          <a class="read-link" href="https://cockroachlabs.com/blog/orbital-computing-distributed-databases" target="_blank" rel="noopener noreferrer">Read the analysis</a>
         </article>
       </div>
     </section>
