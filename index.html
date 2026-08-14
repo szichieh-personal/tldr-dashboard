@@ -3,234 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TLDR Aug 11 Dashboard</title>
+  <title>TLDR Aug 13 Dashboard</title>
   <style>
-    :root {
-      color-scheme: light;
-      --blossom: #f4c4cc;
-      --pistachio: #b9d9c8;
-      --serene: #acd7df;
-      --canary: #ffefb3;
-      --latte: #d2c4b8;
-      --bg: #f7f4ef;
-      --ink: #1f211e;
-      --muted: #665f59;
-      --panel: #fffdf9;
-      --line: #d8cbc0;
-      --hot: #7f2f3b;
-      --hot-bg: #f4c4cc;
-      --research: #275541;
-      --research-bg: #d9eadf;
-      --news: #6e5511;
-      --news-bg: #ffefb3;
-      --tool: #245567;
-      --tool-bg: #d8edf1;
-      --shadow: 0 10px 28px rgba(74, 61, 50, 0.1);
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.4; letter-spacing: 0; }
-    main { width: min(100%, 760px); margin: 0 auto; padding: 18px 14px 36px; }
-    header { padding: 12px 2px 16px; }
-    h1, h2, h3, p { margin: 0; }
-    h1 { font-size: 2rem; line-height: 1.05; font-weight: 780; max-width: 12ch; }
-    .subtitle { margin-top: 10px; color: var(--muted); font-size: 0.98rem; max-width: 38rem; }
-    .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
-    .pill { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 253, 249, 0.76); color: var(--muted); font-size: 0.82rem; font-weight: 650; white-space: nowrap; }
-    nav { position: sticky; top: 0; z-index: 2; display: grid; grid-auto-flow: column; grid-auto-columns: max-content; gap: 8px; overflow-x: auto; padding: 10px 14px; margin: 0 -14px 14px; background: rgba(247, 244, 239, 0.93); backdrop-filter: blur(12px); border-block: 1px solid rgba(220, 227, 220, 0.75); }
-    nav a { color: var(--ink); text-decoration: none; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 8px 11px; font-size: 0.86rem; font-weight: 720; white-space: nowrap; }
-    section { scroll-margin-top: 86px; margin-top: 26px; }
-    .section-title { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
-    .section-title h2 { font-size: 1.25rem; font-weight: 780; }
-    .count { font-size: 0.82rem; font-weight: 720; color: var(--muted); }
-    .grid { display: grid; gap: 12px; }
-    .grid.two { grid-template-columns: 1fr; }
-    .stack { display: grid; gap: 10px; }
-    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 14px 14px 15px; box-shadow: var(--shadow); }
-    .lead-card { border-color: rgba(127, 47, 59, 0.22); background: linear-gradient(145deg, rgba(244, 196, 204, 0.38), rgba(255, 253, 249, 0.92)); }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-    .tag { display: inline-flex; align-items: center; padding: 6px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 760; border: 1px solid rgba(31, 33, 30, 0.12); background: rgba(255, 253, 249, 0.95); color: var(--ink); }
-    .tag.hot { border-color: rgba(127, 47, 59, 0.28); background: var(--hot-bg); color: var(--hot); }
-    .tag.research { border-color: rgba(39, 85, 65, 0.24); background: var(--research-bg); color: var(--research); }
-    .tag.news { border-color: rgba(110, 85, 17, 0.24); background: var(--news-bg); color: var(--news); }
-    .tag.tool { border-color: rgba(36, 85, 103, 0.24); background: var(--tool-bg); color: var(--tool); }
-    h3 { font-size: 1.05rem; line-height: 1.2; font-weight: 780; }
-    .summary { margin-top: 8px; font-size: 0.92rem; color: var(--muted); }
-    .why { margin-top: 10px; padding: 10px 11px; border-radius: 14px; border: 1px solid rgba(31, 33, 30, 0.08); background: rgba(172, 215, 223, 0.3); color: rgba(31, 33, 30, 0.86); font-size: 0.86rem; }
-    .topic { display: grid; grid-template-columns: 44px 1fr; gap: 10px; align-items: start; background: var(--panel); padding: 12px; box-shadow: var(--shadow); border: 1px solid var(--line); border-radius: 18px; }
-    .score { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; background: var(--serene); font-size: 0.94rem; font-weight: 820; }
-    .topic strong { display: block; font-size: 0.95rem; line-height: 1.2; }
-    .topic span { display: block; margin-top: 3px; color: var(--muted); font-size: 0.83rem; }
-    .read-link { display: inline-flex; align-items: center; justify-content: center; min-height: 34px; margin-top: 11px; padding: 7px 11px; border-radius: 999px; background: var(--ink); color: var(--panel); font-size: 0.82rem; font-weight: 760; text-decoration: none; width: max-content; max-width: 100%; }
-    .read-link:focus-visible { outline: 3px solid var(--canary); outline-offset: 2px; }
-    @media (min-width: 680px) {
-      main { padding-top: 28px; }
-      h1 { max-width: none; font-size: 2.45rem; }
-      .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
+    :root { color-scheme: light; --blossom:#f4c4cc; --pistachio:#b9d9c8; --serene:#acd7df; --canary:#ffefb3; --latte:#d2c4b8; --bg:#f7f4ef; --ink:#1f211e; --muted:#665f59; --panel:#fffdf9; --line:#d8cbc0; --hot:#7f2f3b; --hot-bg:#f4c4cc; --research:#275541; --research-bg:#d9eadf; --news:#6e5511; --news-bg:#ffefb3; --tool:#245567; --tool-bg:#d8edf1; --shadow:0 10px 28px rgba(74,61,50,.1); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.4; letter-spacing:0; }
+    main { width:min(100%,760px); margin:0 auto; padding:18px 14px 36px; }
+    header { padding:12px 2px 16px; }
+    h1,h2,h3,p { margin:0; }
+    h1 { font-size:2rem; line-height:1.05; font-weight:780; max-width:12ch; }
+    .subtitle { margin-top:10px; color:var(--muted); font-size:.98rem; max-width:38rem; }
+    .meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; }
+    .pill { display:inline-flex; align-items:center; min-height:32px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:rgba(255,253,249,.76); color:var(--muted); font-size:.82rem; font-weight:650; white-space:nowrap; }
+    nav { position:sticky; top:0; z-index:2; display:grid; grid-auto-flow:column; grid-auto-columns:max-content; gap:8px; overflow-x:auto; padding:10px 14px; margin:0 -14px 14px; background:rgba(247,244,239,.93); backdrop-filter:blur(12px); border-block:1px solid rgba(220,227,220,.75); }
+    nav a { color:var(--ink); text-decoration:none; background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:8px 11px; font-size:.86rem; font-weight:720; white-space:nowrap; }
+    section { scroll-margin-top:86px; margin-top:26px; }
+    .section-title { display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:12px; }
+    .section-title h2 { font-size:1.25rem; font-weight:780; }
+    .count { font-size:.82rem; font-weight:720; color:var(--muted); }
+    .grid { display:grid; gap:12px; }
+    .grid.two { grid-template-columns:1fr; }
+    .stack { display:grid; gap:10px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:14px 14px 15px; box-shadow:var(--shadow); }
+    .lead-card { border-color:rgba(127,47,59,.22); background:linear-gradient(145deg,rgba(244,196,204,.38),rgba(255,253,249,.92)); }
+    .tag-row { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+    .tag { display:inline-flex; align-items:center; padding:6px 10px; border-radius:999px; font-size:.78rem; font-weight:760; border:1px solid rgba(31,33,30,.12); background:rgba(255,253,249,.95); color:var(--ink); }
+    .tag.hot { border-color:rgba(127,47,59,.28); background:var(--hot-bg); color:var(--hot); }
+    .tag.research { border-color:rgba(39,85,65,.24); background:var(--research-bg); color:var(--research); }
+    .tag.news { border-color:rgba(110,85,17,.24); background:var(--news-bg); color:var(--news); }
+    .tag.tool { border-color:rgba(36,85,103,.24); background:var(--tool-bg); color:var(--tool); }
+    h3 { font-size:1.05rem; line-height:1.2; font-weight:780; }
+    .summary { margin-top:8px; font-size:.92rem; color:var(--muted); }
+    .why { margin-top:10px; padding:10px 11px; border-radius:14px; border:1px solid rgba(31,33,30,.08); background:rgba(172,215,223,.3); color:rgba(31,33,30,.86); font-size:.86rem; }
+    .topic { display:grid; grid-template-columns:44px 1fr; gap:10px; align-items:start; background:var(--panel); padding:12px; box-shadow:var(--shadow); border:1px solid var(--line); border-radius:18px; }
+    .score { display:grid; place-items:center; width:44px; height:44px; border-radius:8px; background:var(--serene); font-size:.94rem; font-weight:820; }
+    .topic strong { display:block; font-size:.95rem; line-height:1.2; }
+    .topic span { display:block; margin-top:3px; color:var(--muted); font-size:.83rem; }
+    .read-link { display:inline-flex; align-items:center; justify-content:center; min-height:34px; margin-top:11px; padding:7px 11px; border-radius:999px; background:var(--ink); color:var(--panel); font-size:.82rem; font-weight:760; text-decoration:none; width:max-content; max-width:100%; }
+    .read-link:focus-visible { outline:3px solid var(--canary); outline-offset:2px; }
+    @media (min-width:680px) { main { padding-top:28px; } h1 { max-width:none; font-size:2.45rem; } .grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>TLDR Aug 11 Brief</h1>
-      <p class="subtitle">Mobile scan of three TLDR newsletters from August 11, focused on frontier cyber capability, local agent models, multimodal tooling, computer-use agents, AI for science, and the infrastructure financing the next wave of AI.</p>
-      <div class="meta">
-        <span class="pill">3 newsletters</span>
-        <span class="pill">August 11, 2026</span>
-        <span class="pill">TLDR newsletter label</span>
-      </div>
+      <h1>TLDR Aug 13 Brief</h1>
+      <p class="subtitle">Mobile scan of three TLDR newsletters from August 13, focused on browser-native agents, long-horizon model competition, enterprise execution, safer tool access, agent data infrastructure, and production reliability.</p>
+      <div class="meta"><span class="pill">3 newsletters</span><span class="pill">August 13, 2026</span><span class="pill">TLDR newsletter label</span></div>
     </header>
-
-    <nav aria-label="Dashboard sections">
-      <a href="#attention">Attention</a>
-      <a href="#topics">Topics</a>
-      <a href="#research">Research</a>
-      <a href="#news">News</a>
-    </nav>
+    <nav aria-label="Dashboard sections"><a href="#attention">Attention</a><a href="#topics">Topics</a><a href="#research">Research</a><a href="#news">News</a></nav>
 
     <section id="attention">
       <div class="section-title"><h2>Needs Your Attention</h2><span class="count">8 items</span></div>
       <div class="grid">
-        <article class="card lead-card">
-          <div class="tag-row"><span class="tag hot">OpenAI</span><span class="tag tool">Cybersecurity</span></div>
-          <h3>GPT-5.6-Cyber gives vetted defenders fewer restrictions</h3>
-          <p class="summary">OpenAI introduced a specialized model for advanced vulnerability research and exploit validation while expanding Daybreak into Blue and Red access tiers for approved security teams.</p>
-          <p class="why">Why it matters: cyber-capable models are moving from general safeguards toward identity-, scope-, and audit-based access controls for higher-risk work.</p>
-          <a class="read-link" href="https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders" target="_blank" rel="noopener noreferrer">Read the report</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row"><span class="tag hot">Meta</span><span class="tag tool">Local Agents</span></div>
-          <h3>Muse Glimmer brings a 30B open agentic model to local hardware</h3>
-          <p class="summary">Meta released an Apache 2.0 model optimized for always-on agents, coding, function calling, evaluation, reliable tool use, and multi-step task completion.</p>
-          <p class="why">Why it matters: a capable open-weight agent model changes the privacy, latency, and cost tradeoffs for persistent assistants running close to users.</p>
-          <a class="read-link" href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener noreferrer">Read Meta’s release</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row"><span class="tag hot">Anthropic</span><span class="tag tool">AI for Science</span></div>
-          <h3>Claude advances a bound related to the Riemann hypothesis</h3>
-          <p class="summary">After exploring 650 ideas with coordinated subagents and numerical checks, Claude improved a longstanding lower bound from 41.6% to 67.2%; mathematicians and formal validation confirmed the result.</p>
-          <p class="why">Why it matters: the work shows agents can extend expert research by combining literature, search, computation, proof repair, and independent verification.</p>
-          <a class="read-link" href="https://www.anthropic.com/research/riemann-zeta" target="_blank" rel="noopener noreferrer">Read the research</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row"><span class="tag hot">Google</span><span class="tag tool">Multimodal Search</span></div>
-          <h3>Google tests an AI-first homepage without the classic Search button</h3>
-          <p class="summary">The experiment replaces Search with AI Mode and lets signed-out users ask about uploaded files or brainstorm, while signed-in users can generate images.</p>
-          <p class="why">Why it matters: AI Mode is shifting from a destination inside Search toward the default front door for multimodal, generative interaction.</p>
-          <a class="read-link" href="https://searchenginewatch.com/google-tests-ai-focused-homepage-for-signed-out-users/" target="_blank" rel="noopener noreferrer">Read the report</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row"><span class="tag hot">Qwen</span><span class="tag tool">Multimodal Agents</span></div>
-          <h3>Qwen packages multimodal capabilities as skills and MCP servers</h3>
-          <p class="summary">Qwen-MM-Plugins provides native multimodal building blocks for agent harnesses, with skills, optional MCP servers, tool listings, setup instructions, and worked examples.</p>
-          <p class="why">Why it matters: reusable multimodal primitives make vision and media workflows easier to compose across agent environments instead of rebuilding integrations per app.</p>
-          <a class="read-link" href="https://github.com/QwenLM/Qwen-MM-Plugins" target="_blank" rel="noopener noreferrer">Explore the repository</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row"><span class="tag hot">Agent Tooling</span><span class="tag tool">Computer Use</span></div>
-          <h3>Computer-use agents are crossing into production workflows</h3>
-          <p class="summary">Agents increasingly handle ticket processing, data entry, and legacy systems without APIs, but operational context, infrastructure, and reliability now matter more than raw benchmark capability.</p>
-          <p class="why">Why it matters: the moat is moving toward observability, recovery, permissions, and workflow-specific context around the model.</p>
-          <a class="read-link" href="https://a16z.com/can-agents-use-a-computer-yet-weve-got-the-data/" target="_blank" rel="noopener noreferrer">Read the data</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row"><span class="tag hot">AI Product</span><span class="tag tool">Economics</span></div>
-          <h3>AI feature usage can grow while margins disappear</h3>
-          <p class="summary">Atlassian’s guide argues that AI features fail when their value does not justify delivery cost, even when adoption is healthy, and compares pricing models and margin traps.</p>
-          <p class="why">Why it matters: product teams need unit economics and outcome measures alongside engagement before scaling expensive inference-heavy features.</p>
-          <a class="read-link" href="https://www.atlassian.com/software/jira/product-discovery/resources/why-ai-features-fail-to-make-money" target="_blank" rel="noopener noreferrer">Read the guide</a>
-        </article>
-
-        <article class="card">
-          <div class="tag-row"><span class="tag hot">Claude Code</span><span class="tag tool">Code Review Agents</span></div>
-          <h3>Code-review agents need explicit risk thresholds</h3>
-          <p class="summary">A practical build shows routine reviews can be automated quickly when teams define clear instructions, preserve human oversight for high-risk changes, and continuously evaluate decisions.</p>
-          <p class="why">Why it matters: operational design and escalation policy are becoming more important than the infrastructure required to launch a review bot.</p>
-          <a class="read-link" href="https://www.lennysnewsletter.com/p/how-i-ai-build-an-ai-code-review" target="_blank" rel="noopener noreferrer">Watch the walkthrough</a>
-        </article>
+        <article class="card lead-card"><div class="tag-row"><span class="tag hot">Anthropic</span><span class="tag tool">Browser Agents</span></div><h3>Claude in Chrome becomes a full Cowork session</h3><p class="summary">Anthropic upgraded its Chrome side panel so conversations persist across desktop, web, and mobile while existing skills and connectors work in-browser without extra setup.</p><p class="why">Why it matters: the browser is becoming a durable agent workspace rather than a temporary chat surface.</p><a class="read-link" href="https://claude.com/claude-in-chrome" target="_blank" rel="noopener noreferrer">Explore Claude in Chrome</a></article>
+        <article class="card"><div class="tag-row"><span class="tag hot">OpenAI</span><span class="tag tool">Enterprise Agents</span></div><h3>Enterprise AI use is shifting from assistance to execution</h3><p class="summary">OpenAI's usage analysis finds frontier firms consume more intelligence per worker, adopt connected tools more intensively, and delegate more multi-step work.</p><p class="why">Why it matters: governance, context, and workflow integration are becoming the differentiators between shallow adoption and compounding value.</p><a class="read-link" href="https://openai.com/index/introducing-b2b-signals/" target="_blank" rel="noopener noreferrer">Read OpenAI's analysis</a></article>
+        <article class="card"><div class="tag-row"><span class="tag hot">SpaceXAI</span><span class="tag tool">Long-Horizon Agents</span></div><h3>Grok 4.6 intensifies the agent-model price race</h3><p class="summary">The model targets long-running coding and knowledge work, ties GPT-5.6 Sol Max on one broad index, and starts at $2 per million input tokens and $6 per million output tokens.</p><p class="why">Why it matters: strong long-horizon performance is moving down the price curve while model access expands across IDEs and APIs.</p><a class="read-link" href="https://venturebeat.com/technology/spacexai-debuts-grok-4-6-overtaking-kimi-k3s-performance-and-matching-gpt-5-6-sol-for-worlds-third-best-on-artificial-analysis" target="_blank" rel="noopener noreferrer">Read the report</a></article>
+        <article class="card"><div class="tag-row"><span class="tag hot">Agent Tooling</span><span class="tag tool">MCP Security</span></div><h3>Safer MCP servers trade flexibility for constrained operations</h3><p class="summary">A PostgreSQL walkthrough compares open-ended agent-generated SQL with tightly typed query tools that expose only permitted database actions.</p><p class="why">Why it matters: production MCP design is increasingly about minimizing authority, validating inputs, and making policy visible in the tool surface.</p><a class="read-link" href="https://blog.pamelafox.org/2026/08/building-safe-mcp-servers-for-your.html" target="_blank" rel="noopener noreferrer">Read the guide</a></article>
+        <article class="card"><div class="tag-row"><span class="tag hot">Databricks</span><span class="tag tool">Agent Infrastructure</span></div><h3>Electric brings local Postgres into AI agent sandboxes</h3><p class="summary">Databricks is acquiring Electric to combine PGlite's fast WASM-local database with Lakebase synchronization and centralized governance.</p><p class="why">Why it matters: distributed agents need low-latency private state without losing a shared, governed source of truth.</p><a class="read-link" href="https://www.databricks.com/blog/electric-joins-databricks-bring-wasm-postgres-ai-agent-sandboxes" target="_blank" rel="noopener noreferrer">Read the announcement</a></article>
+        <article class="card"><div class="tag-row"><span class="tag hot">Vercel</span><span class="tag tool">Product Infrastructure</span></div><h3>Vercel rebuilds critical build-state storage around durability</h3><p class="summary">Its Redis-to-DynamoDB migration used dual writes, shadow reads, feature flags, and production comparisons, then uncovered a serialized-read bottleneck that required concurrency redesign.</p><p class="why">Why it matters: safe infrastructure migration depends as much on behavioral comparison and rollback controls as on the target database.</p><a class="read-link" href="https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build" target="_blank" rel="noopener noreferrer">Read the engineering post</a></article>
+        <article class="card"><div class="tag-row"><span class="tag hot">Microsoft</span><span class="tag tool">Image Generation</span></div><h3>MAI-Image-2.6 reaches No. 2 on the Arena leaderboard</h3><p class="summary">Microsoft's latest image model placed second on the text-to-image leaderboard, ahead of systems from Google, Meta, and xAI in the reported snapshot.</p><p class="why">Why it matters: Microsoft is developing a first-party image stack that could become core infrastructure across its consumer and enterprise products.</p><a class="read-link" href="https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/" target="_blank" rel="noopener noreferrer">Read Microsoft's release</a></article>
+        <article class="card"><div class="tag-row"><span class="tag hot">Qwen</span><span class="tag tool">Agent Models</span></div><h3>Qwen3.8 scales coding and long-horizon execution</h3><p class="summary">The 2.4T-parameter mixture model supports adaptive reasoning effort and deployment through common inference frameworks including SGLang and vLLM.</p><p class="why">Why it matters: very large open models are packaging reasoning depth, tool integration, and deployment flexibility as explicit agent controls.</p><a class="read-link" href="https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B" target="_blank" rel="noopener noreferrer">View the model card</a></article>
       </div>
     </section>
 
     <section id="topics">
       <div class="section-title"><h2>Hot Topics</h2><span class="count">5 threads</span></div>
       <div class="stack">
-        <div class="topic"><div class="score">1</div><div><strong>Cyber access is becoming policy infrastructure</strong><span>GPT-5.6-Cyber’s tiered rollout puts identity, authorization, logging, and scoped use at the center of frontier capability deployment.</span></div></div>
-        <div class="topic"><div class="score">2</div><div><strong>Local agents are getting purpose-built models</strong><span>Muse Glimmer challenges the assumption that persistent tool-using agents must always depend on the largest datacenter model.</span></div></div>
-        <div class="topic"><div class="score">3</div><div><strong>Multimodal interaction is becoming the default surface</strong><span>Google’s AI-first homepage and Qwen’s plugin system turn files, images, and media into standard agent inputs and tools.</span></div></div>
-        <div class="topic"><div class="score">4</div><div><strong>Reliability is the moat for computer-use agents</strong><span>Production value now depends on context, permissions, recovery, observability, and human approval more than raw task scores.</span></div></div>
-        <div class="topic"><div class="score">5</div><div><strong>Compute is being financed like infrastructure</strong><span>Nvidia’s capital partnerships recast chips and datacenters as revenue-generating assets that can support large-scale borrowing.</span></div></div>
+        <div class="topic"><div class="score">1</div><div><strong>The browser is becoming the agent workspace</strong><span>Claude's persistent Cowork session puts connectors, skills, and cross-device continuity directly beside the web apps where work happens.</span></div></div>
+        <div class="topic"><div class="score">2</div><div><strong>Long-horizon intelligence is getting cheaper</strong><span>Grok, DeepSeek, and Qwen are competing on agent benchmarks, deployment reach, and token price—not only conversational quality.</span></div></div>
+        <div class="topic"><div class="score">3</div><div><strong>Agent infrastructure is moving closer to the task</strong><span>WASM Postgres, local state, safe MCP surfaces, and low-latency context are becoming standard pieces of the agent stack.</span></div></div>
+        <div class="topic"><div class="score">4</div><div><strong>Verification is the real deployment bottleneck</strong><span>Formal specs, production comparisons, drift monitoring, and explicit acceptance criteria are emerging as the operating system for reliable agents.</span></div></div>
+        <div class="topic"><div class="score">5</div><div><strong>AI infrastructure is converging with cloud platforms</strong><span>Nvidia's software, financing, and distributed capacity strategy resembles a synthetic hyperscaler built around its own hardware moat.</span></div></div>
       </div>
     </section>
 
     <section id="research">
       <div class="section-title"><h2>Important Research</h2><span class="count">4 reads</span></div>
       <div class="grid two">
-        <article class="card">
-          <div class="tag-row"><span class="tag research">Anthropic</span><span class="tag tool">Mathematics</span></div>
-          <h3>Multi-agent mathematical search produces a validated advance</h3>
-          <p class="summary">Claude combined prior research, hundreds of candidate ideas, numerical experiments, proof reconstruction, expert review, and formal checking to improve a bound related to the Riemann hypothesis.</p>
-          <a class="read-link" href="https://www.anthropic.com/research/riemann-zeta" target="_blank" rel="noopener noreferrer">Read the research</a>
-        </article>
-        <article class="card">
-          <div class="tag-row"><span class="tag research">Dyna-2</span><span class="tag tool">World Models</span></div>
-          <h3>One million hours of video reveal robotics scaling laws</h3>
-          <p class="summary">Dyna-2 scales human-video pretraining for world-action models and reports predictable gains on human and robot tasks, including zero-shot deployment to unseen hardware.</p>
-          <a class="read-link" href="https://www.dyna.co/dyna-2" target="_blank" rel="noopener noreferrer">Read the project</a>
-        </article>
-        <article class="card">
-          <div class="tag-row"><span class="tag research">Transformers</span><span class="tag tool">Architecture</span></div>
-          <h3>A controlled study removes feed-forward layers entirely</h3>
-          <p class="summary">Researchers test attention-only transformers to isolate what is lost when the FFN—roughly two-thirds of non-embedding parameters in many decoders—is removed.</p>
-          <a class="read-link" href="https://arxiv.org/abs/2607.18363" target="_blank" rel="noopener noreferrer">Read the paper</a>
-        </article>
-        <article class="card">
-          <div class="tag-row"><span class="tag research">Coding Agents</span><span class="tag tool">Evaluation</span></div>
-          <h3>Programming-language claims need broader agent evaluations</h3>
-          <p class="summary">Dan Luu argues that language failures are often setup-specific and that no single benchmark—or small group of them—supports general claims about the best language for coding agents.</p>
-          <a class="read-link" href="https://danluu.com/pl-tokens/" target="_blank" rel="noopener noreferrer">Read the analysis</a>
-        </article>
+        <article class="card"><div class="tag-row"><span class="tag research">Formal Methods</span><span class="tag tool">Agent Evaluation</span></div><h3>Specula automates specification and model checking</h3><p class="summary">The system derives TLA+ specs from code, validates traces, searches for concurrency bugs, and reproduces failures with precisely timed integration tests—while leaving system-level composition unresolved.</p><a class="read-link" href="https://muratbuffalo.blogspot.com/2026/08/specula-scaling-formal-specifications.html" target="_blank" rel="noopener noreferrer">Read the analysis</a></article>
+        <article class="card"><div class="tag-row"><span class="tag research">Vector Search</span><span class="tag tool">Retrieval</span></div><h3>Metadata filters can fracture approximate vector search</h3><p class="summary">Qdrant compares filterable HNSW, ACORN expansion, scans, and planner choices to show when index-time edges outperform query-time repair.</p><a class="read-link" href="https://qdrant.tech/articles/filtered-vector-search-acorn/" target="_blank" rel="noopener noreferrer">Read the benchmarks</a></article>
+        <article class="card"><div class="tag-row"><span class="tag research">Mathematics</span><span class="tag tool">LLM Capability</span></div><h3>Where are language models actually good at mathematics?</h3><p class="summary">Timothy Gowers examines the gap between striking frontier results and broad mathematical competence, arguing that isolated advances do not yet imply across-the-board superiority.</p><a class="read-link" href="https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/" target="_blank" rel="noopener noreferrer">Read the essay</a></article>
+        <article class="card"><div class="tag-row"><span class="tag research">Model Drift</span><span class="tag tool">Observability</span></div><h3>LLM reliability needs multiple drift signals</h3><p class="summary">Production quality can degrade through changing data, user behavior, prompts, retrieval corpora, embeddings, or business rules, requiring baselines plus task and user-feedback telemetry.</p><a class="read-link" href="https://www.honeycomb.io/blog/ai-model-drift" target="_blank" rel="noopener noreferrer">Read the field guide</a></article>
       </div>
     </section>
 
     <section id="news">
       <div class="section-title"><h2>Interesting News</h2><span class="count">5 stories</span></div>
       <div class="grid">
-        <article class="card">
-          <div class="tag-row"><span class="tag news">Meta</span><span class="tag tool">Open AI Strategy</span></div>
-          <h3>Zuckerberg argues for widely distributed personal superintelligence</h3>
-          <p class="summary">Meta’s new vision emphasizes personal agents, privacy, open-weight models, scientific progress, and a $1 billion fund for communities hosting its data centers.</p>
-          <a class="read-link" href="https://about.fb.com/news/2026/08/the-future-is-for-everyone/" target="_blank" rel="noopener noreferrer">Read the essay</a>
-        </article>
-        <article class="card">
-          <div class="tag-row"><span class="tag news">Nvidia</span><span class="tag tool">AI Infrastructure</span></div>
-          <h3>Nvidia lines up $500 billion in infrastructure financing</h3>
-          <p class="summary">Six major asset managers are partnering with Nvidia to fund chips and datacenters for hyperscalers, frontier labs, and enterprises while treating compute like financeable infrastructure.</p>
-          <a class="read-link" href="https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html" target="_blank" rel="noopener noreferrer">Read the report</a>
-        </article>
-        <article class="card">
-          <div class="tag-row"><span class="tag news">OpenAI</span><span class="tag tool">Capital</span></div>
-          <h3>OpenAI reportedly completes a $7 billion employee tender</h3>
-          <p class="summary">The liquidity program reportedly valued OpenAI at $852 billion, matching its March fundraising valuation.</p>
-          <a class="read-link" href="https://techcrunch.com/2026/08/10/openai-reportedly-completed-a-7-billion-employee-tender-offer/" target="_blank" rel="noopener noreferrer">Read the report</a>
-        </article>
-        <article class="card">
-          <div class="tag-row"><span class="tag news">Apple</span><span class="tag tool">Content Provenance</span></div>
-          <h3>Apple explores hardware-backed photo authenticity</h3>
-          <p class="summary">Apple Reference Image would use unique data tied to the iPhone camera hardware that captured a photo to authenticate its origin.</p>
-          <a class="read-link" href="https://9to5mac.com/2026/08/10/apple-is-working-on-a-way-to-authenticate-that-a-photo-came-from-an-iphone-camera/" target="_blank" rel="noopener noreferrer">Read the report</a>
-        </article>
-        <article class="card">
-          <div class="tag-row"><span class="tag news">Microsoft</span><span class="tag tool">AI Chips</span></div>
-          <h3>Microsoft reportedly plans a September Maia 300 unveiling</h3>
-          <p class="summary">The next in-house accelerator is intended to reduce Microsoft’s dependence on Nvidia GPUs as cloud providers race to control more of their AI hardware stack.</p>
-          <a class="read-link" href="https://insideai.news/news/ai-hardware-infrastructure/microsoft-plans-maia-300-ai-chip-unveiling-in-september-report-says/7446/" target="_blank" rel="noopener noreferrer">Read the report</a>
-        </article>
+        <article class="card"><div class="tag-row"><span class="tag news">DeepSeek</span><span class="tag tool">Model Economics</span></div><h3>DeepSeek prices V4-Pro-0813 at $0.87 per million output tokens</h3><p class="summary">The new model is rolling out through DeepSeek chat and API with reported strength on terminal, cyber, software-engineering, and automation benchmarks.</p><a class="read-link" href="https://wccftech.com/deepseek-prices-its-new-v4-pro-0813-model-at-0-87-per-1-million-output-tokens-as-the-high-flying-chinese-ai-lab-wows-with-its-soaring-token-consumption/" target="_blank" rel="noopener noreferrer">Read the report</a></article>
+        <article class="card"><div class="tag-row"><span class="tag news">Microsoft</span><span class="tag tool">Reasoning Models</span></div><h3>Microsoft launches the cost-focused MAI-Thinking-1</h3><p class="summary">The medium-sized reasoning model targets enterprise coding, mathematics, and knowledge work where efficiency matters alongside capability.</p><a class="read-link" href="https://microsoft.ai/news/introducing-mai-thinking-1/" target="_blank" rel="noopener noreferrer">Read Microsoft's release</a></article>
+        <article class="card"><div class="tag-row"><span class="tag news">Stripe</span><span class="tag tool">Database Reliability</span></div><h3>Stripe uses graph search to automate database remediation</h3><p class="summary">Runtime planning across a graph-modeled MongoDB fleet adapts to shard layouts, supports partial recovery, and reportedly reduces pager alerts by about 30%.</p><a class="read-link" href="https://stripe.dev/blog/how-stripe-uses-graph-search-and-state-machines-to-auto-remediate-a-global-database-fleet" target="_blank" rel="noopener noreferrer">Read the engineering post</a></article>
+        <article class="card"><div class="tag-row"><span class="tag news">Salesforce</span><span class="tag tool">Product Data</span></div><h3>Standardized telemetry cuts Salesforce time-to-insight by 97%</h3><p class="summary">A common product schema now generates adoption metrics across 45 billion rows per day, 19,000 events, and more than 2,000 product features.</p><a class="read-link" href="https://engineering.salesforce.com/how-standardizing-product-telemetry-reduced-time-to-insight-by-97" target="_blank" rel="noopener noreferrer">Read the case study</a></article>
+        <article class="card"><div class="tag-row"><span class="tag news">Netflix</span><span class="tag tool">Agentic Workflows</span></div><h3>Netflix's Maestro offers a production-derived workflow control plane</h3><p class="summary">The Apache-2.0 orchestrator supports large-scale data, ML, and batch pipelines and is worth tracking as agentic workflows demand durable scheduling and recovery.</p><a class="read-link" href="https://github.com/Netflix/maestro" target="_blank" rel="noopener noreferrer">Explore the repository</a></article>
       </div>
     </section>
   </main>
